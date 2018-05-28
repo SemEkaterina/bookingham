@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="640" Width="360">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="0" Grid.RowSpan="3" Background="#FFF32C3F" SelectionChanged="ListBox_SelectionChanged"/>
+        <TextBox FontFamily="Century" FontSize="26" Background="{x:Null}" Height="40" Margin="12 100 12 100" HorizontalAlignment="Center">YOUR TRAVEL HELPER</TextBox>
     </Grid>
 </Window>
