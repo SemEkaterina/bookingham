@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelsAndUsers
+namespace HotelsAndUsers.Core.Model
 {
-    class Room
+    public class Room
     {
         public int Id { get; set; }
         public int IdHotel { get; set; }
@@ -15,6 +15,5 @@ namespace HotelsAndUsers
         public string Class { get; set; }
         public int BedNumber { get; set; }
         public List<Reservation> Reservations { get; set; }
-
     }
 }

@@ -1,12 +1,15 @@
-﻿using System;
+﻿using HotelsAndUsers.Core.Helpers;
+using HotelsAndUsers.Core.Interfaces;
+using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelsAndUsers
+namespace HotelsAndUsers.Core
 {
-    class DBRepository:IRepository
+    internal class DBRepository : IRepository
     {
         public List<Guest> Guests { get; set; }
         public List<Hotel> Hotels { get; set; }

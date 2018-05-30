@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelsAndUsers
+namespace HotelsAndUsers.Core.Model
 {
-    class Booking
+    public class Booking
     {
         public int Id { get; set; }
         public Hotel Hotel { get; set; }

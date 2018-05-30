@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelsAndUsers
+namespace HotelsAndUsers.Core.Model
 {
-    class Reservation
+    public class Reservation
     {
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
