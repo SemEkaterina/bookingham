@@ -9,8 +9,8 @@ namespace HotelsAndUsers.Core.Interfaces
 {
     interface IRepository
     {
-        IEnumerable<Guest> Guests { get; }
-        IEnumerable<Hotel> Hotels { get; }
+        IEnumerable<Guest> _guests { get; }
+        IEnumerable<Hotel> _hotels { get; }
 
         int CheckGuest(string login, string password);
         Guest Authorize(string login, string password);

@@ -14,8 +14,8 @@ namespace HotelsAndUsers.Core
         public List<Guest> Guests { get; set; }
         public List<Hotel> Hotels { get; set; }
 
-        public IEnumerable<Guest> guests => Guests;
-        public IEnumerable<Hotel> hotels => Hotels;
+        public IEnumerable<Guest> _guests => Guests;
+        public IEnumerable<Hotel> _hotels => Hotels;
 
         public Guest Authorize(string login, string password)
         {

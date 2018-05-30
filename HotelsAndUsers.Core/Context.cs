@@ -18,7 +18,7 @@ namespace HotelsAndUsers.Core
 
         public Context() : base("Bookingham")
         {
-
+            
         }
     }
 }

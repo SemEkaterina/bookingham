@@ -10,27 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace BookinghamNew.UI
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для LogInWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LogInWindow : Window
     {
-        public MainWindow()
+        public LogInWindow()
         {
             InitializeComponent();
         }
 
-        private void ButtonUser_Click(object sender, RoutedEventArgs e)
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void ButtonAdmin_Click(object sender, RoutedEventArgs e)
+        private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
 
         }

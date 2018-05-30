@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="640" Width="360">
+        Title="EntranceWindow" Height="640" Width="360" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="0" Grid.RowSpan="3" Background="#FFF32C3F" SelectionChanged="ListBox_SelectionChanged"/>
-        <TextBox FontFamily="Century" FontSize="26" Background="{x:Null}" Height="40" Margin="12 100 12 100" HorizontalAlignment="Center">YOUR TRAVEL HELPER</TextBox>
+        <Image Grid.Row="0" Grid.RowSpan="3" Source="Images/logIn.jpg" Stretch="UniformToFill"></Image>
+        <TextBlock Grid.Row="0" Height="48" Width="250" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Century Gothic" Foreground="White" FontSize="28">Your travel helper</TextBlock>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Click="ButtonUser_Click" Height="40" Width="250" Margin="7" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Start as user</Button>
+            <Button Click="ButtonAdmin_Click"  Height="40" Width="250" Margin="7" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Start as admin</Button>
+        </StackPanel>
+        <TextBlock Grid.Row="1" Margin="5" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Century Gothic" Foreground="#FFFFFF" FontSize="16" >www.bookingham.com</TextBlock>
     </Grid>
 </Window>
