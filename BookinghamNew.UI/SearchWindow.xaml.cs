@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace BookinghamNew.UI
 {
     /// <summary>
-    /// Логика взаимодействия для LogInWindow.xaml
+    /// Логика взаимодействия для SearchWindow.xaml
     /// </summary>
-    public partial class LogInWindow : Window
+    public partial class SearchWindow : Window
     {
-        public LogInWindow()
+        public SearchWindow()
         {
             InitializeComponent();
-        }
-
-        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void ButtonRegister_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
