@@ -117,5 +117,11 @@
   <ItemGroup>
     <Resource Include="Images\logIn.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelsAndUsers.Core\HotelsAndUsers.Core.csproj">
+      <Project>{1DCAB2C5-725B-4431-B025-94528E4FDE2C}</Project>
+      <Name>HotelsAndUsers.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

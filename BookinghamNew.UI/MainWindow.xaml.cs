@@ -32,7 +32,9 @@ namespace BookinghamNew.UI
 
         private void ButtonAdmin_Click(object sender, RoutedEventArgs e)
         {
-
+            var logInWindow = new LogInWindow();
+            logInWindow.Show();
+            Close();
         }
     }
 }
