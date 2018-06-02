@@ -38,18 +38,32 @@ namespace BookinghamNew.UI
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
             List<Hotel> SuitableHotels = new List<Hotel>();
-            foreach(var h in _repo._hotels)
+            foreach (var h in _repo._hotels)
             {
+                int PossibleBeds = 0;
                 if(h.Name == HotelNameCombobox.SelectedItem.ToString())
                 {
-                    ////////////////////////
+                    ////////////////////////открыть окно отеля
                 }
 
-                if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
+                else if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
                 {
                     foreach(var r in h.Rooms)
                     {
+                        for(int i = 1; i <= r.Reservations.Count; i++)
+                        {
+                            if ((CheckInCalendar.SelectedDate >= r.Reservations[i-1].CheckOutDate)&&(CheckInCalendar.SelectedDate < r.Reservations[i].CheckInDate)&&(r.PriceForNight <= int.Parse(MaxPriceTextBox.Text)))
+                            {
+                                h.SuitableRooms.Add(r);
+                                PossibleBeds += r.BedNumber;
+                                break;
+                            }
+                        }                        
+                    }
 
+                    if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text))&&(PossibleBeds >= int.Parse(PeopleTextBox.Text)))
+                    {
+                        SuitableHotels.Add(h);
                     }
                 }
             }
