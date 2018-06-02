@@ -27,7 +27,8 @@ namespace BookinghamNew.UI
 
         private void ButtonUser_Click(object sender, RoutedEventArgs e)
         {
-
+            var LogInWindow = new LogInWindow();
+            LogInWindow.ShowDialog();
         }
 
         private void ButtonAdmin_Click(object sender, RoutedEventArgs e)

@@ -23,5 +23,15 @@ namespace BookinghamNew.UI
         {
             InitializeComponent();
         }
+
+        private void ButtonLogOut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
