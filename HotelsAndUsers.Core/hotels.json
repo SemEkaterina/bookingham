@@ -1,0 +1,162 @@
+﻿[{
+		"Name": "Novotel London Paddington",
+		"Stars": 4,
+		"Type": "Hotel",
+		"Address": "Sheldon Square 3 Kingdom Street",
+		"District": "North-West",
+		"PhoneNumber": "810 44 20 3871 8319",
+		"CheckInTime": "10:00",
+		"CheckOutTime": "12:00",
+		"Rooms": [{
+				"RoomNumber": 101,
+				"PriceForNight": 100,
+				"Class": "Standart",
+				"BedNumber": 1
+			},
+			{
+				"RoomNumber": 102,
+				"PriceForNight": 150,
+				"Class": "Suite",
+				"BedNumber": 2
+			}
+		]
+	},
+	{
+		"Name": "Radisson Blu Edwardian",
+		"Stars": 4,
+		"Type": "Hotel",
+		"Address": "Covent Garden 20 Mercer Street",
+		"District": "Center",
+		"PhoneNumber": "810 44 20 3291 0923",
+		"CheckInTime": "9:00",
+		"CheckOutTime": "12:00",
+		"Rooms": [{
+				"RoomNumber": 101,
+				"PriceForNight": 100,
+				"Class": "Standart",
+				"BedNumber": 1
+			},
+			{
+				"RoomNumber": 102,
+				"PriceForNight": 150,
+				"Class": "Suite",
+				"BedNumber": 2
+			}
+		]
+	},
+	{
+		"Name": "DoubleTree by Hilton London - Westminster",
+		"Stars": 4,
+		"Type": "Hotel",
+		"Address": "30 John Islip Street",
+		"District": "South-East",
+		"PhoneNumber": "810 44 20 7630 1000",
+		"CheckInTime": "9:00",
+		"CheckOutTime": "12:00",
+		"Rooms": [{
+				"RoomNumber": 101,
+				"PriceForNight": 180,
+				"Class": "Standart",
+				"BedNumber": 1
+			},
+			{
+				"RoomNumber": 102,
+				"PriceForNight": 200,
+				"Class": "Suite",
+				"BedNumber": 2
+			}
+		]
+	},
+	{
+		"Name": "Sloane Square Hotel",
+		"Stars": 4,
+		"Type": "Hotel",
+		"Address": "7-12 Sloane Square",
+		"District": "South-West",
+		"PhoneNumber": "810 44 20 3251 9234",
+		"CheckInTime": "10:00",
+		"CheckOutTime": "12:00",
+		"Rooms": [{
+				"RoomNumber": 101,
+				"PriceForNight": 190,
+				"Class": "Standart",
+				"BedNumber": 1
+			},
+			{
+				"RoomNumber": 102,
+				"PriceForNight": 230,
+				"Class": "Suite",
+				"BedNumber": 2
+			}
+		]
+	},
+	{
+		"Name": "InterContinental London Park Lane",
+		"Stars": 5,
+		"Type": "Hotel",
+		"Address": "1 Hamilton Place, Park Lane",
+		"District": "Center",
+		"PhoneNumber": "810 44 20 2381 1129",
+		"CheckInTime": "10:00",
+		"CheckOutTime": "12:00",
+		"Rooms": [{
+				"RoomNumber": 101,
+				"PriceForNight": 380,
+				"Class": "Standart",
+				"BedNumber": 1
+			},
+			{
+				"RoomNumber": 102,
+				"PriceForNight": 400,
+				"Class": "Suite",
+				"BedNumber": 2
+			}
+		]
+	},
+	{
+		"Name": "St. James's Hotel and Club",
+		"Stars": 5,
+		"Type": "Hotel",
+		"Address": "1 Hamilton Place, Park Lane",
+		"District": "Center",
+		"PhoneNumber": "810 44 20 2381 1129",
+		"CheckInTime": "10:00",
+		"CheckOutTime": "12:00",
+		"Rooms": [{
+				"RoomNumber": 101,
+				"PriceForNight": 290,
+				"Class": "Standart",
+				"BedNumber": 1
+			},
+			{
+				"RoomNumber": 102,
+				"PriceForNight": 300,
+				"Class": "Suite",
+				"BedNumber": 2
+			}
+		]
+	},
+	{
+		"Name": "InterContinental London Park Lane",
+		"Stars": 5,
+		"Type": "Hotel",
+		"Address": "7-8 Park Place, Лондон SW1A 1LS, Англия",
+		"District": "Center",
+		"PhoneNumber": "810 44 20 7316 1600",
+		"CheckInTime": "10:00",
+		"CheckOutTime": "12:00",
+		"Rooms": [{
+				"RoomNumber": 101,
+				"PriceForNight": 200,
+				"Class": "Standart",
+				"BedNumber": 1
+			},
+			{
+				"RoomNumber": 102,
+				"PriceForNight": 225,
+				"Class": "Suite",
+				"BedNumber": 2
+			}
+		]
+	}
+]
