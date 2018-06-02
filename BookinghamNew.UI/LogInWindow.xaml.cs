@@ -1,5 +1,4 @@
-﻿using HotelsAndUsers;
-using HotelsAndUsers.Core;
+﻿using HotelsAndUsers.Core;
 using HotelsAndUsers.Core.Model;
 using System;
 using System.Collections.Generic;
@@ -35,8 +34,7 @@ namespace BookinghamNew.UI
             if (_repo.CheckGuest(textBoxLogin.Text, textBoxPassword.Text) == 1)
             {
                 Guest = _repo.Authorize(textBoxLogin.Text, textBoxPassword.Text);
-                //var logInUserWindow = new LogInUserwindow(User);
-                //logInUserWindow.Show();
+                ///////////////////////
                 Close();
             }
             else if (string.IsNullOrWhiteSpace(textBoxLogin.Text))
