@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,19 +21,38 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class SearchWindow : Window
     {
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
+
         public SearchWindow()
         {
             InitializeComponent();
         }
 
-        private void ButtonLogOut_Click(object sender, RoutedEventArgs e)
+        private void ExitButton(object sender, RoutedEventArgs e)
         {
-
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
+            List<Hotel> SuitableHotels = new List<Hotel>();
+            foreach(var h in _repo._hotels)
+            {
+                if(h.Name == HotelNameCombobox.SelectedItem.ToString())
+                {
+                    ////////////////////////
+                }
 
+                if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
+                {
+                    foreach(var r in h.Rooms)
+                    {
+
+                    }
+                }
+            }
         }
     }
 }

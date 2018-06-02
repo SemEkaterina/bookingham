@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelsAndUsers.Core.Interfaces
 {
-    interface IRepository
+    public interface IRepository
     {
         IEnumerable<Guest> _guests { get; }
         IEnumerable<Hotel> _hotels { get; }
