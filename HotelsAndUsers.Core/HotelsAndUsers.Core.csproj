@@ -55,6 +55,27 @@
     <Compile Include="Factory.cs" />
     <Compile Include="Helpers\Hash.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Migrations\201806022223403_Initial.cs" />
+    <Compile Include="Migrations\201806022223403_Initial.Designer.cs">
+      <DependentUpon>201806022223403_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806022227006_DeleteIdHotel.cs" />
+    <Compile Include="Migrations\201806022227006_DeleteIdHotel.Designer.cs">
+      <DependentUpon>201806022227006_DeleteIdHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806022230498_Add IdHotel.cs" />
+    <Compile Include="Migrations\201806022230498_Add IdHotel.Designer.cs">
+      <DependentUpon>201806022230498_Add IdHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806022231574_Delete field IdHotel.cs" />
+    <Compile Include="Migrations\201806022231574_Delete field IdHotel.Designer.cs">
+      <DependentUpon>201806022231574_Delete field IdHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806022232521_Return IdHotel.cs" />
+    <Compile Include="Migrations\201806022232521_Return IdHotel.Designer.cs">
+      <DependentUpon>201806022232521_Return IdHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Booking.cs" />
     <Compile Include="Model\Guest.cs" />
     <Compile Include="Model\Hotel.cs" />
@@ -64,8 +85,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EmbeddedResource Include="hotels.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="users.json" />
+    <EmbeddedResource Include="Migrations\201806022223403_Initial.resx">
+      <DependentUpon>201806022223403_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806022227006_DeleteIdHotel.resx">
+      <DependentUpon>201806022227006_DeleteIdHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806022230498_Add IdHotel.resx">
+      <DependentUpon>201806022230498_Add IdHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806022231574_Delete field IdHotel.resx">
+      <DependentUpon>201806022231574_Delete field IdHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806022232521_Return IdHotel.resx">
+      <DependentUpon>201806022232521_Return IdHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
