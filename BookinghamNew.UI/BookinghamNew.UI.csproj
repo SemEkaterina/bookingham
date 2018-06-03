@@ -64,9 +64,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HotelWindow.xaml.cs">
+      <DependentUpon>HotelWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchWindow.xaml.cs">
       <DependentUpon>SearchWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="HotelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LogInWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,6 +139,12 @@
       <Project>{1DCAB2C5-725B-4431-B025-94528E4FDE2C}</Project>
       <Name>HotelsAndUsers.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\novotelPaddington.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\letter-x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

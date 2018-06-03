@@ -37,6 +37,8 @@ namespace BookinghamNew.UI
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
+            var wert = new HotelWindow();
+            wert.ShowDialog();
             List<Hotel> SuitableHotels = new List<Hotel>();
             foreach(var h in _repo._hotels)
             {
