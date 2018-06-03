@@ -40,6 +40,8 @@ namespace BookinghamNew.UI
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
+            var wert = new HotelWindow();
+            wert.ShowDialog();
             List<Hotel> SuitableHotels = new List<Hotel>();
             int PossibleBeds = 0;
             if(HotelNameCombobox.SelectedIndex != -1) 
