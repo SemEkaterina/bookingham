@@ -15,5 +15,6 @@ namespace HotelsAndUsers.Core.Interfaces
         int CheckGuest(string login, string password);
         Guest Authorize(string login, string password);
         void RegisterGuest(Guest guest);
+        void SearchEngine(List<Room> Rooms, decimal MaxPrice, DateTime CheckInDate, DateTime CheckOutDate, out List<Room> SuitableRooms, out int PossibleBeds);
     }
 }

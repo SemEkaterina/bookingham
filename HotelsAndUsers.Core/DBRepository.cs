@@ -18,6 +18,23 @@ namespace HotelsAndUsers.Core
         public IEnumerable<Guest> _guests => Guests;
         public IEnumerable<Hotel> _hotels => Hotels;
 
+        public DBRepository()
+        {
+            try
+            {
+                using (Context = new Context())
+                {
+                    Guests = Context.Guests.ToList();
+                    Hotels = Context.Hotels.ToList();                   
+                }
+            }
+            catch
+            {
+                Guests = new List<Guest>();
+                Hotels = new List<Hotel>();
+            }
+        }
+
         public Guest Authorize(string login, string password)
         {
             var user = Guests.FirstOrDefault(u => u.Email == login && Hash.GetHash(u.Password) == Hash.GetHash(password));
@@ -39,6 +56,28 @@ namespace HotelsAndUsers.Core
                     context.Guests.Add(guest);
                 }
                 context.SaveChanges();
+            }
+        }
+
+        public void SearchEngine(List<Room> Rooms,decimal MaxPrice,DateTime CheckInDate, DateTime CheckOutDate, out List<Room> SuitableRooms, out int PossibleBeds)
+        {
+            SuitableRooms = new List<Room>();
+            PossibleBeds = 0;
+            foreach (var r in Rooms)
+            {
+                if (r.Reservations == null)
+                {
+                    r.Reservations = new List<Reservation>();
+                }
+                for (int i = 1; i <= r.Reservations.Count + 1; i++)
+                {
+                    if ((CheckInDate >= r.Reservations[i - 1].CheckOutDate) && (CheckInDate < r.Reservations[i].CheckInDate) && (r.PriceForNight <= MaxPrice))
+                    {
+                        SuitableRooms.Add(r);
+                        PossibleBeds += r.BedNumber;
+                        break;
+                    }
+                }
             }
         }
 

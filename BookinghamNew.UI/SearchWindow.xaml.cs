@@ -22,10 +22,13 @@ namespace BookinghamNew.UI
     public partial class SearchWindow : Window
     {
         HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
+        List<string> Districts = new List<string>() { "Center", "North", "South", "West", "East","North-West", "North-East", "South-West", "South-East" };
 
         public SearchWindow()
         {
             InitializeComponent();
+            DistrictHotelCombobox.ItemsSource = Districts;
+            HotelNameCombobox.ItemsSource = _repo._hotels;
         }
 
         private void ExitButton(object sender, RoutedEventArgs e)
@@ -38,30 +41,44 @@ namespace BookinghamNew.UI
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
             List<Hotel> SuitableHotels = new List<Hotel>();
-            foreach (var h in _repo._hotels)
+            int PossibleBeds = 0;
+            if(HotelNameCombobox.SelectedIndex != -1) 
             {
-                int PossibleBeds = 0;
-                if(h.Name == HotelNameCombobox.SelectedItem.ToString())
+                foreach (var h in _repo._hotels)
                 {
-                    ////////////////////////открыть окно отеля
-                }
-
-                else if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
-                {
-                    foreach(var r in h.Rooms)
+                    if(h.Name == HotelNameCombobox.SelectedItem.ToString())
                     {
-                        for(int i = 1; i <= r.Reservations.Count; i++)
-                        {
-                            if ((CheckInCalendar.SelectedDate >= r.Reservations[i-1].CheckOutDate)&&(CheckInCalendar.SelectedDate < r.Reservations[i].CheckInDate)&&(r.PriceForNight <= int.Parse(MaxPriceTextBox.Text)))
-                            {
-                                h.SuitableRooms.Add(r);
-                                PossibleBeds += r.BedNumber;
-                                break;
-                            }
-                        }                        
+                        ////////////////////////открыть окно отеля
                     }
+                }
+            }
 
-                    if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text))&&(PossibleBeds >= int.Parse(PeopleTextBox.Text)))
+            else if ((DistrictHotelCombobox.SelectedIndex != -1) )
+            {
+                foreach (var h in _repo._hotels)
+                {
+                    if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
+                    {
+                        List<Room> SuitableRooms = new List<Room>();
+                        _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
+
+                        if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
+                        {
+                            SuitableHotels.Add(h);
+                        }
+                    }
+                }
+            }
+
+            else
+            {
+                foreach (var h in _repo._hotels)
+                {
+                    List<Room> SuitableRooms = new List<Room>();
+                    _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
+
+
+                    if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
                     {
                         SuitableHotels.Add(h);
                     }
