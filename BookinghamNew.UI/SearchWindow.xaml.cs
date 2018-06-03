@@ -40,7 +40,7 @@ namespace BookinghamNew.UI
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
-            var wert = new HotelWindow();
+            var wert = new HotelWindow(_repo._hotels.First());
             wert.ShowDialog();
             List<Hotel> SuitableHotels = new List<Hotel>();
             int PossibleBeds = 0;
