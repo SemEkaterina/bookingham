@@ -14,6 +14,7 @@ namespace HotelsAndUsers.Core
         public List<Guest> Guests { get; set; }
         public List<Hotel> Hotels { get; set; }
         public Context Context { get; set; }
+        public List<Room> BinRooms { get; set; }
 
         public IEnumerable<Guest> _guests => Guests;
         public IEnumerable<Hotel> _hotels => Hotels;
@@ -69,7 +70,7 @@ namespace HotelsAndUsers.Core
                 {
                     r.Reservations = new List<Reservation>();
                 }
-                for (int i = 1; i <= r.Reservations.Count + 1; i++)
+                for (int i = 1; i <= r.Reservations.Count; i++)
                 {
                     if ((CheckInDate >= r.Reservations[i - 1].CheckOutDate) && (CheckInDate < r.Reservations[i].CheckInDate) && (r.PriceForNight <= MaxPrice))
                     {

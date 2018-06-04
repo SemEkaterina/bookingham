@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,19 +21,23 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class AddToBinWindow : Window
     {
-        public AddToBinWindow()
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
+        public Room Room { get; set; }
+
+        public AddToBinWindow(Room room)
         {
             InitializeComponent();
+            this.Room = room;
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            _repo.BinRooms.Add(Room);
         }
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

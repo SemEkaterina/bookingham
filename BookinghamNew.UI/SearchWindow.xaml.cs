@@ -39,18 +39,19 @@ namespace BookinghamNew.UI
         }
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
-        {
-            var wert = new HotelWindow(_repo._hotels.First());
-            wert.ShowDialog();
+        {            
             List<Hotel> SuitableHotels = new List<Hotel>();
             int PossibleBeds = 0;
             if(HotelNameCombobox.SelectedIndex != -1) 
             {
                 foreach (var h in _repo._hotels)
                 {
-                    if(h.Name == HotelNameCombobox.SelectedItem.ToString())
+                    if(h == HotelNameCombobox.SelectedItem)
                     {
                         ////////////////////////открыть окно отеля
+                        var hotelWindow = new HotelWindow(h);
+                        hotelWindow.Show();
+                        this.Close();
                     }
                 }
             }
@@ -59,6 +60,7 @@ namespace BookinghamNew.UI
             {
                 foreach (var h in _repo._hotels)
                 {
+                    h.SuitableRooms = null;
                     if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
                     {
                         List<Room> SuitableRooms = new List<Room>();
@@ -76,6 +78,7 @@ namespace BookinghamNew.UI
             {
                 foreach (var h in _repo._hotels)
                 {
+                    h.SuitableRooms = null;
                     List<Room> SuitableRooms = new List<Room>();
                     _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
 
@@ -83,9 +86,12 @@ namespace BookinghamNew.UI
                     if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
                     {
                         SuitableHotels.Add(h);
+                        h.SuitableRooms = SuitableRooms;
                     }
                 }
             }
+
+            /////////////////////Вывод списка отелей
         }
     }
 }

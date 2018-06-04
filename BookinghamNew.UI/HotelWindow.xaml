@@ -10,8 +10,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="202.5"/>
             <RowDefinition/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -24,34 +24,36 @@
                 <Image Height="24" Width="24" Source="Images/letter-x.png"/>
             </Button>
         </Canvas>
+
+
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="12">
-            <TextBlock Height="Auto" Name="HotelNameText" Margin="2" TextWrapping="Wrap" FontSize="20"></TextBlock>
-            <TextBlock Height="Auto" Name="HotelStarsCount"  Margin="2" TextWrapping="Wrap" ></TextBlock>
-            <TextBlock Height="Auto" Name="HotelAddressText"  Margin="2" TextWrapping="Wrap" ></TextBlock>
+            <TextBlock Height="24" Name="HotelNameText" Margin="2" TextWrapping="Wrap" ></TextBlock>
+            <TextBlock Height="24" Name="HotelStarsCount"  Margin="2" TextWrapping="Wrap" ></TextBlock>
+            <TextBlock Height="24" Name="HotelAddressText"  Margin="2" TextWrapping="Wrap" ></TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="18">Check-in time</TextBlock>
+            <TextBlock FontFamily="Century Gothic" FontSize="18">Check-in time</TextBlock>
             <!--<TextBox Height="24" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>-->
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="18" Name="CheckInTextblock"></TextBlock>
+            <TextBlock FontFamily="Century Gothic" FontSize="18" Name="CheckInTextblock"></TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="18">Check-out time</TextBlock>
+            <TextBlock FontFamily="Century Gothic" FontSize="18">Check-out time</TextBlock>
             <!--<TextBox Height="24" BorderBrush="{x:Null}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>-->
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="18" Name="CheckOutTextblock"></TextBlock>
+            <TextBlock FontFamily="Century Gothic" FontSize="18" Name="CheckOutTextblock"></TextBlock>
 
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="12">
-            <TextBlock FontFamily="Century Gothic" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">Email</TextBlock>
+            <TextBlock FontFamily="Century Gothic" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center">Email</TextBlock>
             <!--<TextBox Height="24" BorderBrush="{x:Null}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>-->
-            <TextBlock FontFamily="Century Gothic" Name="EmailTextBlock" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-            <TextBlock FontFamily="Century Gothic" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">Phone</TextBlock>
+            <TextBlock FontFamily="Century Gothic" Name="EmailTextBlock" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBlock FontFamily="Century Gothic" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center">Phone</TextBlock>
             <!--<TextBox Height="24" BorderBrush="{x:Null}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></TextBox>-->
-            <TextBlock FontFamily="Century Gothic" Name="PhoneTextBlock" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBlock FontFamily="Century Gothic" Name="PhoneTextBlock" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         </StackPanel>
 
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRomms_Click" Height="40" Width="250" Margin="5" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="24" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
     </Grid>
 </Window>
