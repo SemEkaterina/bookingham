@@ -19,7 +19,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="Images/novotelPaddington.jpg" Stretch="UniformToFill" Height="202.5" Width="354"></Image>
+            <Image Name="ImageOfHotel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="Images/novotelPaddington.jpg" Stretch="UniformToFill" Height="202.5" Width="354"></Image>
             <Button Click="ButtonExit_Click" Background="{x:Null}" BorderBrush="{x:Null}">
                 <Image Height="24" Width="24" Source="Images/letter-x.png"/>
             </Button>
@@ -27,9 +27,9 @@
 
 
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="12">
-            <TextBox Height="24" Name="HotelNameText" Margin="2" TextWrapping="Wrap" BorderBrush="{x:Null}"></TextBox>
-            <TextBox Height="24" Name="HotelStarsCount"  Margin="2" TextWrapping="Wrap" BorderBrush="{x:Null}"></TextBox>
-            <TextBox Height="24" Name="HotelAddressText"  Margin="2" TextWrapping="Wrap" BorderBrush="{x:Null}"></TextBox>
+            <TextBlock Height="24" Name="HotelNameText" Margin="2" TextWrapping="Wrap" ></TextBlock>
+            <TextBlock Height="24" Name="HotelStarsCount"  Margin="2" TextWrapping="Wrap" ></TextBlock>
+            <TextBlock Height="24" Name="HotelAddressText"  Margin="2" TextWrapping="Wrap" ></TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -54,6 +54,6 @@
             <TextBlock FontFamily="Century Gothic" Name="PhoneTextBlock" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         </StackPanel>
 
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRomms_Click" Height="40" Width="250" Margin="7" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRomms_Click" Height="40" Width="250" Margin="24" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
     </Grid>
 </Window>

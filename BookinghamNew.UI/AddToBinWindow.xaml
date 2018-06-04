@@ -1,0 +1,24 @@
+﻿<Window x:Class="BookinghamNew.UI.AddToBinWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookinghamNew.UI"
+        mc:Ignorable="d"
+        Title="AddToBinWindow" Height="160" Width="280" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="14" >Add selected room to the bin?</TextBlock>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Click="ButtonAdd_Click" FontFamily="Century Gothic" Width="90" Height="25" Margin="5" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Add</Button>
+            <Button Click="ButtonCancel_Click" FontFamily="Century Gothic" Width="90" Height="25" Margin="5" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -12,6 +12,7 @@ namespace HotelsAndUsers.Core.Model
         public string Name { get; set; }
         public int Stars { get; set; }
         public string Type { get; set; }
+        public string HotelImagePath { get; set; }
 
         public string Address { get; set; }
         public string District { get; set; }

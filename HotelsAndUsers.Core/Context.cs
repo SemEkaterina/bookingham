@@ -16,7 +16,7 @@ namespace HotelsAndUsers.Core
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Booking> Bookings { get; set; }
 
-        public Context() : base("Bookingham")
+        public Context() : base("Bookingham_New")
         {
             
         }
