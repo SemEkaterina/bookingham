@@ -31,18 +31,18 @@
         <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="12" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="24">Search:</TextBlock>
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Height="24" HorizontalAlignment="Center"  FontFamily="Century Gothic" FontSize="18">District of the hotel:</TextBlock>
-            <ComboBox Height="40" Name="DistrictHotelCombobox" Width="250" Background="White" BorderBrush="Black"/>
+            <ComboBox Name="DistrictHotelCombobox" VerticalContentAlignment="Center" Height="40" Width="250" Background="White" BorderBrush="Black" FontFamily="Century Gothic" FontSize="15" IsEditable="True"/>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Height="24" HorizontalAlignment="Center"  FontFamily="Century Gothic" FontSize="18">Name of the hotel::</TextBlock>
-            <ComboBox Height="40" Width="250" Name="HotelNameCombobox" DisplayMemberPath="Name" Background="White" BorderBrush="Black"/>
+            <ComboBox Height="40" Width="250" VerticalContentAlignment="Center" Name="HotelNameCombobox" DisplayMemberPath="Name" Background="White" BorderBrush="Black" FontFamily="Century Gothic" FontSize="15" IsEditable="True"/>
         </StackPanel>
 
 
         <StackPanel Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Height="24" HorizontalAlignment="Left"  FontFamily="Century Gothic" FontSize="18" Margin="5">Check-in:</TextBlock>
-            <DatePicker Background="#FF9D7776" Name="CheckInCalendar" BorderBrush="{x:Null}" FontFamily="Century Gothic"></DatePicker>
+            <DatePicker Background="#FF9D7776" Name="CheckInCalendar" BorderBrush="{x:Null}" FontFamily="Century Gothic" ></DatePicker>
         </StackPanel>
 
         <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -52,17 +52,17 @@
 
         <StackPanel Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Height="24" Width="100" FontFamily="Century Gothic" FontSize="18">Rooms</TextBlock>
-            <TextBox Height="24" Name="RoomsTextBox" Width="100">1</TextBox>
+            <TextBox Height="24" Name="RoomsTextBox" Width="100" FontFamily="Century Gothic" FontSize="18">1</TextBox>
         </StackPanel>
 
         <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Height="24" Width="100" FontFamily="Century Gothic" FontSize="18">People</TextBlock>
-            <TextBox Height="24" Name="PeopleTextBox" Width="100">1</TextBox>
+            <TextBox Height="24" Name="PeopleTextBox" Width="100" FontFamily="Century Gothic" FontSize="18">1</TextBox>
         </StackPanel>
 
         <StackPanel Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Height="24" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="18">Maximum price:</TextBlock>
-            <TextBox Height="24" Width="300" Name="MaxPriceTextBox" HorizontalContentAlignment="Center">25000</TextBox>
+            <TextBox Height="24" Width="300" Name="MaxPriceTextBox" HorizontalContentAlignment="Center" FontFamily="Century Gothic" FontSize="18">25000</TextBox>
         </StackPanel>
 
         <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonSearch_Click" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White">Search</Button>

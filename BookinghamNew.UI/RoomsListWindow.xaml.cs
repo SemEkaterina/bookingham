@@ -38,5 +38,10 @@ namespace BookinghamNew.UI
         {
 
         }
+
+        private void DataGridRooms_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

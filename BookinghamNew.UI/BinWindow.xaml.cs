@@ -23,5 +23,10 @@ namespace BookinghamNew.UI
         {
             InitializeComponent();
         }
+
+        private void ButtonProceed_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

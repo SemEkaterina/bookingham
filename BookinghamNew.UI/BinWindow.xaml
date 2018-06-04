@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
         Title="BinWindow" Height="640" Width="360" WindowStartupLocation="CenterScreen">
-    <Grid>
-        
+    
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FF9D7776"></Canvas>
+        <ScrollViewer Grid.Row="1" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
+            
+        </ScrollViewer>
+        <Button Click="ButtonProceed_Click" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" Margin="24">Proceed</Button>
     </Grid>
+    
 </Window>

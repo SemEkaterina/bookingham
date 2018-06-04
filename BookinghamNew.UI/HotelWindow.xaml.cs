@@ -38,7 +38,8 @@ namespace BookinghamNew.UI
 
         private void ButtonShowRomms_Click(object sender, RoutedEventArgs e)
         {
-
+            var ert = new RoomsListWindow();
+            ert.ShowDialog();
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
