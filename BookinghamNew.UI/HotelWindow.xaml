@@ -54,6 +54,6 @@
             <TextBlock FontFamily="Century Gothic" Name="PhoneTextBlock" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         </StackPanel>
 
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRomms_Click" Height="40" Width="250" Margin="24" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="24" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
     </Grid>
 </Window>

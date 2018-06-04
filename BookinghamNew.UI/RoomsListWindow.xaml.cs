@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,24 +20,30 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class RoomsListWindow : Window
     {
-        public RoomsListWindow()
+        public Hotel Hotel { get; set; }
+
+        public RoomsListWindow(Hotel hotel)
         {
             InitializeComponent();
+            this.Hotel = hotel;
+            DataGridRooms.ItemsSource = Hotel.SuitableRooms;
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
         {
-
+            var addtobinWindow = new AddToBinWindow(DataGridRooms.SelectedItem as Room);
+            addtobinWindow.Show();
         }
 
         private void BinButton(object sender, RoutedEventArgs e)
         {
-
+            var binWindow = new BinWindow();
+            binWindow.Show();
         }
 
         private void ExitToHotelButton(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

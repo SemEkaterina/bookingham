@@ -33,12 +33,14 @@ namespace BookinghamNew.UI
             CheckOutTextblock.Text = Hotel.CheckOutTime.ToString();
             EmailTextBlock.Text = Hotel.Email;
             PhoneTextBlock.Text = Hotel.PhoneNumber;
-
+            //ImageOfHotel.Source = Hotel.HotelImagePath.;
+            //Source = "Images/novotelPaddington.jpg"
         }
 
-        private void ButtonShowRomms_Click(object sender, RoutedEventArgs e)
+        private void ButtonShowRooms_Click(object sender, RoutedEventArgs e)
         {
-
+            var roomslistlWindow = new RoomsListWindow(Hotel);
+            roomslistlWindow.Show();
         }
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)

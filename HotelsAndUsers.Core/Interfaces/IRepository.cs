@@ -11,6 +11,7 @@ namespace HotelsAndUsers.Core.Interfaces
     {
         IEnumerable<Guest> _guests { get; }
         IEnumerable<Hotel> _hotels { get; }
+        List<Room> BinRooms { get; set; }
 
         int CheckGuest(string login, string password);
         Guest Authorize(string login, string password);
