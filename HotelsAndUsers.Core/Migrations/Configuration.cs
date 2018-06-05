@@ -40,10 +40,12 @@ namespace HotelsAndUsers.Core.Migrations
                     }
                 }
             }
+
             foreach (var hotel in ReadHotels)
             {
                 context.Hotels.Add(hotel);
             }
+
             foreach (var hotel in ReadHotels)
             {
                 foreach (var room in ReadRooms)
@@ -51,6 +53,8 @@ namespace HotelsAndUsers.Core.Migrations
                     context.Rooms.Add(room);
                 }
             }
+            context.SaveChanges();
+
         }
     }
 }

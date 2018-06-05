@@ -8,7 +8,7 @@ namespace HotelsAndUsers.Core.Model
 {
     public class Guest
     {
-        public int Id { get; set; }
+        public int GuestId { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
@@ -16,6 +16,6 @@ namespace HotelsAndUsers.Core.Model
         public int Age { get; set; }
         public string PassportId { get; set; }
         public string PassportNumber { get; set; }
-        public int PreviousBookingsId { get; set; }
+        public List<Booking> GuestBookings { get; set; }
     }
 }

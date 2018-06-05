@@ -55,9 +55,9 @@
     <Compile Include="Factory.cs" />
     <Compile Include="Helpers\Hash.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201806041918133_Initial.cs" />
-    <Compile Include="Migrations\201806041918133_Initial.Designer.cs">
-      <DependentUpon>201806041918133_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201806051051354_Initial.cs" />
+    <Compile Include="Migrations\201806051051354_Initial.Designer.cs">
+      <DependentUpon>201806051051354_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Booking.cs" />
@@ -73,8 +73,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EmbeddedResource Include="Migrations\201806041918133_Initial.resx">
-      <DependentUpon>201806041918133_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806051051354_Initial.resx">
+      <DependentUpon>201806051051354_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="users.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
