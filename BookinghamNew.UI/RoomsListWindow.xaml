@@ -22,15 +22,25 @@
         <Button Grid.Row="0" Grid.Column="0" Click="ExitToHotelButton" Height="48" Width="48" HorizontalAlignment="Left" Margin="12" Background="White" BorderBrush="{x:Null}">HOTEL</Button>
 
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
-            <DataGrid Name="DataGridRooms"  FontFamily="Century Gothic" AutoGenerateColumns="False" IsReadOnly="True">
-                <DataGrid.Columns>
+            <!--<DataGrid Name="DataGridRooms"  FontFamily="Century Gothic" AutoGenerateColumns="False" IsReadOnly="True">-->
+            <!--<DataGrid.Columns>
                     <DataGridTextColumn Width="1*" Header="Class" Binding="{Binding Class}"/>
                     <DataGridTextColumn Width="1*" Header="Beds" Binding="{Binding  BedNumber}"/>
                     <DataGridTextColumn Width="1*" Header="Price" Binding="{Binding  PriceForNight}"/>
-                </DataGrid.Columns>
-            </DataGrid>
+                </DataGrid.Columns>-->
+            <ListBox x:Name="roomsList" SelectionChanged="roomsList_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5" Orientation="Horizontal">
+                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=Class}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=BedNumber}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Price}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <!--</DataGrid>-->
         </ScrollViewer>
-
         <Button  Click="ButtonSelect_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" Margin="24">Select</Button>
     </Grid>
 </Window>

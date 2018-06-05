@@ -9,22 +9,36 @@
     
         <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FF9D7776"></Canvas>
-        <ScrollViewer Grid.Row="1" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
+        <Button Grid.Row="0" Click="RoomsListButton" Grid.Column="0" Height="40" Width="40" HorizontalAlignment="Left" Margin="16" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Height="24" Width="24" Source="Images/exit.png"></Image>
+        </Button>
             
+        <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
+            <ListBox x:Name="roomsList">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5" Orientation="Vertical">
+                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=Hotel.Name}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=Hotel.Address}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Class}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=BedNumber}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="22" Text="{Binding Path=Price}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </ScrollViewer>
+            
         <Button Click="ButtonProceed_Click" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" Margin="24">Proceed</Button>
     </Grid>
     

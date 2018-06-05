@@ -28,5 +28,10 @@ namespace BookinghamNew.UI
         {
 
         }
+
+        private void RoomsListButton(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

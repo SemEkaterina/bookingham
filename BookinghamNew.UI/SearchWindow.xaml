@@ -23,8 +23,8 @@
         </Grid.ColumnDefinitions>
 
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FF9D7776"></Canvas>
-        <Button Grid.Row="0" Grid.Column="1" Height="48" Width="48" HorizontalAlignment="Right" Margin="12" Background="White" FontFamily="Century Gothic">Log in</Button>
-        <Button Grid.Row="0" Click="ExitButton" Grid.Column="0" Height="48" Width="48" HorizontalAlignment="Left" Margin="12" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button Grid.Row="0" Grid.Column="1" Height="40" Width="40" HorizontalAlignment="Right" Margin="16" Background="White" FontFamily="Century Gothic">Log in</Button>
+        <Button Grid.Row="0" Click="ExitButton" Grid.Column="0" Height="40" Width="40" HorizontalAlignment="Left" Margin="16" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Image Height="24" Width="24" Source="Images/exit.png"></Image>
         </Button>
 

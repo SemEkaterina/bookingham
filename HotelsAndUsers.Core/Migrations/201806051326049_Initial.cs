@@ -13,15 +13,37 @@ namespace HotelsAndUsers.Core.Migrations
                     {
                         BookingId = c.Int(nullable: false, identity: true),
                         GuestId = c.Int(nullable: false),
-                        HotelId = c.Int(nullable: false),
                         BookingTime = c.DateTime(nullable: false),
                         CheckIn = c.DateTime(nullable: false),
                         CheckOut = c.DateTime(nullable: false),
                         TotalPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Hotel_HotelId = c.Int(),
                     })
                 .PrimaryKey(t => t.BookingId)
+                .ForeignKey("dbo.Hotels", t => t.Hotel_HotelId)
                 .ForeignKey("dbo.Guests", t => t.GuestId, cascadeDelete: true)
-                .Index(t => t.GuestId);
+                .Index(t => t.GuestId)
+                .Index(t => t.Hotel_HotelId);
+            
+            CreateTable(
+                "dbo.Hotels",
+                c => new
+                    {
+                        HotelId = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Stars = c.Int(nullable: false),
+                        Type = c.String(),
+                        HotelImagePath = c.String(),
+                        Address = c.String(),
+                        District = c.String(),
+                        Description = c.String(),
+                        PhoneNumber = c.String(),
+                        CheckInTime = c.String(),
+                        CheckOutTime = c.String(),
+                        Email = c.String(),
+                        Password = c.String(),
+                    })
+                .PrimaryKey(t => t.HotelId);
             
             CreateTable(
                 "dbo.Rooms",
@@ -34,17 +56,17 @@ namespace HotelsAndUsers.Core.Migrations
                         BedNumber = c.Int(nullable: false),
                         PriceForNight = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Description = c.String(),
-                        Booking_BookingId = c.Int(),
                         Hotel_HotelId = c.Int(),
                         Hotel_HotelId1 = c.Int(),
+                        Booking_BookingId = c.Int(),
                     })
                 .PrimaryKey(t => t.RoomId)
-                .ForeignKey("dbo.Bookings", t => t.Booking_BookingId)
                 .ForeignKey("dbo.Hotels", t => t.Hotel_HotelId)
                 .ForeignKey("dbo.Hotels", t => t.Hotel_HotelId1)
-                .Index(t => t.Booking_BookingId)
+                .ForeignKey("dbo.Bookings", t => t.Booking_BookingId)
                 .Index(t => t.Hotel_HotelId)
-                .Index(t => t.Hotel_HotelId1);
+                .Index(t => t.Hotel_HotelId1)
+                .Index(t => t.Booking_BookingId);
             
             CreateTable(
                 "dbo.Reservations",
@@ -75,44 +97,26 @@ namespace HotelsAndUsers.Core.Migrations
                     })
                 .PrimaryKey(t => t.GuestId);
             
-            CreateTable(
-                "dbo.Hotels",
-                c => new
-                    {
-                        HotelId = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Stars = c.Int(nullable: false),
-                        Type = c.String(),
-                        HotelImagePath = c.String(),
-                        Address = c.String(),
-                        District = c.String(),
-                        Description = c.String(),
-                        PhoneNumber = c.String(),
-                        CheckInTime = c.String(),
-                        CheckOutTime = c.String(),
-                        Email = c.String(),
-                        Password = c.String(),
-                    })
-                .PrimaryKey(t => t.HotelId);
-            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Rooms", "Hotel_HotelId1", "dbo.Hotels");
-            DropForeignKey("dbo.Rooms", "Hotel_HotelId", "dbo.Hotels");
             DropForeignKey("dbo.Bookings", "GuestId", "dbo.Guests");
             DropForeignKey("dbo.Rooms", "Booking_BookingId", "dbo.Bookings");
+            DropForeignKey("dbo.Bookings", "Hotel_HotelId", "dbo.Hotels");
+            DropForeignKey("dbo.Rooms", "Hotel_HotelId1", "dbo.Hotels");
+            DropForeignKey("dbo.Rooms", "Hotel_HotelId", "dbo.Hotels");
             DropForeignKey("dbo.Reservations", "RoomId", "dbo.Rooms");
             DropIndex("dbo.Reservations", new[] { "RoomId" });
+            DropIndex("dbo.Rooms", new[] { "Booking_BookingId" });
             DropIndex("dbo.Rooms", new[] { "Hotel_HotelId1" });
             DropIndex("dbo.Rooms", new[] { "Hotel_HotelId" });
-            DropIndex("dbo.Rooms", new[] { "Booking_BookingId" });
+            DropIndex("dbo.Bookings", new[] { "Hotel_HotelId" });
             DropIndex("dbo.Bookings", new[] { "GuestId" });
-            DropTable("dbo.Hotels");
             DropTable("dbo.Guests");
             DropTable("dbo.Reservations");
             DropTable("dbo.Rooms");
+            DropTable("dbo.Hotels");
             DropTable("dbo.Bookings");
         }
     }

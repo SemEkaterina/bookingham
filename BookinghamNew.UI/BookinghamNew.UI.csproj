@@ -170,5 +170,14 @@
   <ItemGroup>
     <Resource Include="Images\phife-365061-unsplash.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\doubleTreeByHiltonWestminster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\interContinentalLondonParkLine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\stJamesHotelAndClub.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

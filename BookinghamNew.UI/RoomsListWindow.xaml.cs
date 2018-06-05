@@ -26,12 +26,12 @@ namespace BookinghamNew.UI
         {
             InitializeComponent();
             this.Hotel = hotel;
-            DataGridRooms.ItemsSource = Hotel.SuitableRooms;
+            roomsList.ItemsSource = Hotel.SuitableRooms;
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
         {
-            var addtobinWindow = new AddToBinWindow(DataGridRooms.SelectedItem as Room);
+            var addtobinWindow = new AddToBinWindow(roomsList.SelectedItem as Room);
             addtobinWindow.Show();
         }
 
@@ -47,6 +47,11 @@ namespace BookinghamNew.UI
         }
 
         private void DataGridRooms_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void roomsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

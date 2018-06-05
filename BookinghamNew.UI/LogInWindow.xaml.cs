@@ -31,9 +31,9 @@ namespace BookinghamNew.UI
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (_repo.CheckGuest(textBoxLogin.Text, textBoxPassword.Text) == 1)
+            if (_repo.CheckGuest(textBoxLogin.Text, passwordBoxPassword.Password) == 1)
             {
-                Guest = _repo.Authorize(textBoxLogin.Text, textBoxPassword.Text);
+                Guest = _repo.Authorize(textBoxLogin.Text, passwordBoxPassword.Password);
                 ///////////////////////
                 Close();
             }
@@ -44,13 +44,13 @@ namespace BookinghamNew.UI
                 return;
             }
 
-            else if (string.IsNullOrWhiteSpace(textBoxPassword.Text))
+            else if (string.IsNullOrWhiteSpace(passwordBoxPassword.Password))
             {
                 MessageBox.Show("Password cannot be empty", "Error");
-                textBoxPassword.Focus();
+                passwordBoxPassword.Focus();
                 return;
             }
-            else if (_repo.CheckGuest(textBoxLogin.Text, textBoxPassword.Text) == 0)
+            else if (_repo.CheckGuest(textBoxLogin.Text, passwordBoxPassword.Password) == 0)
             {
                 MessageBox.Show("Incorrect login/password");
             }

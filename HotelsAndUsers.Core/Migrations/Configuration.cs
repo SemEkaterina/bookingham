@@ -23,7 +23,6 @@ namespace HotelsAndUsers.Core.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
-
             List<Hotel> ReadHotels = new List<Hotel>();
             List<Room> ReadRooms = new List<Room>();
             //List<Guest> ReadUsers = new List<Guest>();
