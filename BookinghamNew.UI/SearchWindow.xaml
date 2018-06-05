@@ -90,6 +90,6 @@
             <TextBlock Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="18">Maximum price</TextBlock>
             <TextBox Height="Auto" Width="250" Name="MaxPriceTextBox" HorizontalContentAlignment="Center" FontFamily="Century Gothic" FontSize="18">250</TextBox>
         </StackPanel>
-        <Button Click="ButtonSearch_Click" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin=" 1 24 1 64" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Search</Button>
+        <Button Click="ButtonSearch_Click" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin=" 1 24 1 48" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Search</Button>
     </Grid>
 </Window>

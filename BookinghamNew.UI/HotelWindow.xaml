@@ -48,7 +48,7 @@
                 <ImageBrush ImageSource="Images/interContinentalLondonParkLine.jpg" Stretch="UniformToFill"/>
             </Canvas.Background>
             <Button Click="ButtonExit_Click" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}">
-                <Image Height="24" Width="24" Margin="7" Source="Images/letter-x.png"/>
+                <Image Height="22" Width="22" Margin="7" Source="Images/letter-x.png" Opacity="0.6"/>
             </Button>
         </Canvas>
 
@@ -76,13 +76,13 @@
 
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="7">
             <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">Email</TextBlock>
             <TextBlock Height="Auto" FontFamily="Century Gothic" Name="EmailTextBlock" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
             <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">Phone</TextBlock>
             <TextBlock Height="Auto" FontFamily="Century Gothic" Name="PhoneTextBlock" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         </StackPanel>
 
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Cursor="Hand" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 64" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Cursor="Hand" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
     </Grid>
 </Window>
