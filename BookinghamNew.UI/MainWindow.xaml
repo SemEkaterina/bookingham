@@ -6,17 +6,46 @@
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
         Title="EntranceWindow" Height="640" Width="360" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="brdr" TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+         </Style>
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Image Grid.Row="0" Grid.RowSpan="3" Source="Images/logIn.jpg" Stretch="UniformToFill"></Image>
-        <TextBlock Grid.Row="0" Height="48" Width="250" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Century Gothic" Foreground="White" FontSize="28">Your travel helper</TextBlock>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Click="ButtonUser_Click" Height="40" Width="250" Margin="7" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="#FF9D7776">Start as user</Button>
-            <Button Click="ButtonAdmin_Click"  Height="40" Width="250" Margin="7" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" BorderBrush="#FF9D7776">Start as admin</Button>
+        <StackPanel Grid.Row="0" VerticalAlignment="Bottom" Margin="49 5">
+            <TextBlock Height="Auto" Width="Auto" HorizontalAlignment="Left" FontFamily="Century Gothic" Foreground="White" FontSize="38">YOUR </TextBlock>
+            <TextBlock Height="Auto" Width="Auto" HorizontalAlignment="Left" FontFamily="Century Gothic" Foreground="White" FontSize="38">TRAVEL</TextBlock>
+            <TextBlock Height="Auto" Width="Auto" HorizontalAlignment="Left" FontFamily="Century Gothic" Foreground="White" FontSize="38">HELPER</TextBlock>
         </StackPanel>
-        <TextBlock Grid.Row="1" Margin="5" Background="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Century Gothic" Foreground="#FFFFFF" FontSize="16" >www.bookingham.com</TextBlock>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5 48 5 64">
+            <Button Click="ButtonUser_Click" Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Start as user</Button>
+            <Button Click="ButtonAdmin_Click"  Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Start as admin</Button>
+        </StackPanel>
+        
     </Grid>
 </Window>
