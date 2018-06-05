@@ -29,7 +29,7 @@ namespace BookinghamNew.UI
 
         private void ButtonUser_Click(object sender, RoutedEventArgs e)
         {
-            var searchWindow = new SearchWindow();
+            var searchWindow = new SearchWindow(null);
             searchWindow.Show();
             this.Close();
         }
