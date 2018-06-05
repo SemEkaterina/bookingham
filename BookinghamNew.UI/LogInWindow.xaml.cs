@@ -34,7 +34,7 @@ namespace BookinghamNew.UI
             if (_repo.CheckGuest(textBoxLogin.Text, passwordBoxPassword.Password) == 1)
             {
                 Guest = _repo.Authorize(textBoxLogin.Text, passwordBoxPassword.Password);
-                ///////////////////////
+                ///////////////////////открытие профиля отеля или гостя
                 Close();
             }
             else if (string.IsNullOrWhiteSpace(textBoxLogin.Text))

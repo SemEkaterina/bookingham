@@ -46,11 +46,6 @@ namespace BookinghamNew.UI
             this.Close();
         }
 
-        private void DataGridRooms_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void roomsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
