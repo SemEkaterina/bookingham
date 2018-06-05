@@ -39,7 +39,7 @@
         <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="2" Source="Images/logIn.jpg" Stretch="UniformToFill"></Image>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="24">
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="18">Email</TextBlock>
-            <TextBox TextWrapping="Wrap" Name="textBoxLogin" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
+            <TextBox Name="textBoxEmail" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
             <TextBlock Grid.Row="2" Grid.Column="0" Margin="1" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="18">Password</TextBlock>
             <PasswordBox Name="passwordBoxPassword" Grid.Row="2" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></PasswordBox>
         </StackPanel>

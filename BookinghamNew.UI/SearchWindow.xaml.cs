@@ -31,7 +31,7 @@ namespace BookinghamNew.UI
             HotelNameCombobox.ItemsSource = _repo._hotels;
         }
 
-        private void ExitButton(object sender, RoutedEventArgs e)
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             var mainWindow = new MainWindow();
             mainWindow.Show();
@@ -92,6 +92,11 @@ namespace BookinghamNew.UI
             }
 
             /////////////////////Вывод списка отелей
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

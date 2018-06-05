@@ -31,16 +31,16 @@ namespace BookinghamNew.UI
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (_repo.CheckGuest(textBoxLogin.Text, passwordBoxPassword.Password) == 1)
+            if (_repo.CheckGuest(textBoxEmail.Text, passwordBoxPassword.Password) == 1)
             {
-                Guest = _repo.Authorize(textBoxLogin.Text, passwordBoxPassword.Password);
+                Guest = _repo.Authorize(textBoxEmail.Text, passwordBoxPassword.Password);
                 ///////////////////////
                 Close();
             }
-            else if (string.IsNullOrWhiteSpace(textBoxLogin.Text))
+            else if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
             {
                 MessageBox.Show("Email cannot be empty", "Error");
-                textBoxLogin.Focus();
+                textBoxEmail.Focus();
                 return;
             }
 
@@ -50,7 +50,7 @@ namespace BookinghamNew.UI
                 passwordBoxPassword.Focus();
                 return;
             }
-            else if (_repo.CheckGuest(textBoxLogin.Text, passwordBoxPassword.Password) == 0)
+            else if (_repo.CheckGuest(textBoxEmail.Text, passwordBoxPassword.Password) == 0)
             {
                 MessageBox.Show("Incorrect login/password");
             }
@@ -64,6 +64,6 @@ namespace BookinghamNew.UI
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
 
-        }
+        }       
     }
 }

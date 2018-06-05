@@ -70,6 +70,9 @@
     <Compile Include="BinWindow.xaml.cs">
       <DependentUpon>BinWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HotelsListWindow.xaml.cs">
+      <DependentUpon>HotelsListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HotelWindow.xaml.cs">
       <DependentUpon>HotelWindow.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BinWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HotelsListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,13 +161,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\arrow.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\logIn.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\exit.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HotelsAndUsers.Core\HotelsAndUsers.Core.csproj">
@@ -175,9 +176,6 @@
     <Resource Include="Images\letter-x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\phife-365061-unsplash.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\doubleTreeByHiltonWestminster.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -187,7 +185,22 @@
     <Resource Include="Images\stJamesHotelAndClub.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\world.png" />
+    <Resource Include="Images\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\search_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\order.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,7 +28,7 @@
                     <DataGridTextColumn Width="1*" Header="Beds" Binding="{Binding  BedNumber}"/>
                     <DataGridTextColumn Width="1*" Header="Price" Binding="{Binding  PriceForNight}"/>
                 </DataGrid.Columns>-->
-            <ListBox x:Name="roomsList" SelectionChanged="roomsList_SelectionChanged">
+            <ListBox x:Name="roomsList" SelectionChanged="RoomsList_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="5" Orientation="Horizontal">
