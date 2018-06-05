@@ -92,9 +92,9 @@ namespace BookinghamNew.UI
             }
 
             /////////////////////Вывод списка отелей
-        }
+        }       
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

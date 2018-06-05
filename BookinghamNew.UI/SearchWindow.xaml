@@ -55,7 +55,7 @@
         </Button>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="7" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Margin="5" FontFamily="Century Gothic" FontSize="26" Foreground="Black">Search</TextBlock>
-            <Image Margin="5" Height="24" Width="24" Source="Images/search.png"></Image>
+            <Image Margin="5" Height="24" Width="24" Source="Images/search_black.png"></Image>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="12">
             <TextBlock Height="24" HorizontalAlignment="Center"  FontFamily="Century Gothic" FontSize="18">District of the hotel</TextBlock>
@@ -90,6 +90,6 @@
             <TextBlock Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="18">Maximum price</TextBlock>
             <TextBox Height="Auto" Width="250" Name="MaxPriceTextBox" HorizontalContentAlignment="Center" FontFamily="Century Gothic" FontSize="18">250</TextBox>
         </StackPanel>
-        <Button Click="ButtonSearch_Click" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin=" 1 24 1 48" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Search</Button>
+        <Button Click="ButtonSearch_Click" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin=" 1 24 1 64" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Search</Button>
     </Grid>
 </Window>

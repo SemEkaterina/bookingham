@@ -43,7 +43,7 @@
         </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
         <Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" FontFamily="Century Gothic" BorderBrush="{x:Null}">
-            <Image Height="28" Width="28" Source="Images/order.png"></Image>
+            <Image Height="28" Width="28" Source="Images/order_white.png"></Image>
         </Button>
         <Button Grid.Row="0" Grid.Column="0" Click="ExitToSearchPageButton_Click" Height="50" Width="50" HorizontalAlignment="Left" Margin="12" Background="{x:Null}" BorderBrush="{x:Null}">
             <Image Height="28" Width="28" Source="Images/search_white.png"></Image>

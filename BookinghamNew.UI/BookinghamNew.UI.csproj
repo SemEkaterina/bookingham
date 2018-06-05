@@ -191,7 +191,7 @@
     <Resource Include="Images\log-out.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\search.png" />
+    <Resource Include="Images\search_black.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\garbage.png" />
@@ -200,7 +200,19 @@
     <Resource Include="Images\search_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\order.png" />
+    <Resource Include="Images\order_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\order_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\favorite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

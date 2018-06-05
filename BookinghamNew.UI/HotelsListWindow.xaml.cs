@@ -38,5 +38,10 @@ namespace BookinghamNew.UI
         {
 
         }
+
+        private void RoomsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

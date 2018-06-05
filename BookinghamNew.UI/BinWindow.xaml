@@ -20,7 +20,7 @@
         </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FF9D7776"></Canvas>
         <Button Grid.Row="0" Click="RoomsListButton" Grid.Column="0" Height="40" Width="40" HorizontalAlignment="Left" Margin="16" Background="White" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Image Height="24" Width="24" Source="Images/exit.png"></Image>
+            <Image Height="24" Width="24" Source="Images/cancel.png"></Image>
         </Button>
             
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
