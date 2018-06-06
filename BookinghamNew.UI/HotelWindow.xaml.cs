@@ -46,6 +46,7 @@ namespace BookinghamNew.UI
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
             ////////////вернуться к списку отелей
+            this.Close();
         }
     }
 }

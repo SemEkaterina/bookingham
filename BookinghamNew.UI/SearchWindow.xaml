@@ -59,7 +59,7 @@
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="12">
             <TextBlock Height="24" HorizontalAlignment="Center"  FontFamily="Century Gothic" FontSize="18">District of the hotel</TextBlock>
-            <ComboBox Name="DistrictHotelCombobox" VerticalContentAlignment="Center" Height="40" Width="250" BorderBrush="Black" FontFamily="Century Gothic" FontSize="15" IsEditable="True" Background="{x:Null}"/>
+            <ComboBox Name="DistrictHotelCombobox" SelectionChanged="DistrictHotelCombobox_SelectionChanged" VerticalContentAlignment="Center" Height="40" Width="250" BorderBrush="Black" FontFamily="Century Gothic" FontSize="15" IsEditable="True" Background="{x:Null}"/>
             <TextBlock Height="24" HorizontalAlignment="Center"  FontFamily="Century Gothic" FontSize="18">Name of the hotel</TextBlock>
             <ComboBox Height="40" Width="250" VerticalContentAlignment="Center" Name="HotelNameCombobox" DisplayMemberPath="Name" Background="White" BorderBrush="Black" FontFamily="Century Gothic" FontSize="15" IsEditable="True"/>
         </StackPanel>
