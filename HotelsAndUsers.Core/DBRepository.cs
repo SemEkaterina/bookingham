@@ -26,7 +26,7 @@ namespace HotelsAndUsers.Core
                 using (Context = new Context())
                 {
                     Guests = Context.Guests.ToList();
-                    Hotels = Context.Hotels.ToList();                   
+                    Hotels = Context.Hotels.Include("Rooms").ToList();                   
                 }
             }
             catch

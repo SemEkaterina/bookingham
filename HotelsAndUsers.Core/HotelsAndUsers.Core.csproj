@@ -56,9 +56,9 @@
     <Compile Include="FileRepository.cs" />
     <Compile Include="Helpers\Hash.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201806051326049_Initial.cs" />
-    <Compile Include="Migrations\201806051326049_Initial.Designer.cs">
-      <DependentUpon>201806051326049_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201806062027182_Initial.cs" />
+    <Compile Include="Migrations\201806062027182_Initial.Designer.cs">
+      <DependentUpon>201806062027182_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Booking.cs" />
@@ -70,12 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EmbeddedResource Include="hotels.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="hotels.json" />
     <None Include="packages.config" />
-    <EmbeddedResource Include="Migrations\201806051326049_Initial.resx">
-      <DependentUpon>201806051326049_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806062027182_Initial.resx">
+      <DependentUpon>201806062027182_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="users.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
