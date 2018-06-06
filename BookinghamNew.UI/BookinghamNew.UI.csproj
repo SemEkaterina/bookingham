@@ -220,5 +220,8 @@
   <ItemGroup>
     <Resource Include="Images\hotel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hotels\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

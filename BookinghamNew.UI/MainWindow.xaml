@@ -43,8 +43,18 @@
             <TextBlock Height="Auto" Width="Auto" HorizontalAlignment="Left" FontFamily="Century Gothic" Foreground="White" FontSize="38">HELPER</TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5 48 5 64">
-            <Button Click="ButtonUser_Click" Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Start as user</Button>
-            <Button Click="ButtonAdmin_Click"  Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Start as admin</Button>
+            <Button Click="ButtonUser_Click" Height="40" Width="250" Margin="1" Background="#FFEA4636" Cursor="Hand" BorderBrush="{x:Null}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock FontSize="18" FontFamily="Century Gothic" Width="200" Foreground="White" VerticalAlignment="Center">Start as user</TextBlock>
+                    <Image Height="26" Width="26" HorizontalAlignment="Right" Source="Images/next.png"></Image>
+                </StackPanel>
+            </Button>
+            <Button Click="ButtonAdmin_Click"  Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock FontSize="18" FontFamily="Century Gothic" Width="200" Foreground="White" VerticalAlignment="Center">Start as admin</TextBlock>
+                    <Image Height="26" Width="26" HorizontalAlignment="Right" Source="Images/next.png"></Image>
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
