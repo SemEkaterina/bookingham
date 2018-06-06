@@ -53,7 +53,6 @@ namespace BookinghamNew.UI
                         ////////////////////////открыть окно отеля
                         var hotelWindow = new HotelWindow(h);
                         hotelWindow.Show();
-                        this.Close();
                     }
                 }
             }
@@ -74,6 +73,10 @@ namespace BookinghamNew.UI
                         }
                     }
                 }
+                /////////////////////Вывод списка отелей
+                var hotelslistWindow = new HotelsListWindow(SuitableHotels);
+                hotelslistWindow.Show();
+                this.Close();
             }
 
             else
@@ -91,12 +94,13 @@ namespace BookinghamNew.UI
                         h.SuitableRooms = SuitableRooms;
                     }
                 }
+                /////////////////////Вывод списка отелей
+                var hotelslistWindow = new HotelsListWindow(SuitableHotels);
+                hotelslistWindow.Show();
+                this.Close();
             }
 
-            /////////////////////Вывод списка отелей
-            var hotelslistWindow = new HotelsListWindow(SuitableHotels);
-            hotelslistWindow.Show();
-            this.Close();
+            
         }
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
@@ -104,6 +108,25 @@ namespace BookinghamNew.UI
             var loginWindow = new LogInWindow();
             loginWindow.Show();
             this.Close();
+        }
+
+        private void DistrictHotelCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DistrictHotelCombobox.Focus();
+            if (DistrictHotelCombobox.SelectedItem != null)
+            {
+                var selecteddistrict = DistrictHotelCombobox.SelectedItem.ToString();
+                List<Hotel> somehotels = new List<Hotel>();
+                foreach (var h in _repo._hotels)
+                {
+                    if (h.District == selecteddistrict)
+                    {
+                        somehotels.Add(h);
+                    }
+                    
+                }
+                HotelNameCombobox.ItemsSource = somehotels;
+            }
         }
     }
 }

@@ -33,14 +33,12 @@ namespace BookinghamNew.UI
         {
             var hotelWindow = new HotelWindow(hotelsList.SelectedItem as Hotel);
             hotelWindow.Show();
-            this.Close();
         }
 
         private void BinButton_Click(object sender, RoutedEventArgs e)
         {
             var binWindow = new BinWindow();
             binWindow.Show();
-            this.Close();
         }
 
         private void ExitToSearchPageButton_Click(object sender, RoutedEventArgs e)

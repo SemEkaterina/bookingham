@@ -76,7 +76,7 @@ namespace BookinghamNew.UI
                         Password = textBoxPassword.Password,
                     };
                     _repo.RegisterGuest(Guest);
-                    DialogResult = true;
+                this.Close();
                 }
            
         }
