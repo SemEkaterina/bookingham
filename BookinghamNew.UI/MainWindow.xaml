@@ -46,6 +46,5 @@
             <Button Click="ButtonUser_Click" Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Start as user</Button>
             <Button Click="ButtonAdmin_Click"  Height="40" Width="250" Margin="1" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Start as admin</Button>
         </StackPanel>
-        
     </Grid>
 </Window>

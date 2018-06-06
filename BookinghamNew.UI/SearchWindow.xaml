@@ -55,7 +55,7 @@
         </Button>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="7" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Margin="5" FontFamily="Century Gothic" FontSize="26" Foreground="Black">Search</TextBlock>
-            <Image Margin="5" Height="24" Width="24" Source="Images/search.png"></Image>
+            <Image Margin="5" Height="24" Width="24" Source="Images/search_black.png"></Image>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="12">
             <TextBlock Height="24" HorizontalAlignment="Center"  FontFamily="Century Gothic" FontSize="18">District of the hotel</TextBlock>

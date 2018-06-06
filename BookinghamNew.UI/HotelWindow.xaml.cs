@@ -41,7 +41,7 @@ namespace BookinghamNew.UI
         {
             var roomslistlWindow = new RoomsListWindow(Hotel);
             roomslistlWindow.Show();
-        }
+        }        
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {

@@ -6,6 +6,30 @@
        xmlns:local="clr-namespace:BookinghamNew.UI"
        mc:Ignorable="d"
        Title="RoomsListWindow" Height="640" Width="360" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="brdr" TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        </Style>
+    </Window.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -17,18 +41,16 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FF9D7776"></Canvas>
-        <Button Grid.Row="0" Grid.Column="1" Click="BinButton" Height="48" Width="48" HorizontalAlignment="Right" Margin="12" Background="White" FontFamily="Century Gothic">BIN</Button>
-        <Button Grid.Row="0" Grid.Column="0" Click="ExitToHotelButton" Height="48" Width="48" HorizontalAlignment="Left" Margin="12" Background="White" BorderBrush="{x:Null}">HOTEL</Button>
+        <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
+        <Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="48" Width="48" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" FontFamily="Century Gothic" BorderBrush="{x:Null}">
+            <Image Height="30" Width="30" Source="Images/garbage.png"></Image>
+        </Button>
+        <Button Grid.Row="0" Grid.Column="0" Click="ExitToHotelButton" Height="50" Width="50" Cursor="Hand" HorizontalAlignment="Left" Margin="12" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Image Height="30" Width="30" Source="Images/hotel.png"></Image>
+        </Button>
 
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
-            <!--<DataGrid Name="DataGridRooms"  FontFamily="Century Gothic" AutoGenerateColumns="False" IsReadOnly="True">-->
-            <!--<DataGrid.Columns>
-                    <DataGridTextColumn Width="1*" Header="Class" Binding="{Binding Class}"/>
-                    <DataGridTextColumn Width="1*" Header="Beds" Binding="{Binding  BedNumber}"/>
-                    <DataGridTextColumn Width="1*" Header="Price" Binding="{Binding  PriceForNight}"/>
-                </DataGrid.Columns>-->
-            <ListBox x:Name="roomsList" SelectionChanged="roomsList_SelectionChanged">
+            <ListBox x:Name="roomsList" SelectionChanged="RoomsList_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="5" Orientation="Horizontal">
@@ -39,8 +61,7 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <!--</DataGrid>-->
         </ScrollViewer>
-        <Button  Click="ButtonSelect_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FF9D7776" Foreground="White" Margin="24">Select</Button>
+        <Button Click="ButtonSelect_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Select</Button>
     </Grid>
 </Window>
