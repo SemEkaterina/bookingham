@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Helpers;
+using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +22,9 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class RegistrationWindow : Window
     {
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
+        public Guest Guest { get; set; }
+
         public RegistrationWindow()
         {
             InitializeComponent();
@@ -26,7 +32,53 @@ namespace BookinghamNew.UI
 
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxLogin.Text))
+            {
+                MessageBox.Show("Password cannot be empty", "Error");
+                textBoxLogin.Focus();
+                return;
+            }
 
+            else if (string.IsNullOrWhiteSpace(textBoxName.Text))
+            {
+                MessageBox.Show("Name cannot be empty", "Error");
+                textBoxName.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxSurname.Text))
+            {
+                MessageBox.Show("Surname cannot be empty", "Error");
+                textBoxSurname.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxPassword.Password))
+            {
+                MessageBox.Show("Password cannot be empty", "Error");
+                textBoxPassword.Focus();
+                return;
+            }
+
+            int check = _repo.CheckGuest(textBoxLogin.Text, Hash.GetHash(textBoxPassword.Password));
+            if (check == 1)
+            {
+                MessageBox.Show("This user has been already created", "Error");
+                return;
+            }               
+                if (Guest == null)
+                {
+                    Guest = new Guest
+                    {
+                        Name = textBoxName.Text,
+                        Surname = textBoxSurname.Text,
+                        Email = textBoxLogin.Text,
+                        Password = textBoxPassword.Password,
+                    };
+                    _repo.RegisterGuest(Guest);
+                    DialogResult = true;
+                }
+           
         }
     }
 }

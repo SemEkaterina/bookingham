@@ -34,7 +34,10 @@ namespace BookinghamNew.UI
             if (_repo.CheckGuest(textBoxEmail.Text, passwordBoxPassword.Password) == 1)
             {
                 Guest = _repo.Authorize(textBoxEmail.Text, passwordBoxPassword.Password);
-                ///////////////////////
+                ///////////////////////открытие профиля отеля или гостя
+                var searchWindow = new SearchWindow(Guest);
+                searchWindow.Show();
+                this.Close();
                 Close();
             }
             else if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
@@ -63,7 +66,9 @@ namespace BookinghamNew.UI
 
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
-
-        }       
+            var registerWindow = new RegistrationWindow();
+            registerWindow.Show();
+            this.Close();
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,12 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class BinWindow : Window
     {
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
+
         public BinWindow()
         {
             InitializeComponent();
+            roomsList.ItemsSource = _repo.BinRooms;
         }
 
         private void ButtonProceed_Click(object sender, RoutedEventArgs e)
@@ -31,7 +36,7 @@ namespace BookinghamNew.UI
 
         private void RoomsListButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

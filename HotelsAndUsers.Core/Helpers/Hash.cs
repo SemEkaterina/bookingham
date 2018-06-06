@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelsAndUsers.Core.Helpers
 {
-    class Hash
+    public class Hash
     {
         public static string GetHash(string password)
         {

@@ -23,12 +23,14 @@ namespace BookinghamNew.UI
     {
         HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
         List<string> Districts = new List<string>() { "Center", "North", "South", "West", "East","North-West", "North-East", "South-West", "South-East" };
+        public Guest Guest { get; set; }
 
-        public SearchWindow()
+        public SearchWindow(Guest Guest)
         {
             InitializeComponent();
             DistrictHotelCombobox.ItemsSource = Districts;
             HotelNameCombobox.ItemsSource = _repo._hotels;
+            this.Guest = Guest;
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -92,11 +94,16 @@ namespace BookinghamNew.UI
             }
 
             /////////////////////Вывод списка отелей
-        }       
+            var hotelslistWindow = new HotelsListWindow(SuitableHotels);
+            hotelslistWindow.Show();
+            this.Close();
+        }
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var loginWindow = new LogInWindow();
+            loginWindow.Show();
+            this.Close();
         }
     }
 }
