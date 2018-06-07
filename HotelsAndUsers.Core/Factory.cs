@@ -11,6 +11,6 @@ namespace HotelsAndUsers.Core
         private static Factory _instance;
         public static Factory Instance => _instance ?? (_instance = new Factory());
         private Interfaces.IRepository _repo;
-        public Interfaces.IRepository GetRepository() => _repo ?? (_repo = new FileRepository());
+        public Interfaces.IRepository GetRepository() => _repo ?? (_repo = new DBRepository());
     }
 }

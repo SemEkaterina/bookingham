@@ -69,6 +69,9 @@ namespace HotelsAndUsers.Core
                 if (r.Reservations == null)
                 {
                     r.Reservations = new List<Reservation>();
+                    SuitableRooms.Add(r);
+                    PossibleBeds += r.BedNumber;
+                    break;
                 }
                 for (int i = 1; i <= r.Reservations.Count; i++)
                 {

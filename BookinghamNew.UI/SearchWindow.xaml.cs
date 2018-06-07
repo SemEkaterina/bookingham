@@ -51,6 +51,9 @@ namespace BookinghamNew.UI
                     if(h == HotelNameCombobox.SelectedItem)
                     {
                         ////////////////////////открыть окно отеля
+                        List<Room> SuitableRooms = new List<Room>();
+                        _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
+                        h.SuitableRooms = SuitableRooms;
                         var hotelWindow = new HotelWindow(h);
                         hotelWindow.Show();
                     }
@@ -66,7 +69,7 @@ namespace BookinghamNew.UI
                     {
                         List<Room> SuitableRooms = new List<Room>();
                         _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
-
+                        h.SuitableRooms = SuitableRooms;
                         if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
                         {
                             SuitableHotels.Add(h);

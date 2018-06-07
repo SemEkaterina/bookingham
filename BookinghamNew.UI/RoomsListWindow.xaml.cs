@@ -35,11 +35,10 @@ namespace BookinghamNew.UI
             addtobinWindow.Show();
         }
 
-        private void BinButton(object sender, RoutedEventArgs e)
-        {
-            var binWindow = new BinWindow();
-            binWindow.Show();
-        }
+        //private void BinButton(object sender, RoutedEventArgs e)
+        //{
+            
+        //}
 
         private void ExitToHotelButton(object sender, RoutedEventArgs e)
         {
@@ -53,7 +52,8 @@ namespace BookinghamNew.UI
 
         private void BinButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var binWindow = new BinWindow();
+            binWindow.Show();
         }
     }
 }

@@ -32,7 +32,12 @@ namespace BookinghamNew.UI
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
+            if (_repo.BinRooms == null)
+            {
+                _repo.BinRooms = new List<Room>();
+            }
             _repo.BinRooms.Add(Room);
+            this.Close();
         }
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)

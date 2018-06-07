@@ -31,7 +31,7 @@ namespace BookinghamNew.UI
 
         private void ButtonProceed_Click(object sender, RoutedEventArgs e)
         {
-
+            ////зарегать booking
         }
 
         private void RoomsListButton_Click(object sender, RoutedEventArgs e)
