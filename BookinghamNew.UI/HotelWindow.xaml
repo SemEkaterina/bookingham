@@ -52,7 +52,6 @@
             </Button>
         </Canvas>
 
-
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock Height="Auto" FontSize="20" Name="HotelNameText" Margin="5" TextWrapping="Wrap"></TextBlock>
             <StackPanel Orientation="Horizontal" Margin="2">

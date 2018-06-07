@@ -70,7 +70,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EmbeddedResource Include="hotels.json" />
+    <None Include="hotels.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <EmbeddedResource Include="Migrations\201806062027182_Initial.resx">
       <DependentUpon>201806062027182_Initial.cs</DependentUpon>
