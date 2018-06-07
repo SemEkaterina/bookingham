@@ -31,14 +31,17 @@ namespace BookinghamNew.UI
             DistrictHotelCombobox.ItemsSource = Districts;
             HotelNameCombobox.ItemsSource = _repo._hotels;
             this.Guest = Guest;
+            CheckInCalendar.DisplayDateStart = DateTime.Today;
+            CheckInCalendar.SelectedDate = DateTime.Today;
+            CheckOutCalendar.SelectedDate = DateTime.Today.AddDays(1);
         }
 
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Close();
-        }
+        //private void ExitButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var mainWindow = new MainWindow();
+        //    mainWindow.Show();
+        //    this.Close();
+        //}
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {            
@@ -130,6 +133,13 @@ namespace BookinghamNew.UI
                 }
                 HotelNameCombobox.ItemsSource = somehotels;
             }
+        }
+
+        private void HomePageButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }

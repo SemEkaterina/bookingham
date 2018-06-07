@@ -35,11 +35,6 @@ namespace BookinghamNew.UI
             addtobinWindow.Show();
         }
 
-        //private void BinButton(object sender, RoutedEventArgs e)
-        //{
-            
-        //}
-
         private void ExitToHotelButton(object sender, RoutedEventArgs e)
         {
             this.Close();

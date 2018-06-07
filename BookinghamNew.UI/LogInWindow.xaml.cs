@@ -70,5 +70,15 @@ namespace BookinghamNew.UI
             registerWindow.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HomePageButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

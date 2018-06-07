@@ -46,13 +46,19 @@
         </Grid.ColumnDefinitions>
 
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
-        <Button Click="LogInButton_Click"  Grid.Row="0" Grid.Column="1" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" FontFamily="Century Gothic" BorderBrush="{x:Null}" Cursor="Hand">
-            <Image Height="40" Width="40" Source="Images/log-in.png"></Image>
+        <Button Click="LogInButton_Click"  Grid.Row="0" Grid.Column="1" Height="Auto" Width="60" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" FontFamily="Century Gothic" Foreground="White" BorderBrush="{x:Null}" Cursor="Hand" FontSize="16">
+            <!--<Image Height="40" Width="40" Source="Images/log-in.png"></Image>-->Log In
         </Button>
-
-        <Button  Click="ExitButton_Click" Grid.Row="0" Grid.Column="0" Height="50" Width="50" HorizontalAlignment="Left" Margin="12" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand">
-            <Image Height="40" Width="40" Source="Images/log-out.png"></Image>
+        <Button Grid.Row="0" Click="HomePageButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16 12" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Hand">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Foreground="White" FontFamily="Century Gothic" FontSize="13">YOUR</TextBlock>
+                <TextBlock Foreground="White" FontFamily="Century Gothic" FontSize="13">TRAVEL</TextBlock>
+                <TextBlock Foreground="White" FontFamily="Century Gothic" FontSize="13">HELPER</TextBlock>
+            </StackPanel>
         </Button>
+        <!--<Button  Click="ExitButton_Click" Grid.Row="0" Grid.Column="0" Height="50" Width="60" HorizontalAlignment="Left" Margin="12" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Cursor="Hand">
+            --><!--<Image Height="40" Width="40" Source="Images/log-out.png"></Image>--><!--Log Out
+        </Button>-->
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="7" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Margin="5" FontFamily="Century Gothic" FontSize="26" Foreground="Black">Search</TextBlock>
             <Image Margin="5" Height="24" Width="24" Source="Images/search_black.png"></Image>
