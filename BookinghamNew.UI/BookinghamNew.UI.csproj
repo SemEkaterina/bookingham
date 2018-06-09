@@ -76,6 +76,9 @@
     <Compile Include="HotelWindow.xaml.cs">
       <DependentUpon>HotelWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PreviousBookings.xaml.cs">
+      <DependentUpon>PreviousBookings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PreviousBookings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegistrationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,19 +177,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\novotelPaddington.jpg" />
+    <Resource Include="Hotels\novotel_london_paddington.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\letter-x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\doubleTreeByHiltonWestminster.jpg" />
+    <Resource Include="Hotels\doubleTreeByHiltonWestminster.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\interContinentalLondonParkLine.jpg" />
+    <Resource Include="Hotels\interContinentalLondonParkLine.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\stJamesHotelAndClub.jpg" />
+    <Resource Include="Hotels\stJamesHotelAndClub.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\log-in.png" />
@@ -212,16 +219,36 @@
     <Resource Include="Images\placeholder.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\favorite.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\next.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Images\hotel.png" />
+    <Resource Include="Images\reply.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Hotels\" />
+    <Resource Include="Images\house-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clock _2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Stars\1_star.png" />
+    <Resource Include="Stars\2_stars.png" />
+    <Resource Include="Stars\3_stars.png" />
+    <Resource Include="Stars\4_stars.png" />
+    <Resource Include="Stars\5_stars.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,11 +28,45 @@ namespace BookinghamNew.UI
             this.Hotel = Hotel;
             HotelNameText.Text = Hotel.Name;
             HotelAddressText.Text = Hotel.Address;
-            HotelStarsCount.Text = Hotel.Stars.ToString();
+            if (Hotel.Stars == 1)
+            {
+                Uri uri = new Uri(@"Stars/1_star.png", UriKind.Relative);
+                ImageSource imgSource = new BitmapImage(uri);
+                StarsImage.Source = imgSource;
+            }
+            if (Hotel.Stars == 2)
+            {
+                Uri uri = new Uri(@"Stars/2_stars.png", UriKind.Relative);
+                ImageSource imgSource = new BitmapImage(uri);
+                StarsImage.Source = imgSource;
+            }
+            if (Hotel.Stars == 3)
+            {
+                Uri uri = new Uri(@"Stars/3_stars.png", UriKind.Relative);
+                ImageSource imgSource = new BitmapImage(uri);
+                StarsImage.Source = imgSource;
+            }
+            if (Hotel.Stars == 4)
+            {
+                Uri uri = new Uri(@"Stars/4_stars.png", UriKind.Relative);
+                ImageSource imgSource = new BitmapImage(uri);
+                StarsImage.Source = imgSource;
+            }
+            if (Hotel.Stars == 5)
+            {
+                Uri uri = new Uri(@"Stars/5_stars.png", UriKind.Relative);
+                ImageSource imgSource = new BitmapImage(uri);
+                StarsImage.Source = imgSource;
+            }           
             CheckInTextblock.Text = Hotel.CheckInTime.ToString();
             CheckOutTextblock.Text = Hotel.CheckOutTime.ToString();
             EmailTextBlock.Text = Hotel.Email;
             PhoneTextBlock.Text = Hotel.PhoneNumber;
+
+            Uri newUri = new Uri(Hotel.HotelImagePath, UriKind.Relative);
+            ImageSource imgHotelSource = new BitmapImage(newUri);
+            ImageOfHotel.Source = imgHotelSource;
+
             //ImageOfHotel.Source = Hotel.HotelImagePath.;
             //Source = "Images/novotelPaddington.jpg"
         }
@@ -42,11 +76,5 @@ namespace BookinghamNew.UI
             var roomslistlWindow = new RoomsListWindow(Hotel);
             roomslistlWindow.Show();
         }        
-
-        private void ButtonExit_Click(object sender, RoutedEventArgs e)
-        {
-            ////////////вернуться к списку отелей
-            this.Close();
-        }
     }
 }

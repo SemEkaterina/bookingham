@@ -32,6 +32,7 @@ namespace BookinghamNew.UI
             HotelNameCombobox.ItemsSource = _repo._hotels;
             this.Guest = Guest;
             CheckInCalendar.DisplayDateStart = DateTime.Today;
+            CheckOutCalendar.DisplayDateStart = DateTime.Today;
             CheckInCalendar.SelectedDate = DateTime.Today;
             CheckOutCalendar.SelectedDate = DateTime.Today.AddDays(1);
         }

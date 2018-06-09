@@ -5,31 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
-        Title="AddToBinWindow" Height="160" Width="280" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <Style TargetType="{x:Type Button}">
-            <Style.Triggers>
-                <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="RenderTransform">
-                        <Setter.Value>
-                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
-                        </Setter.Value>
-                    </Setter>
-                </Trigger>
-            </Style.Triggers>
-            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="brdr" TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
-        </Style>
-    </Window.Resources>
+        Height="160" Width="280" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -39,10 +15,10 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="13" >Add selected room to the booking?</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" >Add selected room to the booking?</TextBlock>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Click="ButtonAdd_Click" FontFamily="Century Gothic" Width="100" Height="25" Cursor="Hand" Margin="5" Background="#FFEA4636" Foreground="White" BorderBrush="{x:Null}">Add</Button>
-            <Button Click="ButtonCancel_Click" FontFamily="Century Gothic" Width="100" Height="25" Cursor="Hand" Margin="5" Background="#FFEA4636" Foreground="White" BorderBrush="{x:Null}">Cancel</Button>
+            <Button Click="ButtonAdd_Click" Width="100" Height="25" Cursor="Hand" Margin="5" Background="#FFEA4636" Foreground="White">Add</Button>
+            <Button Click="ButtonCancel_Click" Width="100" Height="25" Cursor="Hand" Margin="5" Background="#FFEA4636" Foreground="White">Cancel</Button>
         </StackPanel>
     </Grid>
 </Window>

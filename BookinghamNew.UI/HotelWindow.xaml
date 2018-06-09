@@ -5,31 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
-        Title="HotelWindow" Height="640" Width="360" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <Style TargetType="{x:Type Button}">
-            <Style.Triggers>
-                <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="RenderTransform">
-                        <Setter.Value>
-                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
-                        </Setter.Value>
-                    </Setter>
-                </Trigger>
-            </Style.Triggers>
-            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="brdr" TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
-        </Style>
-    </Window.Resources>
+        Height="640" Width="360" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="202.5"/>
@@ -42,46 +18,46 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
-        <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+        <Image Name="ImageOfHotel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Stretch="UniformToFill"></Image>
+        <!--<Canvas Name="HotelImageCanvas" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
             <Canvas.Background>
-                <ImageBrush ImageSource="Images/interContinentalLondonParkLine.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="Hotels/interContinentalLondonParkLine.jpg" Stretch="UniformToFill"/>
             </Canvas.Background>
-            <Button Click="ButtonExit_Click" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}">
+            --><!--<Button Click="ButtonExit_Click" Background="{x:Null}">
                 <Image Height="22" Width="22" Margin="7" Source="Images/letter-x.png" Opacity="0.6"/>
-            </Button>
-        </Canvas>
+            </Button>--><!--
+        </Canvas>-->
 
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock Height="Auto" FontSize="20" Name="HotelNameText" Margin="5" TextWrapping="Wrap"></TextBlock>
-            <StackPanel Orientation="Horizontal" Margin="2">
-                <Image Height="18" Width="18" Source="Images/favorite.png"></Image>
-                <TextBlock Height="Auto" Name="HotelStarsCount" Margin="5" TextWrapping="Wrap"></TextBlock>
-            </StackPanel>
+            <Image Name="StarsImage" Height="22" Width="Auto" Margin="2" HorizontalAlignment="Left"></Image>
             <StackPanel Orientation="Horizontal" Margin="2">
                 <Image Height="18" Width="18" Source="Images/placeholder.png"></Image>
                 <TextBlock Height="Auto" Name="HotelAddressText" Margin="5" TextWrapping="Wrap"></TextBlock>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="0" Margin="12" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="16">Check-in time</TextBlock>
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="16" Name="CheckInTextblock"></TextBlock>
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Height="Auto" FontSize="16">Check-in time</TextBlock>
+            <TextBlock Height="Auto" FontSize="16" Name="CheckInTextblock"></TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Margin="12" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="16">Check-out time</TextBlock>
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="16" Name="CheckOutTextblock"></TextBlock>
-
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Height="Auto" FontSize="16">Check-out time</TextBlock>
+            <TextBlock Height="Auto" FontSize="16" Name="CheckOutTextblock"></TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="7">
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">Email</TextBlock>
-            <TextBlock Height="Auto" FontFamily="Century Gothic" Name="EmailTextBlock" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-            <TextBlock Height="Auto" FontFamily="Century Gothic" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center">Phone</TextBlock>
-            <TextBlock Height="Auto" FontFamily="Century Gothic" Name="PhoneTextBlock" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="17">
+            <StackPanel Orientation="Horizontal" Margin="0 2">
+                <Image Height="16" Width="16" Source="Images/mail.png"></Image>
+                <TextBlock Margin="5" Height="Auto" Name="EmailTextBlock" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0 2">
+                <Image Height="16" Width="16" Source="Images/phone.png"></Image>
+                <TextBlock Margin="5" Height="Auto" Name="PhoneTextBlock" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
         </StackPanel>
 
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Cursor="Hand" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" BorderBrush="{x:Null}">Show available rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show available rooms</Button>
     </Grid>
 </Window>

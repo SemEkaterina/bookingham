@@ -5,32 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
-        Title="HotelsListWindow" Height="640" Width="360" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <Style TargetType="{x:Type Button}">
-            <Style.Triggers>
-                <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="RenderTransform">
-                        <Setter.Value>
-                            <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
-                        </Setter.Value>
-                    </Setter>
-                </Trigger>
-            </Style.Triggers>
-            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="brdr" TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
-        </Style>
-    </Window.Resources>
-
+        Height="640" Width="360" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -42,25 +17,25 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
-        <Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" FontFamily="Century Gothic" BorderBrush="{x:Null}">
-            <Image Height="28" Width="28" Source="Images/order_white.png"></Image>
+        <Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
+            <Image Height="28" Width="28" Source="Images/menu.png"></Image>
         </Button>
-        <Button Grid.Row="0" Grid.Column="0" Click="ExitToSearchPageButton_Click" Height="50" Width="50" HorizontalAlignment="Left" Margin="12" Background="{x:Null}" BorderBrush="{x:Null}">
+        <Button Grid.Row="0" Grid.Column="0" Click="ExitToSearchPageButton_Click" Height="50" Width="50" HorizontalAlignment="Left" Margin="12" Background="{x:Null}">
             <Image Height="28" Width="28" Source="Images/search_white.png"></Image>
         </Button>
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
-            <ListBox x:Name="hotelsList" SelectionChanged="HotelsList_SelectionChanged">
+            <ListBox Name="hotelsList" SelectionChanged="HotelsList_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="5" Orientation="Vertical">
-                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=HotelImagePath}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Name}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Address}"/>
+                            <TextBlock Width="Auto" Height="Auto" TextWrapping="Wrap" Text="{Binding Path=HotelImagePath}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="16" TextWrapping="Wrap" Text="{Binding Path=Name}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="12" TextWrapping="Wrap" Text="{Binding Path=Address}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </ScrollViewer>
-        <Button Click="ButtonShow_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" FontFamily="Century Gothic" Background="#FFEA4636" Foreground="White" Margin=" 1 24 1 48" BorderBrush="{x:Null}">Show hotel</Button>
+        <Button Click="ButtonShow_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin=" 1 24 1 48">Show hotel</Button>
     </Grid>
 </Window>
