@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
+        Icon="Images/Group 5logo2.png"
         Height="640" Width="360" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
@@ -32,43 +32,34 @@
                 <TextBlock Foreground="White" FontSize="13">HELPER</TextBlock>
             </StackPanel>
         </Button>
-        <!--<Button  Click="ExitButton_Click" Grid.Row="0" Grid.Column="0" Height="50" Width="60" HorizontalAlignment="Left" Margin="12" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="16" Cursor="Hand">
-            --><!--<Image Height="40" Width="40" Source="Images/log-out.png"></Image>--><!--Log Out
-        </Button>-->
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="7" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Margin="5" FontSize="26" Foreground="Black">Search</TextBlock>
-            <Image Margin="5" Height="24" Width="24" Source="Images/search_black.png"></Image>
-        </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="12">
+
+        <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Search</TextBlock>
+        
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="26">
             <TextBlock Height="24" HorizontalAlignment="Center" FontSize="18">District of the hotel</TextBlock>
-            <ComboBox Name="DistrictHotelCombobox" SelectionChanged="DistrictHotelCombobox_SelectionChanged" VerticalContentAlignment="Center" Height="40" Width="250" BorderBrush="Black" FontSize="14" IsEditable="True" Background="{x:Null}"/>
+            <ComboBox Name="DistrictHotelCombobox" SelectionChanged="DistrictHotelCombobox_SelectionChanged" VerticalContentAlignment="Center" Height="30" Width="250" BorderBrush="Black" FontSize="14" IsEditable="True" Background="{x:Null}"/>
             <TextBlock Height="24" HorizontalAlignment="Center" FontSize="18">Name of the hotel</TextBlock>
-            <ComboBox Height="40" Width="250" VerticalContentAlignment="Center" Name="HotelNameCombobox" IsTextSearchEnabled="True" DisplayMemberPath="Name" Background="White" BorderBrush="Black" FontSize="14" IsEditable="True"/>
+            <ComboBox Height="30" Width="250" VerticalContentAlignment="Center" Name="HotelNameCombobox" IsTextSearchEnabled="True" DisplayMemberPath="Name" Background="White" BorderBrush="Black" FontSize="14" IsEditable="True"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel Margin="8" Width="125" VerticalAlignment="Center">
-                <TextBlock FontSize="18" HorizontalAlignment="Center">Check-In</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="20" Width="20" Source="Images/time.png"></Image>
+                    <TextBlock Margin="5" FontSize="18" HorizontalAlignment="Center">Check-In</TextBlock>
+                </StackPanel>
                 <DatePicker Name="CheckInCalendar" HorizontalContentAlignment="Center" HorizontalAlignment="Center" BorderBrush="{x:Null}" FontFamily="Century Gothic"></DatePicker>
             </StackPanel>
             <StackPanel Margin="8" Width="125"  VerticalAlignment="Center">
-                <TextBlock FontSize="18" HorizontalAlignment="Center">Check-Out</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="20" Width="20" Source="Images/time.png"></Image>
+                    <TextBlock Margin="5" FontSize="18" HorizontalAlignment="Center">Check-Out</TextBlock>
+                </StackPanel>
                 <DatePicker Name="CheckOutCalendar" HorizontalContentAlignment="Center" HorizontalAlignment="Center" BorderBrush="{x:Null}" FontFamily="Century Gothic"></DatePicker>
             </StackPanel>
         </StackPanel>
 
-        <!--<StackPanel Grid.Row="3" Grid.Column="0" Width="250" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="16" Orientation="Horizontal">
-            <StackPanel Margin="2" HorizontalAlignment="Left">
-                <TextBlock Height="Auto" FontSize="18" Margin="3" HorizontalAlignment="Center">Check-in:</TextBlock>
-                <DatePicker Name="CheckInCalendar" Width="Auto" HorizontalAlignment="Center" BorderBrush="{x:Null}" FontFamily="Century Gothic" />
-            </StackPanel>
-            <StackPanel Margin="16 2" HorizontalAlignment="Right">
-                <TextBlock Height="Auto" FontSize="18" Margin="3" HorizontalAlignment="Center">Check-out:</TextBlock>
-                <DatePicker Name="CheckOutCalendar" Width="Auto" HorizontalAlignment="Center" BorderBrush="{x:Null}" FontFamily="Century Gothic" RenderTransformOrigin="0.5,0.5"></DatePicker>
-            </StackPanel>
-        </StackPanel>-->
-
-        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
             <StackPanel>
                 <TextBlock Height="Auto" Width="Auto" HorizontalAlignment="Center" FontSize="18">Rooms</TextBlock>
                 <TextBox Height="Auto" Name="RoomsTextBox" HorizontalContentAlignment="Center" Width="120" FontSize="18">1</TextBox>
@@ -79,10 +70,10 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Maximum price</TextBlock>
             <TextBox Height="Auto" Width="250" Name="MaxPriceTextBox" HorizontalContentAlignment="Center" FontSize="18">250</TextBox>
         </StackPanel>
-        <Button Click="ButtonSearch_Click" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin=" 1 24 1 48" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Search</Button>
+        <Button Click="ButtonSearch_Click" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin=" 1 24 1 48" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Search</Button>
     </Grid>
 </Window>

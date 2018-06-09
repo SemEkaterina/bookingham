@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
+        Icon="Images/Group 5logo2.png"
         Height="640" Width="360" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
@@ -17,11 +18,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
+        <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Bookings</TextBlock>
         <Button Grid.Row="0" Grid.Column="1" Click="HomeButton_Click" Height="48" Width="48" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
             <Image Height="30" Width="30" Source="Images/house-outline.png"></Image>
         </Button>
-        <Button Grid.Row="0" Grid.Column="0" Click="ExitToHotelButton" Height="50" Width="50" HorizontalAlignment="Left" Margin="12" Background="{x:Null}" >
-            <Image Height="30" Width="30" Source="Images/reply.png"></Image>
+        <Button Grid.Row="0" Grid.Column="0" Click="ExitToHotelButton" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" >
+            <Image Height="30" Width="30" Source="Images/back.png"></Image>
         </Button>
 
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">

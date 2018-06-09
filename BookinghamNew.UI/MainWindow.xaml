@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
+        Icon="Images/Group 5logo2.png"
         Height="640" Width="360" WindowStartupLocation="CenterScreen">
     
     
@@ -24,7 +25,7 @@
             <!--<TextBlock Height="Auto" Width="Auto" HorizontalAlignment="Left" Foreground="White" FontSize="38">TRAVEL</TextBlock>
             <TextBlock Height="Auto" Width="Auto" HorizontalAlignment="Left" Foreground="White" FontSize="38">HELPER</TextBlock>-->
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5 48 5 64">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5 24 5 64">
             <Button Click="ButtonUser_Click" Height="40" Width="250" Margin="1" Background="#FFEA4636">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock FontSize="18" Width="200" Foreground="White" VerticalAlignment="Center">Start as user</TextBlock>

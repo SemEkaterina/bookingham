@@ -221,7 +221,9 @@
   <ItemGroup>
     <Resource Include="Images\next.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\back.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\reply.png" />
   </ItemGroup>
@@ -249,6 +251,15 @@
     <Resource Include="Stars\3_stars.png" />
     <Resource Include="Stars\4_stars.png" />
     <Resource Include="Stars\5_stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Group 5logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\time.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
