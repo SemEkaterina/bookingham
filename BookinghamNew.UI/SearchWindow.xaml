@@ -23,14 +23,10 @@
 
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
         <Button Click="LogInButton_Click"  Grid.Row="0" Grid.Column="1" Height="Auto" Width="60" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" Foreground="White" FontSize="16">
-            <!--<Image Height="40" Width="40" Source="Images/log-in.png"></Image>-->Log In
+            <!--<Image Height="40" Width="40" Source="Images/log-in.png"></Image>--> Log In
         </Button>
-        <Button Grid.Row="0" Click="HomePageButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8 12" Background="{x:Null}">
-            <StackPanel Orientation="Vertical">
-                <TextBlock Foreground="White" FontSize="13">YOUR</TextBlock>
-                <TextBlock Foreground="White" FontSize="13">TRAVEL</TextBlock>
-                <TextBlock Foreground="White" FontSize="13">HELPER</TextBlock>
-            </StackPanel>
+        <Button Grid.Row="0" Grid.Column="0" Click="HomePageButton_Click" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" >
+            <Image Height="30" Width="30" Source="Images/back.png"></Image>
         </Button>
 
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Search</TextBlock>
@@ -39,7 +35,7 @@
             <TextBlock Height="24" HorizontalAlignment="Center" FontSize="18">District of the hotel</TextBlock>
             <ComboBox Name="DistrictHotelCombobox" SelectionChanged="DistrictHotelCombobox_SelectionChanged" VerticalContentAlignment="Center" Height="30" Width="250" BorderBrush="Black" FontSize="14" IsEditable="True" Background="{x:Null}"/>
             <TextBlock Height="24" HorizontalAlignment="Center" FontSize="18">Name of the hotel</TextBlock>
-            <ComboBox Height="30" Width="250" VerticalContentAlignment="Center" Name="HotelNameCombobox" IsTextSearchEnabled="True" DisplayMemberPath="Name" Background="White" BorderBrush="Black" FontSize="14" IsEditable="True"/>
+            <ComboBox Height="30" Width="250" VerticalContentAlignment="Center" StaysOpenOnEdit="True" Name="HotelNameCombobox" IsTextSearchEnabled="True" DisplayMemberPath="Name" Background="White" BorderBrush="Black" FontSize="14" IsEditable="True"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">

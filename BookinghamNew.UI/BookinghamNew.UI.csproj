@@ -261,5 +261,8 @@
   <ItemGroup>
     <Resource Include="Images\time.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hotels\sloane_square_hotel.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

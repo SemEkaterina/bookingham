@@ -80,5 +80,10 @@ namespace BookinghamNew.UI
         {
 
         }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

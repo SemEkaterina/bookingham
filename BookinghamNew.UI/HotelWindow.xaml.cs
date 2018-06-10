@@ -60,7 +60,7 @@ namespace BookinghamNew.UI
             }           
             CheckInTextblock.Text = Hotel.CheckInTime.ToString();
             CheckOutTextblock.Text = Hotel.CheckOutTime.ToString();
-            EmailTextBlock.Text = Hotel.Email;
+            //EmailTextBlock.Text = Hotel.Email;
             PhoneTextBlock.Text = Hotel.PhoneNumber;
 
             Uri newUri = new Uri(Hotel.HotelImagePath, UriKind.Relative);
