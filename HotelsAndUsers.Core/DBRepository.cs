@@ -71,7 +71,7 @@ namespace HotelsAndUsers.Core
                     r.Reservations = new List<Reservation>();
                     SuitableRooms.Add(r);
                     PossibleBeds += r.BedNumber;
-                    break;
+                    //break;
                 }
                 for (int i = 1; i <= r.Reservations.Count; i++)
                 {
@@ -100,6 +100,15 @@ namespace HotelsAndUsers.Core
             {
                 return -1;
             }
+        }
+
+        public decimal TotalPrice(Room Room, DateTime InData, DateTime OutData)
+        {
+            decimal total = 0;
+            var daysCount = OutData.Subtract(InData);
+            total = Room.PriceForNight * daysCount.Days;
+
+            return total;
         }
     }
 }

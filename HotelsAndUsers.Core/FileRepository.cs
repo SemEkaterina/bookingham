@@ -111,6 +111,15 @@ namespace HotelsAndUsers.Core
             }
         }
 
+        public decimal TotalPrice(Room Room, DateTime InData, DateTime OutData)
+        {
+            decimal total = 0;
+            var daysCount = OutData.Subtract(InData);
+            total = Room.PriceForNight * daysCount.Days;
+
+            return total;
+        }
+
         public int CheckGuest(string login, string password)
         {
             if (Guests != null)

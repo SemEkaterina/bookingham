@@ -21,23 +21,29 @@ namespace BookinghamNew.UI
     public partial class HotelsListWindow : Window
     {
         public List<Hotel> Hotels { get; set; }
+        public Guest Guest { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
 
-        public HotelsListWindow(List<Hotel> SuitableHotels)
+        public HotelsListWindow(List<Hotel> SuitableHotels, Guest guest, DateTime checkin, DateTime checkout)
         {
             InitializeComponent();
-            this.Hotels = SuitableHotels;
+            Hotels = SuitableHotels;
+            Guest = guest;
+            CheckIn = checkin;
+            CheckOut = checkout;
             hotelsList.ItemsSource = Hotels;
         }
 
         private void ButtonShow_Click(object sender, RoutedEventArgs e)
         {
-            var hotelWindow = new HotelWindow(hotelsList.SelectedItem as Hotel);
+            var hotelWindow = new HotelWindow(hotelsList.SelectedItem as Hotel, Guest, CheckIn, CheckOut);
             hotelWindow.Show();
         }
 
         private void BinButton_Click(object sender, RoutedEventArgs e)
         {
-            var binWindow = new BinWindow();
+            var binWindow = new BinWindow(Guest, CheckIn, CheckOut);
             binWindow.Show();
         }
 

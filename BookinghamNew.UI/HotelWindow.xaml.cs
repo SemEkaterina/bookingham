@@ -21,11 +21,17 @@ namespace BookinghamNew.UI
     public partial class HotelWindow : Window
     {
         public Hotel Hotel { get; set; }
+        public Guest Guest { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
 
-        public HotelWindow(Hotel Hotel)
+        public HotelWindow(Hotel Hotel, Guest guest, DateTime checkin, DateTime checkout)
         {
             InitializeComponent();
             this.Hotel = Hotel;
+            Guest = guest;
+            CheckIn = checkin;
+            CheckOut = checkout;
             HotelNameText.Text = Hotel.Name;
             HotelAddressText.Text = Hotel.Address;
             if (Hotel.Stars == 1)
@@ -73,7 +79,7 @@ namespace BookinghamNew.UI
 
         private void ButtonShowRooms_Click(object sender, RoutedEventArgs e)
         {
-            var roomslistlWindow = new RoomsListWindow(Hotel);
+            var roomslistlWindow = new RoomsListWindow(Hotel, Guest, CheckIn, CheckOut);
             roomslistlWindow.Show();
         }        
     }

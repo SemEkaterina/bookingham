@@ -58,7 +58,7 @@ namespace BookinghamNew.UI
                         List<Room> SuitableRooms = new List<Room>();
                         _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
                         h.SuitableRooms = SuitableRooms;
-                        var hotelWindow = new HotelWindow(h);
+                        var hotelWindow = new HotelWindow(h, Guest, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value);
                         hotelWindow.Show();
                     }
                 }
@@ -81,10 +81,23 @@ namespace BookinghamNew.UI
                     }
                 }
                 /////////////////////Вывод списка отелей
-                var hotelslistWindow = new HotelsListWindow(SuitableHotels);
+                var hotelslistWindow = new HotelsListWindow(SuitableHotels, Guest, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value);
                 hotelslistWindow.Show();
                 this.Close();
             }
+
+            //else if((HotelNameCombobox.SelectedIndex == -1)&&(DistrictHotelCombobox.SelectedIndex == -1))
+            //{
+            //    foreach (var item in _repo._hotels)
+            //    {
+            //        SuitableHotels.Add(item);
+            //    }
+                
+
+            //    var hotelslistWindow = new HotelsListWindow(SuitableHotels);
+            //    hotelslistWindow.Show();
+            //    this.Close();
+            //}
 
             else
             {
@@ -95,19 +108,17 @@ namespace BookinghamNew.UI
                     _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
 
 
-                    if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
+                    if ((SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
                     {
                         SuitableHotels.Add(h);
                         h.SuitableRooms = SuitableRooms;
                     }
                 }
                 /////////////////////Вывод списка отелей
-                var hotelslistWindow = new HotelsListWindow(SuitableHotels);
+                var hotelslistWindow = new HotelsListWindow(SuitableHotels, Guest, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value);
                 hotelslistWindow.Show();
                 this.Close();
-            }
-
-            
+            }            
         }
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)

@@ -21,18 +21,29 @@ namespace BookinghamNew.UI
     public partial class RoomsListWindow : Window
     {
         public Hotel Hotel { get; set; }
+        public Guest Guest { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
 
-        public RoomsListWindow(Hotel hotel)
+        public RoomsListWindow(Hotel hotel, Guest guest, DateTime checkin, DateTime checkout)
         {
             InitializeComponent();
-            this.Hotel = hotel;
+            Hotel = hotel;
+            Guest = guest;
+            CheckIn = checkin;
+            CheckOut = checkout;
             roomsList.ItemsSource = Hotel.SuitableRooms;
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
         {
-            var addtobinWindow = new AddToBinWindow(roomsList.SelectedItem as Room);
-            addtobinWindow.Show();
+            var addtobinWindow = new AddToBinWindow(roomsList.SelectedItem as Room, Hotel);
+            if (addtobinWindow.ShowDialog() == false)
+            {
+                roomsList.ItemsSource = null;
+                roomsList.ItemsSource = Hotel.SuitableRooms;
+            }
+            
         }
 
         private void ExitToHotelButton(object sender, RoutedEventArgs e)
@@ -47,7 +58,7 @@ namespace BookinghamNew.UI
 
         private void BinButton_Click(object sender, RoutedEventArgs e)
         {
-            var binWindow = new BinWindow();
+            var binWindow = new BinWindow(Guest, CheckIn, CheckOut);
             binWindow.Show();
         }
     }

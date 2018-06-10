@@ -27,7 +27,7 @@
         </Button>
 
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
-            <ListBox x:Name="roomsList" SelectionChanged="MyBookingsList_SelectionChanged">
+            <ListBox x:Name="bookingsList" SelectionChanged="MyBookingsList_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="5" Orientation="Horizontal">

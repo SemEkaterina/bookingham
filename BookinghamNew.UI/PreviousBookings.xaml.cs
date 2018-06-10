@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,14 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class PreviousBookings : Window
     {
-        public PreviousBookings()
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
+        public Guest Guest { get; set; }
+
+        public PreviousBookings(Guest guest)
         {
             InitializeComponent();
+            Guest = guest;
+            bookingsList.ItemsSource = guest.GuestBookings;
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
@@ -41,7 +48,9 @@ namespace BookinghamNew.UI
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var searchWindow = new SearchWindow(Guest);
+            searchWindow.Show();
+            this.Close();
         }
     }
 }

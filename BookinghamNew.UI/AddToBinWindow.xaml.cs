@@ -23,11 +23,13 @@ namespace BookinghamNew.UI
     {
         HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
         public Room Room { get; set; }
+        public Hotel Hotel { get; set; }
 
-        public AddToBinWindow(Room room)
+        public AddToBinWindow(Room room, Hotel hotel)
         {
             InitializeComponent();
-            this.Room = room;
+            Room = room;
+            Hotel = hotel;
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
@@ -37,6 +39,7 @@ namespace BookinghamNew.UI
                 _repo.BinRooms = new List<Room>();
             }
             _repo.BinRooms.Add(Room);
+            Hotel.SuitableRooms.Remove(Room);
             this.Close();
         }
 
