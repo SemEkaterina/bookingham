@@ -46,37 +46,9 @@ namespace BookinghamNew.UI
 
             else
             {
-                foreach (var hotel in _repo._hotels)
-                {
-                    decimal totalPrice = 0;
-                    List<Room> BookedRooms = new List<Room>();
-                    foreach (var room in _repo.BinRooms)
-                    {
-                        if (room.Hotel == hotel)
-                        {
-                            BookedRooms.Add(room);
-                            totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
-                        }                       
-                    }
-
-                    Booking NewBooking = new Booking
-                    {
-                        Hotel = hotel,
-                        GuestId = Guest.GuestId,
-                        Room = BookedRooms,
-                        BookingTime = DateTime.Now,
-                        CheckIn = CheckInDate,
-                        CheckOut = CheckOutDate,
-                        TotalPrice = totalPrice
-                    };
-
-                    //добавление в previous bookings
-                    if (Guest.GuestBookings == null)
-                    {
-                        Guest.GuestBookings = new List<Booking>();
-                    }
-                    Guest.GuestBookings.Add(NewBooking);
-                }               
+                var confirmationWindow = new ConfirmationWindow(Guest, CheckInDate, CheckOutDate);
+                confirmationWindow.Show();
+                this.Close();                             
             }
         }
 
