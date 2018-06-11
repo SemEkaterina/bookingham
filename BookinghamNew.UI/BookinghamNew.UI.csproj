@@ -208,16 +208,7 @@
     <Resource Include="Images\search_black.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\garbage.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\search_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\order_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\order_black.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\cancel.png" />
@@ -238,19 +229,10 @@
     <Resource Include="Images\house-outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\clock.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\clock _2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\mail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\phone.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Stars\1_star.png" />
@@ -260,9 +242,6 @@
     <Resource Include="Stars\5_stars.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Group 5logo2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -270,6 +249,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Hotels\sloane_square_hotel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hotels\radissonBluEdwardian.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hotels\theStaffordLondon.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\back_black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

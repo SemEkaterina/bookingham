@@ -1,144 +1,820 @@
-﻿[{
-		"Name": "Novotel London Paddington",
-		"Stars": 4,
-		"Type": "Hotel",
-		"HotelImagePath": "Hotels/novotel_london_paddington.jpg",
-		"Address": "Sheldon Square 3 Kingdom Street",
-		"District": "North-West",
-		"PhoneNumber": "810 44 20 3871 8319",
-		"CheckInTime": "10:00",
-		"CheckOutTime": "12:00",
-		"Rooms": [{
-				"RoomNumber": 101,
-				"PriceForNight": 100,
-				"Class": "Standart",
-				"BedNumber": 1
-			},
-			{
-				"RoomNumber": 102,
-				"PriceForNight": 150,
-				"Class": "Suite",
-				"BedNumber": 2
-			}
-		]
-	},
-	{
-		"Name": "Radisson Blu Edwardian",
-		"Stars": 4,
-		"Type": "Hotel",
-		"Address": "Covent Garden 20 Mercer Street",
-		"District": "Center",
-		"PhoneNumber": "810 44 20 3291 0923",
-		"CheckInTime": "9:00",
-		"CheckOutTime": "12:00",
-		"Rooms": [{
-				"RoomNumber": 101,
-				"PriceForNight": 100,
-				"Class": "Standart",
-				"BedNumber": 1
-			},
-			{
-				"RoomNumber": 102,
-				"PriceForNight": 150,
-				"Class": "Suite",
-				"BedNumber": 2
-			}
-		]
-	},
-	{
-		"Name": "DoubleTree by Hilton London - Westminster",
-		"Stars": 4,
-		"Type": "Hotel",
-		"HotelImagePath": "Hotels/doubleTreeByHiltonWestminster.jpg",
-		"Address": "30 John Islip Street",
-		"District": "South-East",
-		"PhoneNumber": "810 44 20 7630 1000",
-		"CheckInTime": "9:00",
-		"CheckOutTime": "12:00",
-		"Rooms": [{
-				"RoomNumber": 101,
-				"PriceForNight": 180,
-				"Class": "Standart",
-				"BedNumber": 1
-			},
-			{
-				"RoomNumber": 102,
-				"PriceForNight": 200,
-				"Class": "Suite",
-				"BedNumber": 2
-			}
-		]
-	},
-	{
-		"Name": "Sloane Square Hotel",
-		"Stars": 4,
-		"Type": "Hotel",
-		"HotelImagePath": "Hotels/sloane_square_hotel.jpg",
-		"Address": "7-12 Sloane Square",
-		"District": "South-West",
-		"PhoneNumber": "810 44 20 3251 9234",
-		"CheckInTime": "10:00",
-		"CheckOutTime": "12:00",
-		"Rooms": [{
-				"RoomNumber": 101,
-				"PriceForNight": 190,
-				"Class": "Standart",
-				"BedNumber": 1
-			},
-			{
-				"RoomNumber": 102,
-				"PriceForNight": 230,
-				"Class": "Suite",
-				"BedNumber": 2
-			}
-		]
-	},
-	{
-		"Name": "InterContinental London Park Lane",
-		"Stars": 5,
-		"Type": "Hotel",
-		"HotelImagePath": "Hotels/interContinentalLondonParkLine.jpg",
-		"Address": "1 Hamilton Place, Park Lane",
-		"District": "Center",
-		"PhoneNumber": "810 44 20 2381 1129",
-		"CheckInTime": "10:00",
-		"CheckOutTime": "12:00",
-		"Rooms": [{
-				"RoomNumber": 101,
-				"PriceForNight": 380,
-				"Class": "Standart",
-				"BedNumber": 1
-			},
-			{
-				"RoomNumber": 102,
-				"PriceForNight": 400,
-				"Class": "Suite",
-				"BedNumber": 2
-			}
-		]
-	},
-	{
-		"Name": "St. James's Hotel and Club",
-		"Stars": 5,
-		"Type": "Hotel",
-		"HotelImagePath": "Hotels/stJamesHotelAndClub.jpg",
-		"Address": "7-8 Park Place, SW1A 1LS",
-		"District": "Center",
-		"PhoneNumber": "810 44 20 7316 1600",
-		"CheckInTime": "10:00",
-		"CheckOutTime": "12:00",
-		"Rooms": [{
-				"RoomNumber": 101,
-				"PriceForNight": 290,
-				"Class": "Standart",
-				"BedNumber": 1
-			},
-			{
-				"RoomNumber": 102,
-				"PriceForNight": 300,
-				"Class": "Suite",
-				"BedNumber": 2
-			}
-		]
-	}	
+﻿[  
+   {  
+      "Name":"Novotel London Paddington",
+      "Stars":4,
+      "Type":"Hotel",
+      "HotelImagePath":"Hotels/novotel_london_paddington.jpg",
+      "Address":"Sheldon Square 3 Kingdom Street",
+      "District":"North-West",
+      "PhoneNumber":"810 44 20 3871 8319",
+      "CheckInTime":"10:00",
+      "CheckOutTime":"12:00",
+      "MinPrice":144,
+      "Rooms":[  
+         {  
+            "RoomNumber":1001,
+            "PriceForNight":144,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":1002,
+            "PriceForNight":144,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":1003,
+            "PriceForNight":144,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":2001,
+            "PriceForNight":162,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":2002,
+            "PriceForNight":162,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":2003,
+            "PriceForNight":162,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":3001,
+            "PriceForNight":180,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":3002,
+            "PriceForNight":180,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":3003,
+            "PriceForNight":180,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":3004,
+            "PriceForNight":180,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":4001,
+            "PriceForNight":198,
+            "Class":"Family Room",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":4002,
+            "PriceForNight":198,
+            "Class":"Family Room",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":4003,
+            "PriceForNight":217,
+            "Class":"Connected Rooms",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":4004,
+            "PriceForNight":221,
+            "Class":"De Luxe",
+            "BedNumber":3
+         },
+         {  
+            "RoomNumber":4005,
+            "PriceForNight":240,
+            "Class":"President",
+            "BedNumber":4
+         }
+      ]
+   },
+   {  
+      "Name":"Radisson Blu Edwardian Berkshire",
+      "Stars":4,
+      "Type":"Hotel",
+	  "HotelImagePath": "Hotels/radissonBluEdwardian.jpg",
+      "Address":"350 Oxford Street",
+      "District":"South",
+      "PhoneNumber":"810 44 20 3291 0923",
+      "CheckInTime":"9:00",
+      "CheckOutTime":"12:00",
+	  "MinPrice": 221,
+      "Rooms":[  
+         {  
+            "RoomNumber":101,
+            "PriceForNight":221,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":102,
+            "PriceForNight":221,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":103,
+            "PriceForNight":221,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":104,
+            "PriceForNight":221,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":105,
+            "PriceForNight":221,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":201,
+            "PriceForNight":239,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":202,
+            "PriceForNight":239,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":203,
+            "PriceForNight":239,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":204,
+            "PriceForNight":239,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":301,
+            "PriceForNight":257,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":302,
+            "PriceForNight":257,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":303,
+            "PriceForNight":257,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":304,
+            "PriceForNight":257,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":401,
+            "PriceForNight":257,
+            "Class":"Connected Rooms",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":402,
+            "PriceForNight":257,
+            "Class":"Connected Rooms",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":403,
+            "PriceForNight":257,
+            "Class":"Connected Rooms",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":404,
+            "PriceForNight":266,
+            "Class":"Business",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":405,
+            "PriceForNight":266,
+            "Class":"Business",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":501,
+            "PriceForNight":281,
+            "Class":"De Luxe",
+            "BedNumber":3
+         },
+		 {  
+            "RoomNumber":502,
+            "PriceForNight":281,
+            "Class":"De Luxe",
+            "BedNumber":3
+         },
+         {  
+            "RoomNumber":503,
+            "PriceForNight":298,
+            "Class":"President",
+            "BedNumber":3
+         },
+		 {  
+            "RoomNumber":601,
+            "PriceForNight":335,
+            "Class":"Royal Suite",
+            "BedNumber":4
+         }
+      ]
+   },
+   {  
+      "Name":"DoubleTree by Hilton London Westminster",
+      "Stars":4,
+      "Type":"Hotel",
+      "HotelImagePath":"Hotels/doubleTreeByHiltonWestminster.jpg",
+      "Address":"30 John Islip Street",
+      "District":"South-East",
+      "PhoneNumber":"810 44 20 7630 1000",
+      "CheckInTime":"9:00",
+      "CheckOutTime":"12:00",
+	  "MinPrice": 150,
+      "Rooms":[  
+         {  
+            "RoomNumber":101,
+            "PriceForNight":150,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":102,
+            "PriceForNight":150,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":103,
+            "PriceForNight":150,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":104,
+            "PriceForNight":150,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":105,
+            "PriceForNight":150,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":106,
+            "PriceForNight":150,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":201,
+            "PriceForNight":176,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":202,
+            "PriceForNight":176,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":203,
+            "PriceForNight":176,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":301,
+            "PriceForNight":211,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":302,
+            "PriceForNight":211,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":303,
+            "PriceForNight":211,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":304,
+            "PriceForNight":211,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":305,
+            "PriceForNight":236,
+            "Class":"Business",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":306,
+            "PriceForNight":236,
+            "Class":"Business",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":401,
+            "PriceForNight":281,
+            "Class":"De Luxe",
+            "BedNumber":3
+         },
+         {  
+            "RoomNumber":402,
+            "PriceForNight":298,
+            "Class":"President",
+            "BedNumber":3
+         },
+		 {  
+            "RoomNumber":403,
+            "PriceForNight":335,
+            "Class":"Royal Suite",
+            "BedNumber":3
+         }
+      ]
+   },
+   {  
+      "Name":"Sloane Square Hotel",
+      "Stars":4,
+      "Type":"Hotel",
+      "HotelImagePath":"Hotels/sloane_square_hotel.jpg",
+      "Address":"7-12 Sloane Square",
+      "District":"South-West",
+      "PhoneNumber":"810 44 20 3251 9234",
+      "CheckInTime":"10:00",
+      "CheckOutTime":"12:00",
+	  "MinPrice": 187,
+      "Rooms":[  
+         {  
+            "RoomNumber":101,
+            "PriceForNight":187,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":102,
+            "PriceForNight":187,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":103,
+            "PriceForNight":187,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":104,
+            "PriceForNight":187,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":105,
+            "PriceForNight":187,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":106,
+            "PriceForNight":187,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":201,
+            "PriceForNight":201,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+	     {  
+            "RoomNumber":202,
+            "PriceForNight":201,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":203,
+            "PriceForNight":201,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":204,
+            "PriceForNight":248,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":205,
+            "PriceForNight":248,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":206,
+            "PriceForNight":248,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":301,
+            "PriceForNight":294,
+            "Class":"De Luxe",
+            "BedNumber":4
+         }
+      ]
+   },
+   {  
+      "Name":"InterContinental London Park Lane",
+      "Stars":5,
+      "Type":"Hotel",
+      "HotelImagePath":"Hotels/interContinentalLondonParkLine.jpg",
+      "Address":"1 Hamilton Place, Park Lane",
+      "District":"Center",
+      "PhoneNumber":"810 44 20 2381 1129",
+      "CheckInTime":"10:00",
+      "CheckOutTime":"12:00",
+      "MinPrice": 361,
+      "Rooms":[  
+         {  
+            "RoomNumber":1001,
+            "PriceForNight":361,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":1002,
+            "PriceForNight":361,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":1003,
+            "PriceForNight":361,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":1004,
+            "PriceForNight":361,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":1005,
+            "PriceForNight":361,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":1006,
+            "PriceForNight":361,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":1007,
+            "PriceForNight":361,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":1008,
+            "PriceForNight":361,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":2001,
+            "PriceForNight":430,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+	     {  
+            "RoomNumber":2002,
+            "PriceForNight":430,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":2003,
+            "PriceForNight":430,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":2003,
+            "PriceForNight":430,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":2004,
+            "PriceForNight":430,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":2005,
+            "PriceForNight":469,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":2006,
+            "PriceForNight":469,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":2007,
+            "PriceForNight":469,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":2008,
+            "PriceForNight":469,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":3001,
+            "PriceForNight":501,
+            "Class":"Family Room",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":3002,
+            "PriceForNight":501,
+            "Class":"Family Room",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":3003,
+            "PriceForNight":501,
+            "Class":"Family Room",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":3004,
+            "PriceForNight":528,
+            "Class":"Connected Rooms",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":3005,
+            "PriceForNight":528,
+            "Class":"Connected Rooms",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":3006,
+            "PriceForNight":528,
+            "Class":"Connected Rooms",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":4001,
+            "PriceForNight":538,
+            "Class":"Business",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":4002,
+            "PriceForNight":538,
+            "Class":"Business",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":4003,
+            "PriceForNight":614,
+            "Class":"De Luxe",
+            "BedNumber":4
+         },
+		 {  
+            "RoomNumber":5001,
+            "PriceForNight":614,
+            "Class":"De Luxe",
+            "BedNumber":4
+         },	 
+		 {  
+            "RoomNumber":5002,
+            "PriceForNight":684,
+            "Class":"Royal Suite",
+            "BedNumber":4
+         },
+		 {  
+            "RoomNumber":6001,
+            "PriceForNight":738,
+            "Class":"Duplex",
+            "BedNumber":5
+         }
+      ]
+   },
+   {  
+      "Name":"St. James's Hotel and Club",
+      "Stars":5,
+      "Type":"Hotel",
+      "HotelImagePath":"Hotels/stJamesHotelAndClub.jpg",
+      "Address":"7-8 Park Place, SW1A 1LS",
+      "District":"Center",
+      "PhoneNumber":"810 44 20 7316 1600",
+      "CheckInTime":"10:00",
+      "CheckOutTime":"12:00",
+      "MinPrice": 332,
+      "Rooms":[  
+         {  
+            "RoomNumber":101,
+            "PriceForNight":332,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":102,
+            "PriceForNight":332,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":103,
+            "PriceForNight":332,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":104,
+            "PriceForNight":332,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":201,
+            "PriceForNight":379,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+	     {  
+            "RoomNumber":202,
+            "PriceForNight":379,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":203,
+            "PriceForNight":406,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":204,
+            "PriceForNight":406,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":301,
+            "PriceForNight":481,
+            "Class":"De Luxe",
+            "BedNumber":3
+         },
+		 {  
+            "RoomNumber":302,
+            "PriceForNight":481,
+            "Class":"De Luxe",
+            "BedNumber":3
+         }
+      ]
+   },
+   {  
+      "Name":"The Stafford London",
+      "Stars":5,
+      "Type":"Hotel",
+      "HotelImagePath":"Hotels/theStaffordLondon.JPG",
+      "Address":"16-18 St. James's Place",
+      "District":"Center",
+      "PhoneNumber":"810 44 20 3958 4011",
+      "CheckInTime":"9:00",
+      "CheckOutTime":"12:00",
+	  "MinPrice":412,
+      "Rooms":[  
+         {  
+            "RoomNumber":101,
+            "PriceForNight":412,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":102,
+            "PriceForNight":412,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":103,
+            "PriceForNight":412,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":104,
+            "PriceForNight":412,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+            "RoomNumber":201,
+            "PriceForNight":458,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+	     {  
+            "RoomNumber":202,
+            "PriceForNight":458,
+            "Class":"Superior",
+            "BedNumber":1
+         },
+         {  
+            "RoomNumber":203,
+            "PriceForNight":481,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":204,
+            "PriceForNight":481,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":205,
+            "PriceForNight":481,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+            "RoomNumber":206,
+            "PriceForNight":481,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+         {  
+            "RoomNumber":301,
+            "PriceForNight":512,
+            "Class":"De Luxe",
+            "BedNumber":3
+         },
+		 {  
+            "RoomNumber":302,
+            "PriceForNight":512,
+            "Class":"De Luxe",
+            "BedNumber":3
+         },
+		 {  
+            "RoomNumber":303,
+            "PriceForNight":608,
+            "Class":"Royal Suite",
+            "BedNumber":3
+         }
+      ]
+   }
 ]
