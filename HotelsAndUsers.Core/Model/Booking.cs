@@ -10,7 +10,6 @@ namespace HotelsAndUsers.Core.Model
     {
         public int BookingId { get; set; }
         public int GuestId { get; set; }
-        public int HotelId { get; set; }
         public Hotel Hotel { get; set; }
         public List<Room> Room { get; set; }
         public DateTime BookingTime { get; set; }

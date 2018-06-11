@@ -19,7 +19,7 @@
         </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
 
-        <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Rooms</TextBlock>
+        <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Order</TextBlock>
 
         <!--<Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="48" Width="48" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
             <Image Height="26" Width="26" Source="Images/menu.png"></Image>
@@ -27,20 +27,21 @@
         <Button Grid.Row="0" Grid.Column="0" Click="ExitToReservationButton" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" >
             <Image Height="30" Width="30" Source="Images/back.png"></Image>
         </Button>
-
-        <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
-            <ListBox x:Name="roomsList" SelectionChanged="ConfirmationList_SelectionChanged">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Margin="5" Orientation="Horizontal">
-                            <!--<TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=Class}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=BedNumber}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Price}"/>-->
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </ScrollViewer>
+        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="5">
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">First name</TextBlock>
+            <TextBlock Name="textBoxFirstName" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" ></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Last name</TextBlock>
+            <TextBlock Name="textBoxLasNname" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Email Address</TextBlock>
+            <TextBox Name="textBoxEmail" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Country</TextBlock>
+            <TextBox Name="textBoxCountry" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Passport Number</TextBlock>
+            <TextBox Name="textBoxPassportSeries" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="1" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Passport Number</TextBlock>
+            <TextBox Name="textBoxPassportNumber" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
+        </StackPanel>
+        
         <Button Click="ButtonConfirm_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Confirm</Button>
     </Grid>
 </Window>
