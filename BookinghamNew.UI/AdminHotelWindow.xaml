@@ -25,9 +25,12 @@
             <Image Height="26" Width="26" Source="Images/back.png"></Image>
         </Button>
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Hotel</TextBlock>
-        <!--<Button Grid.Row="0" Grid.Column="1" Click="CurrentGuestButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
-            <Image Height="26" Width="26" Source="Images/menu.png"></Image>
-        </Button>-->
+        <Button Grid.Row="0" Grid.Column="1" Click="SaveChangesButton_Click" Height="50" Width="Auto" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" Foreground="White">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">Save</TextBlock>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">Changes</TextBlock>
+            </StackPanel>
+        </Button>
         <Image Name="ImageOfHotel" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Stretch="UniformToFill"></Image>
 
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center">
@@ -53,7 +56,6 @@
             <TextBlock Height="Auto" FontSize="16">Check-out time</TextBlock>
             <TextBox Height="Auto" FontSize="16" Name="CheckOutTextblock" Foreground="#FF989898"></TextBox>
         </StackPanel>
-
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 18 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show rooms</Button>
     </Grid>
 </Window>

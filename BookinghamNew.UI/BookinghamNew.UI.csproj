@@ -67,6 +67,9 @@
     <Compile Include="AddToBinWindow.xaml.cs">
       <DependentUpon>AddToBinWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminConfirmationWindow.xaml.cs">
+      <DependentUpon>AdminConfirmationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminGuestsListWindow.xaml.cs">
       <DependentUpon>AdminGuestsListWindow.xaml</DependentUpon>
     </Compile>
@@ -101,6 +104,10 @@
       <DependentUpon>SearchWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AddToBinWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminConfirmationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -279,6 +286,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\rubbish-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\shopping-basket.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Beds\1_double.png" />
+    <Resource Include="Beds\2_double.png" />
+    <Resource Include="Beds\3_double.png" />
+    <Resource Include="Beds\4_double.png" />
+    <Resource Include="Beds\5_double.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

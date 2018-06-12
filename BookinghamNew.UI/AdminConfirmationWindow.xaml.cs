@@ -15,26 +15,21 @@ using System.Windows.Shapes;
 namespace BookinghamNew.UI
 {
     /// <summary>
-    /// Логика взаимодействия для AdminHotelWindow.xaml
+    /// Логика взаимодействия для AdminConfirmationWindow.xaml
     /// </summary>
-    public partial class AdminHotelWindow : Window
+    public partial class AdminConfirmationWindow : Window
     {
-        public AdminHotelWindow()
+        public AdminConfirmationWindow()
         {
             InitializeComponent();
         }
 
+        private void ButtonConfirm_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonShowRooms_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

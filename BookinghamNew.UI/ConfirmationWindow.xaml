@@ -29,19 +29,19 @@
         </Button>
         <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="5">
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">First name</TextBlock>
-            <TextBox Name="textBoxFirstName" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" BorderBrush="{x:Null}"></TextBox>
+            <TextBox Name="textBoxFirstName" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" BorderBrush="#FFEA4636"></TextBox>
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Last name</TextBlock>
-            <TextBox Name="textBoxLasNname" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" BorderBrush="{x:Null}"></TextBox>
+            <TextBox Name="textBoxLasNname" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" BorderBrush="#FFEA4636"></TextBox>
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Email Address</TextBlock>
-            <TextBox Name="textBoxEmail" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
+            <TextBox Name="textBoxEmail" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="#FFEA4636"></TextBox>
             <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Country</TextBlock>
-            <TextBox Name="textBoxCountry" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
-            <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Passport Number</TextBlock>
-            <TextBox Name="textBoxPassportSeries" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
+            <TextBox Name="textBoxCountry" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="#FFEA4636"></TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Passport Series</TextBlock>
+            <TextBox Name="textBoxPassportSeries" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="#FFEA4636"></TextBox>
             <TextBlock Grid.Row="1" Grid.Column="1" Margin="1" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Passport Number</TextBlock>
-            <TextBox Name="textBoxPassportNumber" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="{x:Null}"></TextBox>
+            <TextBox Name="textBoxPassportNumber" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="#FFEA4636"></TextBox>
         </StackPanel>
-        
+
         <Button Click="ButtonConfirm_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Confirm</Button>
     </Grid>
 </Window>

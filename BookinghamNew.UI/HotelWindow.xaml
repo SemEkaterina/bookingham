@@ -12,7 +12,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="202.5"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -21,12 +21,12 @@
         </Grid.ColumnDefinitions>
         
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
-        <Button Grid.Row="0" Click="BackButton_Click" Grid.Column="0" Height="40" Width="40" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" Foreground="{x:Null}">
+        <Button Grid.Row="0" Click="BackButton_Click" Grid.Column="0" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" Foreground="{x:Null}">
             <Image Height="26" Width="26" Source="Images/back.png"></Image>
         </Button>
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Hotel</TextBlock>
         <Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
-            <Image Height="26" Width="26" Source="Images/menu.png"></Image>
+            <Image Height="26" Width="26" Source="Images/shopping-basket.png"></Image>
         </Button>
         <Image Name="ImageOfHotel" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Stretch="UniformToFill"></Image>
         
