@@ -265,5 +265,8 @@
   <ItemGroup>
     <Resource Include="Images\back_black.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rubbish-bin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
