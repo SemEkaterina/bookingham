@@ -153,5 +153,10 @@ namespace BookinghamNew.UI
             mainWindow.Show();
             this.Close();
         }
+
+        private void ButtonPreviousBookings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

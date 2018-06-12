@@ -70,6 +70,9 @@
             <TextBlock Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Maximum price</TextBlock>
             <TextBox Height="Auto" Width="250" Name="MaxPriceTextBox" HorizontalContentAlignment="Center" FontSize="18">250</TextBox>
         </StackPanel>
-        <Button Click="ButtonSearch_Click" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin=" 1 24 1 48" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Search</Button>
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin=" 1 24 1 48" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Click="ButtonSearch_Click"  Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Cursor="Hand" BorderBrush="{x:Null}">Search</Button>
+            <Button Click="ButtonPreviousBookings_Click" Height="Auto" Width="250" Margin="1" FontSize="13" HorizontalContentAlignment="Left" Foreground="Black" Background="{x:Null}">Show my previous bookings?</Button>
+        </StackPanel>
     </Grid>
 </Window>
