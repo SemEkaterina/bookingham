@@ -32,6 +32,9 @@ namespace BookinghamNew.UI
             Guest = guest;
             CheckInDate = checkin;
             CheckOutDate = checkout;
+            textBoxFirstName.Text = Guest.Name;
+            textBoxLasNname.Text = Guest.Surname;
+            textBoxEmail.Text = Guest.Email;
             
         }
 
@@ -47,6 +50,27 @@ namespace BookinghamNew.UI
 
         private void ButtonConfirm_Click(object sender, RoutedEventArgs e)
         {
+            if ((textBoxFirstName.Text == Guest.Name)&&(textBoxLasNname.Text == Guest.Surname))
+            {
+                Guest.PassportId = textBoxPassportSeries.Text;
+                Guest.PassportNumber = textBoxPassportNumber.Text;
+                Guest.Country = textBoxCountry.Text;
+            }
+
+            else
+            {
+                Guest guest = new Guest()
+                {
+                    Name = textBoxFirstName.Text,
+                    Surname = textBoxLasNname.Text,
+                    Email = textBoxEmail.Text,
+                    PassportId = textBoxPassportSeries.Text,
+                    PassportNumber = textBoxPassportNumber.Text,
+                    Country = textBoxCountry.Text,
+                };
+                _repo.RegisterGuest(guest);
+                Guest = guest;
+            }
             foreach (var hotel in _repo._hotels)
             {
                 decimal totalPrice = 0;
@@ -81,19 +105,14 @@ namespace BookinghamNew.UI
                         TotalPrice = totalPrice
                     };
 
-                    //добавление в previous bookings
 
                     _repo.AddBooking(Guest, NewBooking);
-                    MessageBox.Show("Success", "Success");
-                    return;
-                    //if (Guest.GuestBookings == null)
-                    //{
-                    //    Guest.GuestBookings = new List<Booking>();
-                    //}
-                    //Guest.GuestBookings.Add(NewBooking);
+
                 }
                 
             }
+            MessageBox.Show("Success", "Success");
+            return;
         }
     }
 }

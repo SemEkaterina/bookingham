@@ -33,7 +33,16 @@ namespace BookinghamNew.UI
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            if (bookingsList.SelectedItem == null)
+            {
+                MessageBox.Show("Select booking please", "Error");
+                return;
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
 
         private void MyBookingsList_SelectionChanged(object sender, SelectionChangedEventArgs e)

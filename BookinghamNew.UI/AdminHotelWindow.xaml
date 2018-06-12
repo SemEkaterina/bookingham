@@ -40,18 +40,18 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="3">
                 <Image Height="14" Width="14" Source="Images/phone.png"></Image>
-                <TextBox Margin="7 2" Height="Auto" Name="PhoneTextBlock" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF989898" BorderBrush="#FFEA4636"></TextBox>
+                <TextBox Margin="7 2" Height="Auto" Name="HotelPhoneText" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF989898" BorderBrush="#FFEA4636"></TextBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Height="Auto" FontSize="16">Check-in time</TextBlock>
-            <TextBox Height="Auto" FontSize="16" Name="CheckInTextblock" Foreground="#FF989898"></TextBox>
+            <TextBox Height="Auto" FontSize="16" Name="HotelCheckInText" Foreground="#FF989898"></TextBox>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Height="Auto" FontSize="16">Check-out time</TextBlock>
-            <TextBox Height="Auto" FontSize="16" Name="CheckOutTextblock" Foreground="#FF989898"></TextBox>
+            <TextBox Height="Auto" FontSize="16" Name="HotelCheckOutText" Foreground="#FF989898"></TextBox>
         </StackPanel>
 
         <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show rooms</Button>

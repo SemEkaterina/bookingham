@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,19 +20,31 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class AdminHotelWindow : Window
     {
-        public AdminHotelWindow()
+        public Hotel Hotel { get; set; }
+        public AdminHotelWindow(Hotel hotel)
         {
             InitializeComponent();
+            Hotel = hotel;
+            HotelClassText.Text = Hotel.Type;
+            HotelAddressText.Text = Hotel.Address;
+            HotelNameText.Text = Hotel.Name;
+            HotelPhoneText.Text = Hotel.PhoneNumber;
+            HotelCheckInText.Text = Hotel.CheckInTime;
+            HotelCheckOutText.Text = Hotel.CheckOutTime;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
 
         private void ButtonShowRooms_Click(object sender, RoutedEventArgs e)
         {
-
+            var adminRoomsListWindow = new AdminRoomsListWindow(Hotel);
+            adminRoomsListWindow.Show();
+            this.Close();
         }
     }
 }

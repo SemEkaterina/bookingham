@@ -1,4 +1,5 @@
-﻿using HotelsAndUsers.Core.Model;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class HotelWindow : Window
     {
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
         public Hotel Hotel { get; set; }
         public Guest Guest { get; set; }
         public DateTime CheckIn { get; set; }
@@ -83,12 +85,22 @@ namespace BookinghamNew.UI
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void BinButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (_repo.BinRooms == null)
+            {
+                MessageBox.Show("Bin is empty", "Error");
+                return;
+            }
+            else
+            {
+                var binWindow = new BinWindow(Guest, CheckIn, CheckOut);
+                binWindow.Show();
+            }
+            
         }
     }
 }
