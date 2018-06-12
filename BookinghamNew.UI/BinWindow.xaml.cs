@@ -69,5 +69,10 @@ namespace BookinghamNew.UI
         {
 
         }
+
+        private void ButtonLogIn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

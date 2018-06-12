@@ -10,6 +10,8 @@
       "CheckInTime":"10:00",
       "CheckOutTime":"12:00",
       "MinPrice":144,
+	  "Email": "novotel@gmail.com",
+	  "Password": "novotel",
       "Rooms":[  
          {  
 			"HotelId":1,
@@ -129,6 +131,8 @@
       "CheckInTime":"9:00",
       "CheckOutTime":"12:00",
 	  "MinPrice": 221,
+	  "Email": "radisson@gmail.com",
+	  "Password": "radisson",
       "Rooms":[  
          {  
 			"HotelId":2,
@@ -297,6 +301,8 @@
       "CheckInTime":"9:00",
       "CheckOutTime":"12:00",
 	  "MinPrice": 150,
+	  "Email": "doubletree@gmail.com",
+	  "Password": "doubletree",
       "Rooms":[  
          {  
 			"HotelId":3,
@@ -437,6 +443,8 @@
       "CheckInTime":"10:00",
       "CheckOutTime":"12:00",
 	  "MinPrice": 187,
+	  "Email": "sloane@gmail.com",
+	  "Password": "sloane",
       "Rooms":[  
          {  
 			"HotelId":4,
@@ -542,6 +550,8 @@
       "CheckInTime":"10:00",
       "CheckOutTime":"12:00",
       "MinPrice": 361,
+	  "Email": "intercontinental@gmail.com",
+	  "Password": "novotel",
       "Rooms":[  
          {  
 			"HotelId":5,
@@ -759,6 +769,8 @@
       "CheckInTime":"10:00",
       "CheckOutTime":"12:00",
       "MinPrice": 332,
+	  "Email": "stjamesclub@gmail.com",
+	  "Password": "stjamesclub",
       "Rooms":[  
          {  
 			"HotelId":6,
@@ -843,6 +855,8 @@
       "CheckInTime":"9:00",
       "CheckOutTime":"12:00",
 	  "MinPrice":412,
+	  "Email": "stafford@gmail.com",
+	  "Password": "stafford",
       "Rooms":[  
          {  
 			"HotelId":7,
