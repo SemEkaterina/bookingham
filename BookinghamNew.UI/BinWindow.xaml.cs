@@ -53,7 +53,7 @@ namespace BookinghamNew.UI
                     List<Room> BookedRooms = new List<Room>();
                     foreach (var room in _repo.BinRooms)
                     {
-                        if (room.Hotel == hotel)
+                        if (room.HotelId == hotel.HotelId)//Изменила отель на IdHotel
                         {
                             BookedRooms.Add(room);
                             totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);

@@ -12,90 +12,105 @@
       "MinPrice":144,
       "Rooms":[  
          {  
+			"HotelId":1,
             "RoomNumber":1001,
             "PriceForNight":144,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":1,
             "RoomNumber":1002,
             "PriceForNight":144,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":1,
             "RoomNumber":1003,
             "PriceForNight":144,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":1,
             "RoomNumber":2001,
             "PriceForNight":162,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":1,
             "RoomNumber":2002,
             "PriceForNight":162,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":1,
             "RoomNumber":2003,
             "PriceForNight":162,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":1,
             "RoomNumber":3001,
             "PriceForNight":180,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":1,
             "RoomNumber":3002,
             "PriceForNight":180,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":1,
             "RoomNumber":3003,
             "PriceForNight":180,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":1,
             "RoomNumber":3004,
             "PriceForNight":180,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":1,
             "RoomNumber":4001,
             "PriceForNight":198,
             "Class":"Family Room",
             "BedNumber":2
          },
          {  
+			"HotelId":1,
             "RoomNumber":4002,
             "PriceForNight":198,
             "Class":"Family Room",
             "BedNumber":2
          },
          {  
+			"HotelId":1,
             "RoomNumber":4003,
             "PriceForNight":217,
             "Class":"Connected Rooms",
             "BedNumber":2
          },
          {  
+			"HotelId":1,
             "RoomNumber":4004,
             "PriceForNight":221,
             "Class":"De Luxe",
             "BedNumber":3
          },
          {  
+			"HotelId":1,
             "RoomNumber":4005,
             "PriceForNight":240,
             "Class":"President",
@@ -116,132 +131,154 @@
 	  "MinPrice": 221,
       "Rooms":[  
          {  
+			"HotelId":2,
             "RoomNumber":101,
             "PriceForNight":221,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":2,
             "RoomNumber":102,
             "PriceForNight":221,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":103,
             "PriceForNight":221,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":104,
             "PriceForNight":221,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":105,
             "PriceForNight":221,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":201,
             "PriceForNight":239,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":2,
             "RoomNumber":202,
             "PriceForNight":239,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":2,
             "RoomNumber":203,
             "PriceForNight":239,
             "Class":"Superior",
             "BedNumber":1
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":204,
             "PriceForNight":239,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":2,
             "RoomNumber":301,
             "PriceForNight":257,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":2,
             "RoomNumber":302,
             "PriceForNight":257,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":2,
             "RoomNumber":303,
             "PriceForNight":257,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":2,
             "RoomNumber":304,
             "PriceForNight":257,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":2,
             "RoomNumber":401,
             "PriceForNight":257,
             "Class":"Connected Rooms",
             "BedNumber":2
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":402,
             "PriceForNight":257,
             "Class":"Connected Rooms",
             "BedNumber":2
          },
-		 {  
+		 { 
+			"HotelId":2,
             "RoomNumber":403,
             "PriceForNight":257,
             "Class":"Connected Rooms",
             "BedNumber":2
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":404,
             "PriceForNight":266,
             "Class":"Business",
             "BedNumber":1
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":405,
             "PriceForNight":266,
             "Class":"Business",
             "BedNumber":1
          },
          {  
+			"HotelId":2,
             "RoomNumber":501,
             "PriceForNight":281,
             "Class":"De Luxe",
             "BedNumber":3
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":502,
             "PriceForNight":281,
             "Class":"De Luxe",
             "BedNumber":3
          },
          {  
+			"HotelId":2,
             "RoomNumber":503,
             "PriceForNight":298,
             "Class":"President",
             "BedNumber":3
          },
 		 {  
+			"HotelId":2,
             "RoomNumber":601,
             "PriceForNight":335,
             "Class":"Royal Suite",
@@ -262,108 +299,126 @@
 	  "MinPrice": 150,
       "Rooms":[  
          {  
+			"HotelId":3,
             "RoomNumber":101,
             "PriceForNight":150,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":3,
             "RoomNumber":102,
             "PriceForNight":150,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":3,
             "RoomNumber":103,
             "PriceForNight":150,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":3,
             "RoomNumber":104,
             "PriceForNight":150,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":3,
             "RoomNumber":105,
             "PriceForNight":150,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":3,
             "RoomNumber":106,
             "PriceForNight":150,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":3,
             "RoomNumber":201,
             "PriceForNight":176,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":3,
             "RoomNumber":202,
             "PriceForNight":176,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":3,
             "RoomNumber":203,
             "PriceForNight":176,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":3,
             "RoomNumber":301,
             "PriceForNight":211,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":3,
             "RoomNumber":302,
             "PriceForNight":211,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":3,
             "RoomNumber":303,
             "PriceForNight":211,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":3,
             "RoomNumber":304,
             "PriceForNight":211,
             "Class":"Suite",
             "BedNumber":2
          },
 		 {  
+			"HotelId":3,
             "RoomNumber":305,
             "PriceForNight":236,
             "Class":"Business",
             "BedNumber":1
          },
 		 {  
+			"HotelId":3,
             "RoomNumber":306,
             "PriceForNight":236,
             "Class":"Business",
             "BedNumber":1
          },
          {  
+			"HotelId":3,
             "RoomNumber":401,
             "PriceForNight":281,
             "Class":"De Luxe",
             "BedNumber":3
          },
          {  
+			"HotelId":3,
             "RoomNumber":402,
             "PriceForNight":298,
             "Class":"President",
             "BedNumber":3
          },
 		 {  
+			"HotelId":3,
             "RoomNumber":403,
             "PriceForNight":335,
             "Class":"Royal Suite",
@@ -384,78 +439,91 @@
 	  "MinPrice": 187,
       "Rooms":[  
          {  
+			"HotelId":4,
             "RoomNumber":101,
             "PriceForNight":187,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":4,
             "RoomNumber":102,
             "PriceForNight":187,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":4,
             "RoomNumber":103,
             "PriceForNight":187,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":4,
             "RoomNumber":104,
             "PriceForNight":187,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":4,
             "RoomNumber":105,
             "PriceForNight":187,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":4,
             "RoomNumber":106,
             "PriceForNight":187,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":4,
             "RoomNumber":201,
             "PriceForNight":201,
             "Class":"Superior",
             "BedNumber":1
          },
 	     {  
+			"HotelId":4,
             "RoomNumber":202,
             "PriceForNight":201,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":4,
             "RoomNumber":203,
             "PriceForNight":201,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":4,
             "RoomNumber":204,
             "PriceForNight":248,
             "Class":"Suite",
             "BedNumber":2
          },
-         {  
+         { 
+			"HotelId":4,
             "RoomNumber":205,
             "PriceForNight":248,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":4,
             "RoomNumber":206,
             "PriceForNight":248,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":4,
             "RoomNumber":301,
             "PriceForNight":294,
             "Class":"De Luxe",
@@ -476,174 +544,203 @@
       "MinPrice": 361,
       "Rooms":[  
          {  
+			"HotelId":5,
             "RoomNumber":1001,
             "PriceForNight":361,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":5,
             "RoomNumber":1002,
             "PriceForNight":361,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":1003,
             "PriceForNight":361,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":1004,
             "PriceForNight":361,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":1005,
             "PriceForNight":361,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":1006,
             "PriceForNight":361,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":1007,
             "PriceForNight":361,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":1008,
             "PriceForNight":361,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":2001,
             "PriceForNight":430,
             "Class":"Superior",
             "BedNumber":1
          },
 	     {  
+			"HotelId":5,
             "RoomNumber":2002,
             "PriceForNight":430,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":5,
             "RoomNumber":2003,
             "PriceForNight":430,
             "Class":"Superior",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":2003,
             "PriceForNight":430,
             "Class":"Superior",
             "BedNumber":1
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":2004,
             "PriceForNight":430,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":5,
             "RoomNumber":2005,
             "PriceForNight":469,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":5,
             "RoomNumber":2006,
             "PriceForNight":469,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":5,
             "RoomNumber":2007,
             "PriceForNight":469,
             "Class":"Suite",
             "BedNumber":2
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":2008,
             "PriceForNight":469,
             "Class":"Suite",
             "BedNumber":2
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":3001,
             "PriceForNight":501,
             "Class":"Family Room",
             "BedNumber":2
          },
          {  
+			"HotelId":5,
             "RoomNumber":3002,
             "PriceForNight":501,
             "Class":"Family Room",
             "BedNumber":2
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":3003,
             "PriceForNight":501,
             "Class":"Family Room",
             "BedNumber":2
          },
          {  
+			"HotelId":5,
             "RoomNumber":3004,
             "PriceForNight":528,
             "Class":"Connected Rooms",
             "BedNumber":2
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":3005,
             "PriceForNight":528,
             "Class":"Connected Rooms",
             "BedNumber":2
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":3006,
             "PriceForNight":528,
             "Class":"Connected Rooms",
             "BedNumber":2
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":4001,
             "PriceForNight":538,
             "Class":"Business",
             "BedNumber":2
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":4002,
             "PriceForNight":538,
             "Class":"Business",
             "BedNumber":2
          },
          {  
+			"HotelId":5,
             "RoomNumber":4003,
             "PriceForNight":614,
             "Class":"De Luxe",
             "BedNumber":4
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":5001,
             "PriceForNight":614,
             "Class":"De Luxe",
             "BedNumber":4
          },	 
 		 {  
+			"HotelId":5,
             "RoomNumber":5002,
             "PriceForNight":684,
             "Class":"Royal Suite",
             "BedNumber":4
          },
 		 {  
+			"HotelId":5,
             "RoomNumber":6001,
             "PriceForNight":738,
             "Class":"Duplex",
@@ -664,60 +761,70 @@
       "MinPrice": 332,
       "Rooms":[  
          {  
+			"HotelId":6,
             "RoomNumber":101,
             "PriceForNight":332,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":6,
             "RoomNumber":102,
             "PriceForNight":332,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":6,
             "RoomNumber":103,
             "PriceForNight":332,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":6,
             "RoomNumber":104,
             "PriceForNight":332,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":6,
             "RoomNumber":201,
             "PriceForNight":379,
             "Class":"Superior",
             "BedNumber":1
          },
 	     {  
+			"HotelId":6,
             "RoomNumber":202,
             "PriceForNight":379,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":6,
             "RoomNumber":203,
             "PriceForNight":406,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":6,
             "RoomNumber":204,
             "PriceForNight":406,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":6,
             "RoomNumber":301,
             "PriceForNight":481,
             "Class":"De Luxe",
             "BedNumber":3
          },
 		 {  
+			"HotelId":6,
             "RoomNumber":302,
             "PriceForNight":481,
             "Class":"De Luxe",
@@ -738,78 +845,91 @@
 	  "MinPrice":412,
       "Rooms":[  
          {  
+			"HotelId":7,
             "RoomNumber":101,
             "PriceForNight":412,
             "Class":"Standart",
             "BedNumber":1
          },
          {  
+			"HotelId":7,
             "RoomNumber":102,
             "PriceForNight":412,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":7,
             "RoomNumber":103,
             "PriceForNight":412,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":7,
             "RoomNumber":104,
             "PriceForNight":412,
             "Class":"Standart",
             "BedNumber":1
          },
 		 {  
+			"HotelId":7,
             "RoomNumber":201,
             "PriceForNight":458,
             "Class":"Superior",
             "BedNumber":1
          },
 	     {  
+			"HotelId":7,
             "RoomNumber":202,
             "PriceForNight":458,
             "Class":"Superior",
             "BedNumber":1
          },
          {  
+			"HotelId":7,
             "RoomNumber":203,
             "PriceForNight":481,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":7,
             "RoomNumber":204,
             "PriceForNight":481,
             "Class":"Suite",
             "BedNumber":2
          },
 		 {  
+			"HotelId":7,
             "RoomNumber":205,
             "PriceForNight":481,
             "Class":"Suite",
             "BedNumber":2
          },
 		 {  
+			"HotelId":7,
             "RoomNumber":206,
             "PriceForNight":481,
             "Class":"Suite",
             "BedNumber":2
          },
          {  
+			"HotelId":7,
             "RoomNumber":301,
             "PriceForNight":512,
             "Class":"De Luxe",
             "BedNumber":3
          },
 		 {  
+			"HotelId":7,
             "RoomNumber":302,
             "PriceForNight":512,
             "Class":"De Luxe",
             "BedNumber":3
          },
 		 {  
+			"HotelId":7,
             "RoomNumber":303,
             "PriceForNight":608,
             "Class":"Royal Suite",

@@ -36,7 +36,7 @@
             </ListBox>
         </ScrollViewer>
 
-        <Line Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" X1="10" Y1="10" X2="340" Y2="10" Stroke="Red" />
+        <Line Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" X1="10" Y1="10" X2="330" Y2="10" Stroke="Red" />
         <TextBlock Grid.Row="2" Margin="22 14" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center">Total</TextBlock>
         <TextBlock Grid.Row="2" Margin="22 14" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Name="TotalCost"></TextBlock>
         <Button Click="ButtonProceed_Click" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48" >Proceed</Button>

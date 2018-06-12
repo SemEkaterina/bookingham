@@ -56,13 +56,9 @@
     <Compile Include="FileRepository.cs" />
     <Compile Include="Helpers\Hash.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201806111038386_Initial.cs" />
-    <Compile Include="Migrations\201806111038386_Initial.Designer.cs">
-      <DependentUpon>201806111038386_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806111345279_Hotel+Price.cs" />
-    <Compile Include="Migrations\201806111345279_Hotel+Price.Designer.cs">
-      <DependentUpon>201806111345279_Hotel+Price.cs</DependentUpon>
+    <Compile Include="Migrations\201806121026490_Initial.cs" />
+    <Compile Include="Migrations\201806121026490_Initial.Designer.cs">
+      <DependentUpon>201806121026490_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Booking.cs" />
@@ -78,11 +74,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EmbeddedResource Include="Migrations\201806111038386_Initial.resx">
-      <DependentUpon>201806111038386_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806111345279_Hotel+Price.resx">
-      <DependentUpon>201806111345279_Hotel+Price.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806121026490_Initial.resx">
+      <DependentUpon>201806121026490_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="users.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

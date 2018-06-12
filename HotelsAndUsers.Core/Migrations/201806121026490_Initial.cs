@@ -40,6 +40,7 @@ namespace HotelsAndUsers.Core.Migrations
                         PhoneNumber = c.String(),
                         CheckInTime = c.String(),
                         CheckOutTime = c.String(),
+                        MinPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Email = c.String(),
                         Password = c.String(),
                     })
@@ -50,6 +51,7 @@ namespace HotelsAndUsers.Core.Migrations
                 c => new
                     {
                         RoomId = c.Int(nullable: false, identity: true),
+                        HotelId = c.Int(nullable: false),
                         RoomNumber = c.Int(nullable: false),
                         Class = c.String(),
                         BedNumber = c.Int(nullable: false),
@@ -57,17 +59,14 @@ namespace HotelsAndUsers.Core.Migrations
                         Description = c.String(),
                         Hotel_HotelId = c.Int(),
                         Hotel_HotelId1 = c.Int(),
-                        Hotel_HotelId2 = c.Int(),
                         Booking_BookingId = c.Int(),
                     })
                 .PrimaryKey(t => t.RoomId)
                 .ForeignKey("dbo.Hotels", t => t.Hotel_HotelId)
                 .ForeignKey("dbo.Hotels", t => t.Hotel_HotelId1)
-                .ForeignKey("dbo.Hotels", t => t.Hotel_HotelId2)
                 .ForeignKey("dbo.Bookings", t => t.Booking_BookingId)
                 .Index(t => t.Hotel_HotelId)
                 .Index(t => t.Hotel_HotelId1)
-                .Index(t => t.Hotel_HotelId2)
                 .Index(t => t.Booking_BookingId);
             
             CreateTable(
@@ -106,13 +105,11 @@ namespace HotelsAndUsers.Core.Migrations
             DropForeignKey("dbo.Bookings", "GuestId", "dbo.Guests");
             DropForeignKey("dbo.Rooms", "Booking_BookingId", "dbo.Bookings");
             DropForeignKey("dbo.Bookings", "Hotel_HotelId", "dbo.Hotels");
-            DropForeignKey("dbo.Rooms", "Hotel_HotelId2", "dbo.Hotels");
             DropForeignKey("dbo.Rooms", "Hotel_HotelId1", "dbo.Hotels");
-            DropForeignKey("dbo.Reservations", "RoomId", "dbo.Rooms");
             DropForeignKey("dbo.Rooms", "Hotel_HotelId", "dbo.Hotels");
+            DropForeignKey("dbo.Reservations", "RoomId", "dbo.Rooms");
             DropIndex("dbo.Reservations", new[] { "RoomId" });
             DropIndex("dbo.Rooms", new[] { "Booking_BookingId" });
-            DropIndex("dbo.Rooms", new[] { "Hotel_HotelId2" });
             DropIndex("dbo.Rooms", new[] { "Hotel_HotelId1" });
             DropIndex("dbo.Rooms", new[] { "Hotel_HotelId" });
             DropIndex("dbo.Bookings", new[] { "Hotel_HotelId" });
