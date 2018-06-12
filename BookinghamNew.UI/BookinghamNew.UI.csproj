@@ -67,6 +67,15 @@
     <Compile Include="AddToBinWindow.xaml.cs">
       <DependentUpon>AddToBinWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminGuestsListWindow.xaml.cs">
+      <DependentUpon>AdminGuestsListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHotelWindow.xaml.cs">
+      <DependentUpon>AdminHotelWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRoomsListWindow.xaml.cs">
+      <DependentUpon>AdminRoomsListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BinWindow.xaml.cs">
       <DependentUpon>BinWindow.xaml</DependentUpon>
     </Compile>
@@ -92,6 +101,18 @@
       <DependentUpon>SearchWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AddToBinWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminGuestsListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminHotelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminRoomsListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -211,9 +232,6 @@
     <Resource Include="Images\search_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\placeholder.png" />
   </ItemGroup>
   <ItemGroup>
@@ -224,9 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\reply.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\house-outline.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\clock _2.png" />
@@ -261,9 +276,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\phone.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\back_black.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\rubbish-bin.png" />
