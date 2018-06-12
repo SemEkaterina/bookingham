@@ -29,7 +29,7 @@
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5 64">
             <Button Click="ButtonLogin_Click" Height="40" Width="250" Margin="1" FontSize="18" Background="#FFEA4636" Foreground="White">Log In</Button>
             <Button Click="ButtonCancel_Click" Height="40" Width="250" Margin="1" FontSize="18" Background="#FFEA4636" Foreground="White">Cancel</Button>
-            <Button Click="ButtonRegister_Click" Style="{StaticResource BoldButtonStyle}" Height="Auto" Width="250" Margin="1" FontSize="13" HorizontalContentAlignment="Left" Foreground="White" Background="{x:Null}">Don't have an account?</Button>
+            <Button Click="ButtonRegister_Click" Name="DoNotHaveAnAccount" Style="{StaticResource BoldButtonStyle}" Height="Auto" Width="250" Margin="1" FontSize="13" HorizontalContentAlignment="Left" Foreground="White" Background="{x:Null}">Don't have an account?</Button>
         </StackPanel>
     </Grid>
 </Window>
