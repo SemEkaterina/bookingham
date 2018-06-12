@@ -53,7 +53,7 @@ namespace BookinghamNew.UI
                 List<Room> BookedRooms = new List<Room>();
                 foreach (var room in _repo.BinRooms)
                 {
-                    if (room.Hotel.HotelId == hotel.HotelId) //тут проблема с room.hotel, так как отель не присвоен
+                    if (room.HotelId == hotel.HotelId)
                     {
                         BookedRooms.Add(room);
                         Reservation newReservation = new Reservation()

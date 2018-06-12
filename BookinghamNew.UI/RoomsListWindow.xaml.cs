@@ -38,13 +38,21 @@ namespace BookinghamNew.UI
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
         {
-            var addtobinWindow = new AddToBinWindow(roomsList.SelectedItem as Room, Hotel);
-            if (addtobinWindow.ShowDialog() == false)
+            if (roomsList.SelectedItem == null)
             {
-                roomsList.ItemsSource = null;
-                roomsList.ItemsSource = Hotel.SuitableRooms;
+                MessageBox.Show("Please select the room first", "Error");
+                return;
             }
-            
+
+            else
+            {
+                var addtobinWindow = new AddToBinWindow(roomsList.SelectedItem as Room, Hotel);
+                if (addtobinWindow.ShowDialog() == false)
+                {
+                    roomsList.ItemsSource = null;
+                    roomsList.ItemsSource = Hotel.SuitableRooms;
+                }
+            }                     
         }
 
         private void ExitToHotelButton(object sender, RoutedEventArgs e)
