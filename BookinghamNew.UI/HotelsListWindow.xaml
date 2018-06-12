@@ -16,7 +16,7 @@
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Hotels</TextBlock>
         <Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
-            <Image Height="26" Width="26" Source="Images/menu.png"></Image>
+            <Image Height="28" Width="28" Source="Images/shopping-basket.png"></Image>
         </Button>
         <Button Grid.Row="0" Grid.Column="0" Click="ExitToSearchPageButton_Click" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}">
             <Image Height="26" Width="26" Source="Images/back.png"></Image>
@@ -38,12 +38,13 @@
                                 <StackPanel>
                                     <Image Name="ImageOfHotels" Height="45" Width="Auto" Stretch="UniformToFill" Source="{Binding Path=HotelImagePath}"></Image>
                                 </StackPanel>
-                                <StackPanel Orientation="Vertical" Margin="5" Width="170">
+                                <StackPanel Orientation="Vertical" Margin="5" Width="160">
                                     <TextBlock Width="Auto" Height="Auto" FontSize="12" TextWrapping="Wrap" Text="{Binding Path=District}" Foreground="#FF989898"/>
                                     <TextBlock Width="Auto" Height="Auto" FontSize="12" TextWrapping="Wrap" Text="{Binding Path=Address}" Foreground="#FF989898"/>
                                 </StackPanel>
-                                <StackPanel>
+                                <StackPanel Orientation="Horizontal">
                                     <TextBlock HorizontalAlignment="Right" Height="Auto" FontSize="16" Text="{Binding Path=MinPrice}" Foreground="#FFEA4636"/>
+                                    <TextBlock Height="Auto" FontSize="16" Foreground="#FFEA4636">£</TextBlock>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>

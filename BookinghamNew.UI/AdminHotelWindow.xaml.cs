@@ -46,5 +46,10 @@ namespace BookinghamNew.UI
             adminRoomsListWindow.Show();
             this.Close();
         }
+
+        private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
