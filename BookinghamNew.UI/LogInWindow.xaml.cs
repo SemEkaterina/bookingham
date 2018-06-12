@@ -81,16 +81,6 @@ namespace BookinghamNew.UI
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void HomePageButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
 

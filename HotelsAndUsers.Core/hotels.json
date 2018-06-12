@@ -950,5 +950,28 @@
             "BedNumber":3
          }
       ]
+   },
+   {  
+      "Name":"Amity Hostel",
+      "Stars":3,
+      "Type":"Hostel",
+      "HotelImagePath":"Hotels/theStaffordLondon.JPG",
+      "Address":"16-18 St. James's Place",
+      "District":"Center",
+      "PhoneNumber":"810 44 20 3958 4011",
+      "CheckInTime":"9:00",
+      "CheckOutTime":"12:00",
+	  "MinPrice":412,
+	  "Email": "stafford@gmail.com",
+	  "Password": "stafford",
+      "Rooms":[  
+         {  
+			"HotelId":7,
+            "RoomNumber":101,
+            "PriceForNight":412,
+            "Class":"Standart",
+            "BedNumber":1
+         }
+	  ]
    }
 ]

@@ -46,13 +46,13 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Height="Auto" FontSize="16">Check-in time</TextBlock>
-            <TextBlock Height="Auto" FontSize="16" Name="CheckInTextblock" Foreground="#FF989898"></TextBlock>
+            <TextBlock Height="Auto" FontSize="14">Check-in time</TextBlock>
+            <TextBlock Height="Auto" FontSize="14" Name="CheckInTextblock" Foreground="#FF989898"></TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Height="Auto" FontSize="16">Check-out time</TextBlock>
-            <TextBlock Height="Auto" FontSize="16" Name="CheckOutTextblock" Foreground="#FF989898"></TextBlock>
+            <TextBlock Height="Auto" FontSize="14">Check-out time</TextBlock>
+            <TextBlock Height="Auto" FontSize="14" Name="CheckOutTextblock" Foreground="#FF989898"></TextBlock>
         </StackPanel>
 
         <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show available rooms</Button>
