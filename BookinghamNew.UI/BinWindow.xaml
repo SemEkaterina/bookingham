@@ -19,6 +19,9 @@
         <Button Grid.Row="0" Click="RoomsListButton_Click" Grid.Column="0" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" Foreground="{x:Null}">
             <Image Height="26" Width="26" Source="Images/back.png"></Image>
         </Button>
+        <Button Grid.Row="0" Grid.Column="1" Click="DeleteButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
+            <Image Height="26" Width="26" Source="Images/rubbish-bin.png"></Image>
+        </Button>
             
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
             <ListBox x:Name="roomsList">
