@@ -3,6 +3,7 @@ using HotelsAndUsers.Core.Interfaces;
 using HotelsAndUsers.Core.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,23 +89,6 @@ namespace HotelsAndUsers.Core
             }
         }
 
-        //public int CheckGuest(string login, string password)
-        //{
-        //    if (Context.Guests != null)
-        //    {
-        //        var user = Guests.FirstOrDefault(u => u.Email == login && Hash.GetHash(u.Password) == Hash.GetHash(password));
-        //        if (user != null)
-        //        {
-        //            return 1;
-        //        }
-        //        return 0;
-        //    }
-        //    else
-        //    {
-        //        return -1;
-        //    }
-        //}
-
         public decimal TotalPrice(Room Room, DateTime InData, DateTime OutData)
         {
             decimal total = 0;
@@ -144,6 +128,15 @@ namespace HotelsAndUsers.Core
                 room.Reservations.Add(reservation);
 
                 c.Reservations.Add(room.Reservations.Last());
+                c.SaveChanges();
+            }
+        }
+
+        public void UpdateHotel(Hotel hotel)
+        {
+            using (var c = new Context())
+            {
+                c.Hotels.AddOrUpdate(hotel);
                 c.SaveChanges();
             }
         }

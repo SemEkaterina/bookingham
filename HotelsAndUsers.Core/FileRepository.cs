@@ -120,22 +120,14 @@ namespace HotelsAndUsers.Core
             return total;
         }
 
-        //public int CheckGuest(string login, string password)
-        //{
-        //    if (Guests != null)
-        //    {
-        //        var user = Guests.FirstOrDefault(u => u.Email == login && Hash.GetHash(u.Password) == Hash.GetHash(password));
-        //        if (user != null)
-        //        {
-        //            return 1;
-        //        }
-        //        return 0;
-        //    }
-        //    else
-        //    {
-        //        return -1;
-        //    }
-        //}
+        public void UpdateHotel(Hotel hotel)
+        {
+            //using (var c = new Context())
+            //{
+            //    c.Hotels.AddOrUpdate(hotel);
+            //    c.SaveChanges();
+            //}
+        }
 
         public void AddBooking(Guest guest, Booking booking)
         {
