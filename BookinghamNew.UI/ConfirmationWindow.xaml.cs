@@ -87,7 +87,7 @@ namespace BookinghamNew.UI
                             CheckInDate = CheckInDate,
                             CheckOutDate = CheckOutDate
                         };
-                        room.Reservations.Add(newReservation);
+                        _repo.AddReservation(room, newReservation);
                         totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
                     }
                 }

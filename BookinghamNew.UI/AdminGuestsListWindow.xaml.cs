@@ -43,7 +43,9 @@ namespace BookinghamNew.UI
 
         private void ButtonRegisterNewGuest_Click(object sender, RoutedEventArgs e)
         {
-
+            var adminconfirmationListWindow = new AdminConfirmationWindow(Room, Hotel);
+            adminconfirmationListWindow.Show();
+            this.Close();
         }
     }
 }

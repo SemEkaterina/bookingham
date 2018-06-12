@@ -31,14 +31,27 @@ namespace BookinghamNew.UI
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (_repo.CheckGuest(textBoxEmail.Text, passwordBoxPassword.Password) == 1)
+            Hotel hotel = new Hotel();
+            Guest guest = new Guest();
+            _repo.Authorize(textBoxEmail.Text, passwordBoxPassword.Password, out guest, out hotel);
+            if (guest != null)
             {
-                Guest = _repo.Authorize(textBoxEmail.Text, passwordBoxPassword.Password);
-                ///////////////////////открытие профиля отеля или гостя
-                var searchWindow = new SearchWindow(Guest);
+                ///////////////////////открытие профиля гостя
+                var searchWindow = new SearchWindow(guest);
                 searchWindow.Show();
-                this.Close();
                 Close();
+            }
+            if (hotel != null)
+            {
+                ///////////////////////открытие профиля отеля
+                var adminHotelWindow = new AdminHotelWindow(hotel);
+                adminHotelWindow.Show();
+                Close();
+            }
+
+            else if ((hotel == null)&&(guest == null))
+            {
+                MessageBox.Show("Incorrect login/password");
             }
             else if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
             {
@@ -53,10 +66,7 @@ namespace BookinghamNew.UI
                 passwordBoxPassword.Focus();
                 return;
             }
-            else if (_repo.CheckGuest(textBoxEmail.Text, passwordBoxPassword.Password) == 0)
-            {
-                MessageBox.Show("Incorrect login/password");
-            }
+            
             else
             {
                 MessageBox.Show("There is no users in database:(", "Error");

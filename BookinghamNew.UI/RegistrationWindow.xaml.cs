@@ -60,8 +60,10 @@ namespace BookinghamNew.UI
                 return;
             }
 
-            int check = _repo.CheckGuest(textBoxLogin.Text, Hash.GetHash(textBoxPassword.Password));
-            if (check == 1)
+            Guest guest;
+            Hotel hotel;
+             _repo.Authorize(textBoxLogin.Text, Hash.GetHash(textBoxPassword.Password), out guest, out hotel);
+            if (guest != null)
             {
                 MessageBox.Show("This user has been already created", "Error");
                 return;
@@ -79,8 +81,7 @@ namespace BookinghamNew.UI
                 LogInWindow logInWindow = new LogInWindow();
                 logInWindow.Show();
                 this.Close();
-                }
-           
+                }           
         }
 
         private void HomePageButton_Click(object sender, RoutedEventArgs e)

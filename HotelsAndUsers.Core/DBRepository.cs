@@ -36,10 +36,10 @@ namespace HotelsAndUsers.Core
             }
         }
 
-        public Guest Authorize(string login, string password)
+        public void Authorize(string login, string password, out Guest guest, out Hotel hotel)
         {
-            var user = Guests.FirstOrDefault(u => u.Email == login && Hash.GetHash(u.Password) == Hash.GetHash(password));
-            return user;
+            guest = Guests.FirstOrDefault(g => g.Email == login && Hash.GetHash(g.Password) == Hash.GetHash(password));
+            hotel = Hotels.FirstOrDefault(h => h.Email == login && Hash.GetHash(h.Password) == Hash.GetHash(password));           
         }
 
         public void RegisterGuest(Guest guest)
@@ -88,22 +88,22 @@ namespace HotelsAndUsers.Core
             }
         }
 
-        public int CheckGuest(string login, string password)
-        {
-            if (Context.Guests != null)
-            {
-                var user = Guests.FirstOrDefault(u => u.Email == login && Hash.GetHash(u.Password) == Hash.GetHash(password));
-                if (user != null)
-                {
-                    return 1;
-                }
-                return 0;
-            }
-            else
-            {
-                return -1;
-            }
-        }
+        //public int CheckGuest(string login, string password)
+        //{
+        //    if (Context.Guests != null)
+        //    {
+        //        var user = Guests.FirstOrDefault(u => u.Email == login && Hash.GetHash(u.Password) == Hash.GetHash(password));
+        //        if (user != null)
+        //        {
+        //            return 1;
+        //        }
+        //        return 0;
+        //    }
+        //    else
+        //    {
+        //        return -1;
+        //    }
+        //}
 
         public decimal TotalPrice(Room Room, DateTime InData, DateTime OutData)
         {
@@ -127,6 +127,23 @@ namespace HotelsAndUsers.Core
                 guest.GuestBookings.Add(booking);
                 
                 c.Bookings.Add(guest.GuestBookings.Last());
+                c.SaveChanges();
+            }
+        }
+
+        public void AddReservation(Room room, Reservation reservation)
+        {
+            using (var c = new Context())
+            {
+
+                if (room.Reservations == null)
+                {
+                    room.Reservations = new List<Reservation>();
+                }
+
+                room.Reservations.Add(reservation);
+
+                c.Reservations.Add(room.Reservations.Last());
                 c.SaveChanges();
             }
         }
