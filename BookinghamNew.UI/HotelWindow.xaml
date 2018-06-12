@@ -9,6 +9,7 @@
         Height="640" Width="360" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="202.5"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition />
@@ -19,14 +20,18 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
-        <!--<Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White"></Canvas>
+        <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
         <Button Grid.Row="0" Click="BackButton_Click" Grid.Column="0" Height="40" Width="40" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" Foreground="{x:Null}">
-            <Image Height="26" Width="26" Source="Images/back_black.png"></Image>
+            <Image Height="26" Width="26" Source="Images/back.png"></Image>
         </Button>
-        <TextBlock Margin="5" FontSize="26" Foreground="Black" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Hotel</TextBlock>-->
-        <Image Name="ImageOfHotel" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Stretch="UniformToFill"></Image>
+        <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Hotel</TextBlock>
+        <Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
+            <Image Height="26" Width="26" Source="Images/menu.png"></Image>
+        </Button>
+        <Image Name="ImageOfHotel" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Stretch="UniformToFill"></Image>
+        
 
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock Height="Auto" FontSize="14" Name="HotelClassText" Margin="3" Foreground="#FF989898"></TextBlock>
             <TextBlock Height="Auto" FontSize="20" Name="HotelNameText" Margin="3" TextWrapping="Wrap"></TextBlock>
             <Image Name="StarsImage" Height="22" Width="Auto" Margin="4" HorizontalAlignment="Left"></Image>
@@ -40,16 +45,16 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="3" Grid.Column="0" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Height="Auto" FontSize="16">Check-in time</TextBlock>
             <TextBlock Height="Auto" FontSize="16" Name="CheckInTextblock" Foreground="#FF989898"></TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="3" Grid.Column="1" Margin="3" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Height="Auto" FontSize="16">Check-out time</TextBlock>
             <TextBlock Height="Auto" FontSize="16" Name="CheckOutTextblock" Foreground="#FF989898"></TextBlock>
         </StackPanel>
 
-        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show available rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show available rooms</Button>
     </Grid>
 </Window>

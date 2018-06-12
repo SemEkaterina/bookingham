@@ -80,5 +80,15 @@ namespace BookinghamNew.UI
             var roomslistlWindow = new RoomsListWindow(Hotel, Guest, CheckIn, CheckOut);
             roomslistlWindow.Show();
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BinButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
