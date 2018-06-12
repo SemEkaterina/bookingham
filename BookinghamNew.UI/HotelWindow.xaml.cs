@@ -85,5 +85,10 @@ namespace BookinghamNew.UI
         {
 
         }
+
+        private void BinButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
