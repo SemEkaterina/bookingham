@@ -17,6 +17,7 @@ namespace HotelsAndUsers.Core.Interfaces
         Guest Authorize(string login, string password);
         decimal TotalPrice(Room Room, DateTime InData, DateTime OutData);
         void RegisterGuest(Guest guest);
+        void AddBooking(Guest guest, Booking booking);
         void SearchEngine(List<Room> Rooms, decimal MaxPrice, DateTime CheckInDate, DateTime CheckOutDate, out List<Room> SuitableRooms, out int PossibleBeds);
     }
 }

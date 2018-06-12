@@ -136,7 +136,22 @@ namespace HotelsAndUsers.Core
                 return -1;
             }
         }
-    }
 
-    
+        public void AddBooking(Guest guest, Booking booking)
+        {
+            using (var c = new Context())
+            {
+
+                if (guest.GuestBookings == null)
+                {
+                    guest.GuestBookings = new List<Booking>();
+                }
+
+                guest.GuestBookings.Add(booking);
+
+                c.Bookings.Add(guest.GuestBookings.Last());
+                c.SaveChanges();
+            }
+        }
+    }   
 }

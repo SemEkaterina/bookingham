@@ -33,7 +33,7 @@ namespace BookinghamNew.UI
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void MyBookingsList_SelectionChanged(object sender, SelectionChangedEventArgs e)

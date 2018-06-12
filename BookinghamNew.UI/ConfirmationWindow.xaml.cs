@@ -82,11 +82,15 @@ namespace BookinghamNew.UI
                     };
 
                     //добавление в previous bookings
-                    if (Guest.GuestBookings == null)
-                    {
-                        Guest.GuestBookings = new List<Booking>();
-                    }
-                    Guest.GuestBookings.Add(NewBooking);
+
+                    _repo.AddBooking(Guest, NewBooking);
+                    MessageBox.Show("Success", "Success");
+                    return;
+                    //if (Guest.GuestBookings == null)
+                    //{
+                    //    Guest.GuestBookings = new List<Booking>();
+                    //}
+                    //Guest.GuestBookings.Add(NewBooking);
                 }
                 
             }
