@@ -53,7 +53,6 @@ namespace HotelsAndUsers.Core.Migrations
                 }
             }
             context.SaveChanges();
-
         }
     }
 }

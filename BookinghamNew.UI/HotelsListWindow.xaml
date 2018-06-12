@@ -13,10 +13,6 @@
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Hotels</TextBlock>
         <Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
@@ -25,14 +21,31 @@
         <Button Grid.Row="0" Grid.Column="0" Click="ExitToSearchPageButton_Click" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}">
             <Image Height="26" Width="26" Source="Images/back.png"></Image>
         </Button>
-        <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
-            <ListBox Name="hotelsList" SelectionChanged="HotelsList_SelectionChanged">
+        <ScrollViewer Grid.Row="1"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
+            <ListBox Name="hotelsList" SelectionChanged="HotelsList_SelectionChanged" Background="{x:Null}" Cursor="Hand">
+                <ListBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FFEA4636" Opacity="0.5"/>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White"/>
+                </ListBox.Resources>
+
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="5" Orientation="Vertical">
-                            <TextBlock Width="Auto" Height="Auto" TextWrapping="Wrap" Text="{Binding Path=HotelImagePath}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="16" TextWrapping="Wrap" Text="{Binding Path=Name}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="12" TextWrapping="Wrap" Text="{Binding Path=Address}"/>
+                        <StackPanel Margin="2" Orientation="Vertical">
+                            <StackPanel Margin="3">
+                                <TextBlock Width="Auto" Height="Auto" FontSize="14" TextWrapping="Wrap" Text="{Binding Path=Name}"/>
+                            </StackPanel>
+                            <StackPanel Margin="3" Orientation="Horizontal">
+                                <StackPanel>
+                                    <Image Name="ImageOfHotels" Height="45" Width="Auto" Stretch="UniformToFill" Source="{Binding Path=HotelImagePath}"></Image>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="5" Width="170">
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="12" TextWrapping="Wrap" Text="{Binding Path=District}" Foreground="#FF989898"/>
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="12" TextWrapping="Wrap" Text="{Binding Path=Address}" Foreground="#FF989898"/>
+                                </StackPanel>
+                                <StackPanel>
+                                    <TextBlock HorizontalAlignment="Right" Height="Auto" FontSize="16" Text="{Binding Path=MinPrice}" Foreground="#FFEA4636"/>
+                                </StackPanel>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

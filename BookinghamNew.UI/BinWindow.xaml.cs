@@ -33,6 +33,7 @@ namespace BookinghamNew.UI
             CheckInDate = checkin;
             CheckOutDate = checkout;
             roomsList.ItemsSource = _repo.BinRooms;
+            //TotalCost.Text=.......сумма стоимостей румов
         }
 
         private void ButtonProceed_Click(object sender, RoutedEventArgs e)

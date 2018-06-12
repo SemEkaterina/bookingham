@@ -31,7 +31,7 @@ namespace BookinghamNew.UI
             Hotels = SuitableHotels;
             Guest = guest;
             CheckIn = checkin;
-            CheckOut = checkout;
+            CheckOut = checkout;           
             hotelsList.ItemsSource = Hotels;
         }
 

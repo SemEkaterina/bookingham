@@ -12,11 +12,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Reservation</TextBlock>
         <Button Grid.Row="0" Click="RoomsListButton_Click" Grid.Column="0" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" Foreground="{x:Null}">
@@ -39,7 +36,10 @@
             </ListBox>
         </ScrollViewer>
 
-        <Button Click="ButtonProceed_Click" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48" >Proceed</Button>
+        <Line Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" X1="10" Y1="10" X2="340" Y2="10" Stroke="Red" />
+        <TextBlock Grid.Row="2" Margin="22 14" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center">Total</TextBlock>
+        <TextBlock Grid.Row="2" Margin="22 14" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Center" Name="TotalCost"></TextBlock>
+        <Button Click="ButtonProceed_Click" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48" >Proceed</Button>
     </Grid>
     
 </Window>

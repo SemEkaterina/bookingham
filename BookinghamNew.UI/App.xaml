@@ -36,18 +36,5 @@
         <Style TargetType="TextBox">
             <Setter Property="FontFamily" Value="Century Gothic"/>
         </Style>
-
-        <Style TargetType="Button" x:Key="SpecialStyle">
-            <Style.Triggers>
-                <Trigger Property="Control.IsFocused" Value="True">
-                    <Setter Property="Control.Foreground" Value="Blue"/>
-                    
-                </Trigger>
-                
-                <Trigger Property="Button.IsPressed" Value="True">
-                    <Setter Property="Control.Foreground" Value="Red"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
     </Application.Resources>
 </Application>
