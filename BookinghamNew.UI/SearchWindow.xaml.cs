@@ -156,14 +156,23 @@ namespace BookinghamNew.UI
 
         private void ButtonPreviousBookings_Click(object sender, RoutedEventArgs e)
         {
+            if (Guest == null)
+            {
+                MessageBox.Show("You need to sign in first", "Error");
+                return;
+            }
             var previousWindow = new PreviousBookings(Guest);
             if (previousWindow.ShowDialog() == false)
             {
                 DistrictHotelCombobox.SelectedItem = null;
                 //HotelNameCombobox.ItemsSource = _repo.stations;
                 Booking selectedBooking = previousWindow.bookingsList.SelectedItem as Booking;
-                Hotel selectedHotel = selectedBooking.Hotel;
-                HotelNameCombobox.SelectedItem = selectedHotel;
+                if (selectedBooking != null)
+                {
+                    Hotel selectedHotel = selectedBooking.Hotel;
+                    HotelNameCombobox.SelectedItem = selectedHotel;
+                }
+                
                 //foreach (var s in _repo.stations)
                 //    if (s.Name == selectedStation.Name)
                 //    {
