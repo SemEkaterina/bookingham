@@ -43,6 +43,7 @@ namespace BookinghamNew.UI
             {
                 var hotelWindow = new HotelWindow(hotelsList.SelectedItem as Hotel, Guest, CheckIn, CheckOut);
                 hotelWindow.Show();
+                this.Close();
             }
             else
             {
@@ -82,13 +83,13 @@ namespace BookinghamNew.UI
 
         }
 
-        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                ButtonShow_Click(sender, e);
-                e.Handled = true;
-            }
-        }
+        //private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.Key == Key.Enter)
+        //    {
+        //        ButtonShow_Click(sender, e);
+        //        e.Handled = true;
+        //    }
+        //}
     }
 }

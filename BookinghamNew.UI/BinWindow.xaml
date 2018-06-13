@@ -31,12 +31,18 @@
                 </ListBox.Resources>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="5" Orientation="Vertical">
-                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=Hotel.Name}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=Hotel.Address}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Class}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=BedNumber}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="22" Text="{Binding Path=Price}"/>
+                        <StackPanel Margin="5" Orientation="Horizontal">
+                            <StackPanel Orientation="Vertical" Width="250">
+                                <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Class}"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="14" Foreground="#FF989898">Bed Number:</TextBlock>
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="14" Foreground="#FF989898" Text="{Binding Path=BedNumber}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock HorizontalAlignment="Right" Height="Auto" FontSize="16" Text="{Binding Path=PriceForNight}" Foreground="#FFEA4636"/>
+                                <TextBlock Height="Auto" FontSize="16" Foreground="#FFEA4636">£</TextBlock>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
