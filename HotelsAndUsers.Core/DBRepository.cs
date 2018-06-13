@@ -77,16 +77,26 @@ namespace HotelsAndUsers.Core
                 }
                 else
                 {
-                    for (int i = 1; i <= r.Reservations.Count; i++)
+                    for (int i = 1; i <= r.Reservations.Count-1; i++)
                     {
-                        if ((CheckInDate >= r.Reservations[i - 1].CheckOutDate) && (CheckInDate < r.Reservations[i].CheckInDate) && (r.PriceForNight <= MaxPrice))
+                        if ((((CheckInDate >= r.Reservations[i - 1].CheckOutDate) && (CheckInDate < r.Reservations[i].CheckInDate)&&(CheckOutDate < r.Reservations[i].CheckInDate)) ||(CheckInDate >= r.Reservations[r.Reservations.Count-1].CheckOutDate)) && (r.PriceForNight <= MaxPrice))
                         {
                             SuitableRooms.Add(r);
                             PossibleBeds += r.BedNumber;
                             break;
                         }
                     }
-                }               
+                }
+                if (BinRooms != null)
+                {
+                    var suitableRooms = SuitableRooms.Except(BinRooms);
+                    SuitableRooms = new List<Room>();
+                    foreach (var item in suitableRooms)
+                    {
+                        SuitableRooms.Add(item);
+                    }
+                }
+                
             }
         }
 
@@ -123,21 +133,21 @@ namespace HotelsAndUsers.Core
             {
                 if (room.Reservations != null)
                 {
-                    for (int i = 1; i <= room.Reservations.Count+1; i++)
+                    for (int i = 1; i <= room.Reservations.Count-1; i++)
                     {
-                        if ((CheckInDate >= room.Reservations[i - 1].CheckOutDate) && (CheckInDate < room.Reservations[i].CheckInDate))
+                        if (((CheckInDate >= room.Reservations[i - 1].CheckOutDate) && (CheckInDate < room.Reservations[i].CheckInDate) && (CheckOutDate < room.Reservations[i].CheckInDate)) || (CheckInDate >= room.Reservations[room.Reservations.Count - 1].CheckOutDate))
                         {
                             k = 1;
+                            break;
                         }
                     }
-                }
-                
-
-                if (room.Reservations == null)
+                }               
+                else if ((room.Reservations == null) ||(room.Reservations.Count == 0))
                 {
                     room.Reservations = new List<Reservation>();
                     k = 1;
                 }
+
                 if (k==1)
                 {
                     room.Reservations.Add(reservation);
@@ -154,6 +164,16 @@ namespace HotelsAndUsers.Core
             using (var c = new Context())
             {
                 c.Hotels.AddOrUpdate(hotel);
+                c.SaveChanges();
+            }
+        }
+
+        public void RemoveGuest(Guest guest)
+        {
+            using (var c = new Context())
+            {
+                Guests.Remove(guest);
+                c.Guests.Remove(guest);
                 c.SaveChanges();
             }
         }

@@ -38,38 +38,85 @@ namespace BookinghamNew.UI
 
         private void ButtonConfirm_Click(object sender, RoutedEventArgs e)
         {
-            Guest guest = new Guest()
+            if (string.IsNullOrWhiteSpace(textBoxFirstName.Text))
             {
-                Name = textBoxFirstName.Text,
-                Surname = textBoxLasNname.Text,
-                Country = textBoxCountry.Text,
-                PassportId = textBoxPassportSeries.Text,
-                PassportNumber = textBoxPassportNumber.Text,
-                Email = textBoxEmail.Text
-            };
-            _repo.RegisterGuest(guest);
-
-            Reservation newReservation = new Reservation()
-            {
-                GuestId = guest.GuestId,
-                RoomId = Room.RoomId,
-                CheckInDate = CheckInCalendar.SelectedDate.Value,
-                CheckOutDate = CheckOutCalendar.SelectedDate.Value                
-            };
-
-            int k = 0;
-            _repo.AddReservation(Room, newReservation, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out k);
-            if (k==1)
-            {
-                MessageBox.Show("Success", "Success");
+                MessageBox.Show("Name cannot be empty", "Error");
+                textBoxFirstName.Focus();
                 return;
             }
+
+            else if (string.IsNullOrWhiteSpace(textBoxLasNname.Text))
+            {
+                MessageBox.Show("Surname cannot be empty", "Error");
+                textBoxLasNname.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
+            {
+                MessageBox.Show("Email cannot be empty", "Error");
+                textBoxEmail.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxPassportSeries.Text))
+            {
+                MessageBox.Show("PassportId cannot be empty", "Error");
+                textBoxPassportSeries.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxPassportNumber.Text))
+            {
+                MessageBox.Show("PassportNumber cannot be empty", "Error");
+                textBoxPassportNumber.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxNumberOfPeople.Text))
+            {
+                MessageBox.Show("Number of people cannot be empty", "Error");
+                textBoxNumberOfPeople.Focus();
+                return;
+            }
+
             else
             {
-                MessageBox.Show("This room has been already booked for this timespan", "Error");
-                return;
-            }
-            
+                Guest guest = new Guest()
+                {
+                    Name = textBoxFirstName.Text,
+                    Surname = textBoxLasNname.Text,
+                    Country = textBoxCountry.Text,
+                    PassportId = textBoxPassportSeries.Text,
+                    PassportNumber = textBoxPassportNumber.Text,
+                    Email = textBoxEmail.Text
+                };
+                _repo.RegisterGuest(guest);
+
+                Reservation newReservation = new Reservation()
+                {
+                    GuestId = guest.GuestId,
+                    RoomId = Room.RoomId,
+                    CheckInDate = CheckInCalendar.SelectedDate.Value,
+                    CheckOutDate = CheckOutCalendar.SelectedDate.Value
+                };
+
+                int k = 0;
+                _repo.AddReservation(Room, newReservation, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out k);
+                if (k == 1)
+                {
+                    MessageBox.Show("Success", "Success");                    
+                    var adminguestslistWindow = new AdminGuestsListWindow(Room, Hotel);
+                    adminguestslistWindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    //_repo.RemoveGuest(guest);
+                    MessageBox.Show("This room has been already booked for this timespan", "Error");
+                    return;
+                }
+            }                       
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

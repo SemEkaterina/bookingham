@@ -50,65 +50,103 @@ namespace BookinghamNew.UI
 
         private void ButtonConfirm_Click(object sender, RoutedEventArgs e)
         {
-            if ((textBoxFirstName.Text == Guest.Name)&&(textBoxLasNname.Text == Guest.Surname))
+            if (string.IsNullOrWhiteSpace(textBoxFirstName.Text))
             {
-                Guest.PassportId = textBoxPassportSeries.Text;
-                Guest.PassportNumber = textBoxPassportNumber.Text;
-                Guest.Country = textBoxCountry.Text;
+                MessageBox.Show("Name cannot be empty", "Error");
+                textBoxFirstName.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxLasNname.Text))
+            {
+                MessageBox.Show("Surname cannot be empty", "Error");
+                textBoxLasNname.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
+            {
+                MessageBox.Show("Email cannot be empty", "Error");
+                textBoxEmail.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxPassportSeries.Text))
+            {
+                MessageBox.Show("PassportId cannot be empty", "Error");
+                textBoxPassportSeries.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(textBoxPassportNumber.Text))
+            {
+                MessageBox.Show("PassportNumber cannot be empty", "Error");
+                textBoxPassportNumber.Focus();
+                return;
             }
 
             else
             {
-                Guest guest = new Guest()
+                if ((textBoxFirstName.Text == Guest.Name) && (textBoxLasNname.Text == Guest.Surname))
                 {
-                    Name = textBoxFirstName.Text,
-                    Surname = textBoxLasNname.Text,
-                    Email = textBoxEmail.Text,
-                    PassportId = textBoxPassportSeries.Text,
-                    PassportNumber = textBoxPassportNumber.Text,
-                    Country = textBoxCountry.Text,
-                };
-                _repo.RegisterGuest(guest);
-                Guest = guest;
-            }
-            foreach (var hotel in _repo._hotels)
-            {
-                decimal totalPrice = 0;
-                List<Room> BookedRooms = new List<Room>();
-                foreach (var room in _repo.BinRooms)
-                {
-                    if (room.HotelId == hotel.HotelId)
-                    {
-                        BookedRooms.Add(room);
-                        Reservation newReservation = new Reservation()
-                        {
-                            GuestId = Guest.GuestId,
-                            RoomId = room.RoomId,
-                            CheckInDate = CheckInDate,
-                            CheckOutDate = CheckOutDate
-                        };                       
-                        _repo.AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
-                        totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
-                    }
+                    Guest.PassportId = textBoxPassportSeries.Text;
+                    Guest.PassportNumber = textBoxPassportNumber.Text;
+                    Guest.Country = textBoxCountry.Text;
                 }
 
-                if (BookedRooms.Count != 0)
+                else
                 {
-                    Booking NewBooking = new Booking
+                    Guest guest = new Guest()
                     {
-                        HotelId = hotel.HotelId,
-                        GuestId = Guest.GuestId,
-                        //Room = BookedRooms,
-                        BookingTime = DateTime.Now,
-                        CheckIn = CheckInDate,
-                        CheckOut = CheckOutDate,
-                        TotalPrice = totalPrice
+                        Name = textBoxFirstName.Text,
+                        Surname = textBoxLasNname.Text,
+                        Email = textBoxEmail.Text,
+                        PassportId = textBoxPassportSeries.Text,
+                        PassportNumber = textBoxPassportNumber.Text,
+                        Country = textBoxCountry.Text,
                     };
-                    _repo.AddBooking(Guest, NewBooking);
-                }               
+                    _repo.RegisterGuest(guest);
+                    Guest = guest;
+                }
+                foreach (var hotel in _repo._hotels)
+                {
+                    decimal totalPrice = 0;
+                    List<Room> BookedRooms = new List<Room>();
+                    foreach (var room in _repo.BinRooms)
+                    {
+                        if (room.HotelId == hotel.HotelId)
+                        {
+                            BookedRooms.Add(room);
+                            Reservation newReservation = new Reservation()
+                            {
+                                GuestId = Guest.GuestId,
+                                RoomId = room.RoomId,
+                                CheckInDate = CheckInDate,
+                                CheckOutDate = CheckOutDate
+                            };
+                            _repo.AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
+                            totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
+                        }
+                    }
+
+                    if (BookedRooms.Count != 0)
+                    {
+                        Booking NewBooking = new Booking
+                        {
+                            HotelId = hotel.HotelId,
+                            GuestId = Guest.GuestId,
+                            Room = BookedRooms,
+                            BookingTime = DateTime.Now,
+                            CheckIn = CheckInDate,
+                            CheckOut = CheckOutDate,
+                            TotalPrice = totalPrice
+                        };
+                        _repo.AddBooking(Guest, NewBooking);
+                    }
+                }
+                MessageBox.Show("Success", "Success");
+                return;
             }
-            MessageBox.Show("Success", "Success");
-            return;
         }
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
