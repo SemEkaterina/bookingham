@@ -35,22 +35,17 @@ namespace BookinghamNew.UI
             textBoxFirstName.Text = Guest.Name;
             textBoxLasNname.Text = Guest.Surname;
             textBoxEmail.Text = Guest.Email;
-            
+
         }
 
         private void ExitToReservationButton(object sender, RoutedEventArgs e)
-        {           
-            this.Close();
-        }
-
-        private void ConfirmationList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void ButtonConfirm_Click(object sender, RoutedEventArgs e)
         {
-            if ((textBoxFirstName.Text == Guest.Name)&&(textBoxLasNname.Text == Guest.Surname))
+            if ((textBoxFirstName.Text == Guest.Name) && (textBoxLasNname.Text == Guest.Surname))
             {
                 Guest.PassportId = textBoxPassportSeries.Text;
                 Guest.PassportNumber = textBoxPassportNumber.Text;
@@ -86,7 +81,7 @@ namespace BookinghamNew.UI
                             RoomId = room.RoomId,
                             CheckInDate = CheckInDate,
                             CheckOutDate = CheckOutDate
-                        };                       
+                        };
                         _repo.AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
                         totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
                     }
@@ -105,19 +100,24 @@ namespace BookinghamNew.UI
                         TotalPrice = totalPrice
                     };
                     _repo.AddBooking(Guest, NewBooking);
-                }               
+                }
             }
             MessageBox.Show("Success", "Success");
             return;
         }
 
-        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        private void ConfirmationList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.Key == Key.Enter)
-            {
-                ButtonConfirm_Click(sender, e);
-                e.Handled = true;
-            }
+
         }
+
+        //private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.Key == Key.Enter)
+        //    {
+        //        ButtonConfirm_Click(sender, e);
+        //        e.Handled = true;
+        //    }
+        //}
     }
 }

@@ -30,10 +30,9 @@
             <ListBox x:Name="bookingsList" SelectionChanged="MyBookingsList_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="5" Orientation="Vertical">
-                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=Hotel.Name}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=BookingTime}"/>
+                        <StackPanel Margin="5" Orientation="Horizontal">
                             <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=Room.Class}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=BookingTime}"/>
                             <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=CheckIn}"/>
                             <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=CheckOut}"/>
                             <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=TotalPrice}"/>
