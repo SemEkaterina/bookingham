@@ -14,6 +14,7 @@ namespace HotelsAndUsers.Core
     {
         public List<Guest> Guests { get; set; }
         public List<Hotel> Hotels { get; set; }
+        public List<Room> Rooms { get; set; }
         public Context Context { get; set; }
         public List<Room> BinRooms { get; set; }
 
@@ -27,7 +28,18 @@ namespace HotelsAndUsers.Core
                 using (Context = new Context())
                 {
                     Guests = Context.Guests.Include("GuestBookings").ToList();
-                    Hotels = Context.Hotels.Include("Rooms").ToList();                   
+                    Hotels = Context.Hotels.Include("Rooms").ToList();
+                    Rooms = Context.Rooms.Include("Reservations").ToList();
+                    foreach (var hotel in Hotels)
+                    {
+                        foreach (var room in hotel.Rooms)
+                        {
+                            foreach (var reservation in room.Reservations)
+                            {
+                                room.Reservations.Add(reservation);
+                            }
+                        }
+                    }
                 }
             }
             catch
