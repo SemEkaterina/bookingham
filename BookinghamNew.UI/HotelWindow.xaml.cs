@@ -94,7 +94,7 @@ namespace BookinghamNew.UI
 
         private void BinButton_Click(object sender, RoutedEventArgs e)
         {
-            if (_repo.BinRooms == null)
+            if (_repo.BinHotels == null)
             {
                 MessageBox.Show("Bin is empty", "Error");
                 return;

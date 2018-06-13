@@ -36,7 +36,10 @@ namespace BookinghamNew.UI
             decimal totalCost = 0;
             foreach (var hotel in _repo.BinHotels)
             {
-                    totalCost += _repo.TotalPrice(hotel, CheckInDate, CheckOutDate);
+                foreach (var room in hotel.BinRooms)
+                {
+                    totalCost += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
+                }
             }      
             TotalCost.Text = totalCost.ToString();
         }
@@ -70,14 +73,18 @@ namespace BookinghamNew.UI
                 MessageBox.Show("Select a room from the list");
                 return;
             }
-            foreach (var r in _repo.BinRooms)
-                if (r == roomsList.SelectedItem as Room)
+            foreach (var h in _repo.BinHotels)
+                foreach (var r in h.BinRooms)
                 {
-                    _repo.BinRooms.Remove(r);
-                    break;
+                    if (r == roomsList.SelectedItem as Room)
+                    {
+                        h.BinRooms.Remove(r);
+                        break;
+                    }
                 }
+                
             roomsList.ItemsSource = null;
-            roomsList.ItemsSource = _repo.BinRooms;
+            roomsList.ItemsSource = _repo.BinHotels;
         }
 
         private void ButtonLogIn_Click(object sender, RoutedEventArgs e)

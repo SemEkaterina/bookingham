@@ -112,20 +112,23 @@ namespace BookinghamNew.UI
                 {
                     decimal totalPrice = 0;
                     List<Room> BookedRooms = new List<Room>();
-                    foreach (var room in _repo.BinRooms)
+                    foreach (var binhotel in _repo.BinHotels)
                     {
-                        if (room.HotelId == hotel.HotelId)
+                        if (binhotel.HotelId == hotel.HotelId)
                         {
-                            BookedRooms.Add(room);
-                            Reservation newReservation = new Reservation()
+                            foreach (var room in binhotel.BinRooms)
                             {
-                                GuestId = Guest.GuestId,
-                                RoomId = room.RoomId,
-                                CheckInDate = CheckInDate,
-                                CheckOutDate = CheckOutDate
-                            };
-                            _repo.AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
-                            totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
+                                BookedRooms.Add(room);
+                                Reservation newReservation = new Reservation()
+                                {
+                                    GuestId = Guest.GuestId,
+                                    RoomId = room.RoomId,
+                                    CheckInDate = CheckInDate,
+                                    CheckOutDate = CheckOutDate
+                                };
+                                _repo.AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
+                                totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
+                            }                                                        
                         }
                     }
 
@@ -135,7 +138,6 @@ namespace BookinghamNew.UI
                         {
                             HotelId = hotel.HotelId,
                             GuestId = Guest.GuestId,
-                            //Room = BookedRooms,
                             BookingTime = DateTime.Now,
                             CheckIn = CheckInDate,
                             CheckOut = CheckOutDate,

@@ -87,14 +87,21 @@ namespace HotelsAndUsers.Core
                         }
                     }
                 }
-                if (BinRooms != null)
+                if (BinHotels != null)
                 {
-                    var suitableRooms = SuitableRooms.Except(BinRooms);
-                    SuitableRooms = new List<Room>();
-                    foreach (var item in suitableRooms)
+                    foreach (var item in BinHotels)
                     {
-                        SuitableRooms.Add(item);
+                        foreach (var room in item.BinRooms)
+                        {
+                            SuitableRooms.Remove(room);
+                        }                        
                     }
+                    //var suitableRooms = SuitableRooms.Except(BinRooms);
+                    //SuitableRooms = new List<Room>();
+                    //foreach (var item in suitableRooms)
+                    //{
+                    //    SuitableRooms.Add(item);
+                    //}
                 }
                 
             }

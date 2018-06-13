@@ -16,7 +16,7 @@ namespace HotelsAndUsers.Core
         public List<Guest> Guests { get; set; }
         public List<Hotel> Hotels { get; set; }
         public Context Context { get; set; }
-        public List<Room> BinRooms { get; set; }
+        public List<Hotel> BinHotels { get; set; }
 
 
         public IEnumerable<Guest> _guests => Guests;
