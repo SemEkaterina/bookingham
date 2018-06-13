@@ -27,6 +27,7 @@ namespace BookinghamNew.UI
         public LogInWindow()
         {
             InitializeComponent();
+            textBoxEmail.Focus();
         }
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
@@ -49,10 +50,11 @@ namespace BookinghamNew.UI
                 Close();
             }
 
-            else if ((hotel == null)&&(guest == null))
+            else if ((hotel == null) && (guest == null))
             {
                 MessageBox.Show("Incorrect login/password");
             }
+
             else if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
             {
                 MessageBox.Show("Email cannot be empty", "Error");
@@ -65,8 +67,8 @@ namespace BookinghamNew.UI
                 MessageBox.Show("Password cannot be empty", "Error");
                 passwordBoxPassword.Focus();
                 return;
-            }
-            
+            }            
+
             else
             {
                 MessageBox.Show("There is no users in database:(", "Error");

@@ -25,7 +25,7 @@
             <Image Height="30" Width="30" Source="Images/back.png"></Image>
         </Button>
 
-        <TextBlock Grid.Row="1" Name="HotelHeader" Margin="5" FontSize="14" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="1" Name="HotelHeader" TextWrapping="Wrap" Margin="5" FontSize="16" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden">
             <ListBox x:Name="roomsList" SelectionChanged="RoomsList_SelectionChanged">

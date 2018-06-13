@@ -41,8 +41,7 @@ namespace BookinghamNew.UI
             else
             {
                 this.Close();
-            }
-            
+            }           
         }
 
         private void MyBookingsList_SelectionChanged(object sender, SelectionChangedEventArgs e)

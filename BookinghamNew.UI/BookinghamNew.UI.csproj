@@ -222,9 +222,6 @@
     <Resource Include="Hotels\novotel_london_paddington.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\letter-x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Hotels\doubleTreeByHiltonWestminster.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -240,25 +237,13 @@
     <Resource Include="Images\log-out.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\search_black.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\search_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\placeholder.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\next.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\reply.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\clock _2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\menu.png" />
@@ -296,13 +281,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\shopping-basket.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Beds\1_double.png" />
-    <Resource Include="Beds\2_double.png" />
-    <Resource Include="Beds\3_double.png" />
-    <Resource Include="Beds\4_double.png" />
-    <Resource Include="Beds\5_double.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Hotels\amityHostel.jpg" />
