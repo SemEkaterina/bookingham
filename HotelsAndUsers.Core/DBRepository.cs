@@ -28,18 +28,28 @@ namespace HotelsAndUsers.Core
                 using (Context = new Context())
                 {
                     Guests = Context.Guests.Include("GuestBookings").ToList();
-                    Hotels = Context.Hotels.Include("Rooms").ToList();
+                    Hotels = Context.Hotels/*.Include("Rooms")*/.ToList();
                     Rooms = Context.Rooms.Include("Reservations").ToList();
-                    foreach (var hotel in Hotels)
+                    for (int i = 0; i < Guests.Count; i++)
                     {
-                        foreach (var room in hotel.Rooms)
+                        if (Guests[i].Password == null)
                         {
-                            foreach (var reservation in room.Reservations)
-                            {
-                                room.Reservations.Add(reservation);
-                            }
+                            Guests.Remove(Guests[i]);
                         }
                     }
+                        
+                    
+                    //foreach (var hotel in Hotels)
+                    //{
+                    //    hotel.Rooms = new List<Room>();
+                    //    foreach (var room in hotel.Rooms)
+                    //    {
+                    //        if (room.HotelId == hotel.HotelId)
+                    //        {
+                    //            hotel.Rooms.Add(room);
+                    //        }
+                    //    }
+                    //}
                 }
             }
             catch
@@ -156,7 +166,7 @@ namespace HotelsAndUsers.Core
             k = 0;
             using (var c = new Context())
             {
-                if (room.Reservations != null)
+                if (room.Reservations.Count != 0)
                 {
                     for (int i = 1; i <= room.Reservations.Count; i++)
                     {
