@@ -32,11 +32,11 @@ namespace BookinghamNew.UI
             Guest = guest;
             CheckInDate = checkin;
             CheckOutDate = checkout;
-            roomsList.ItemsSource = _repo.BinRooms;
+            roomsList.ItemsSource = _repo.BinHotels;
             decimal totalCost = 0;
-            foreach (var room in _repo.BinRooms)
+            foreach (var hotel in _repo.BinHotels)
             {
-                    totalCost += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
+                    totalCost += _repo.TotalPrice(hotel, CheckInDate, CheckOutDate);
             }      
             TotalCost.Text = totalCost.ToString();
         }
