@@ -36,7 +36,6 @@
                             <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=Room.Class}"/>
                             <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=CheckIn}"/>
                             <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=CheckOut}"/>
-                            <!--<TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=BedNumber}"/>-->
                             <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=TotalPrice}"/>
                         </StackPanel>
                     </DataTemplate>
