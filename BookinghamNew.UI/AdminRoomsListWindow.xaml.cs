@@ -36,6 +36,7 @@ namespace BookinghamNew.UI
 
             }
             Room selectedRoom = roomsList.SelectedItem as Room;
+            
             var adminguestslistWindow = new AdminGuestsListWindow(selectedRoom, Hotel);
             adminguestslistWindow.Show();
             this.Close();

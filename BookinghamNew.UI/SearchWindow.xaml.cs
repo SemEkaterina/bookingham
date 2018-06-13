@@ -145,10 +145,16 @@ namespace BookinghamNew.UI
             if (previousWindow.ShowDialog() == false)
             {
                 DistrictHotelCombobox.SelectedItem = null;
-                //HotelNameCombobox.ItemsSource = _repo.stations;
                 Booking selectedBooking = previousWindow.bookingsList.SelectedItem as Booking;
                 if (selectedBooking != null)
                 {
+                    foreach (var item in _repo._hotels)
+                    {
+                        if (item.HotelId == selectedBooking.HotelId)
+                        {
+                            HotelNameCombobox.SelectedItem = item;
+                        }
+                    }
                     //Hotel selectedHotel = selectedBooking.Hotel;
                     //HotelNameCombobox.SelectedItem = selectedHotel;
                 }

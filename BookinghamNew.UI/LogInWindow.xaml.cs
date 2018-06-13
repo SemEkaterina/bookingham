@@ -33,7 +33,22 @@ namespace BookinghamNew.UI
         {
             Hotel hotel = new Hotel();
             Guest guest = new Guest();
+
+            if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
+            {
+                MessageBox.Show("Email cannot be empty", "Error");
+                textBoxEmail.Focus();
+                return;
+            }
+
+            else if (string.IsNullOrWhiteSpace(passwordBoxPassword.Password))
+            {
+                MessageBox.Show("Password cannot be empty", "Error");
+                passwordBoxPassword.Focus();
+                return;
+            }
             _repo.Authorize(textBoxEmail.Text, passwordBoxPassword.Password, out guest, out hotel);
+
             if (guest != null)
             {
                 ///////////////////////открытие профиля гостя
@@ -49,29 +64,12 @@ namespace BookinghamNew.UI
                 Close();
             }
 
-            else if ((hotel == null)&&(guest == null))
+            else if ((hotel == null) && (guest == null))
             {
                 MessageBox.Show("Incorrect login/password");
             }
-            else if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
-            {
-                MessageBox.Show("Email cannot be empty", "Error");
-                textBoxEmail.Focus();
-                return;
-            }
-
-            else if (string.IsNullOrWhiteSpace(passwordBoxPassword.Password))
-            {
-                MessageBox.Show("Password cannot be empty", "Error");
-                passwordBoxPassword.Focus();
-                return;
-            }
             
-            else
-            {
-                MessageBox.Show("There is no users in database:(", "Error");
-                return;
-            }
+
         }
 
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
