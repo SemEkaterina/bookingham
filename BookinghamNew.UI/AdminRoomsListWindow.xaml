@@ -37,6 +37,7 @@
                     <DataTemplate>
                         <StackPanel Margin="5" Orientation="Horizontal">
                             <StackPanel Orientation="Vertical" Width="250">
+                                <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=RoomNumber}"/>
                                 <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Class}"/>
                                 <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=BedNumber}"/>
                             </StackPanel>
@@ -48,6 +49,10 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </ScrollViewer>
-        <Button Click="ButtonShowGuests_Click" Grid.Row="3" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Show Guests</Button>
+        <Button Click="ButtonShowGuests_Click" Grid.Row="3" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Show Guests
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Opacity="0.4" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

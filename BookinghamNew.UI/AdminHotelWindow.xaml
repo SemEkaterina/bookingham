@@ -58,6 +58,10 @@
             <TextBlock Height="Auto" FontSize="16">Check-out time</TextBlock>
             <TextBox Height="Auto" FontSize="16" Name="HotelCheckOutText" Foreground="#FF989898" BorderBrush="#FFEA4636"></TextBox>
         </StackPanel>
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 18 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 18 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show rooms
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Opacity="0.4" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

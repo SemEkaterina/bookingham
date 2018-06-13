@@ -96,7 +96,7 @@ namespace BookinghamNew.UI
                 {
                     Booking NewBooking = new Booking
                     {
-                        Hotel = hotel,
+                        HotelId = hotel.HotelId,
                         GuestId = Guest.GuestId,
                         Room = BookedRooms,
                         BookingTime = DateTime.Now,

@@ -290,13 +290,21 @@
   <ItemGroup>
     <Resource Include="Images\shopping-basket.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Beds\1_double.png" />
     <Resource Include="Beds\2_double.png" />
     <Resource Include="Beds\3_double.png" />
     <Resource Include="Beds\4_double.png" />
     <Resource Include="Beds\5_double.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hotels\amityHostel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hotels\yhaLondonEarl%27sCourt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hotels\palmersLodgeSwissCottage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

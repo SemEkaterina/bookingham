@@ -52,6 +52,10 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </ScrollViewer>
-        <Button Click="ButtonSelect_Click" Grid.Row="3" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Select</Button>
+        <Button Click="ButtonSelect_Click" Grid.Row="3" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Select
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Opacity="0.4" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
