@@ -39,8 +39,16 @@ namespace BookinghamNew.UI
 
         private void ButtonShow_Click(object sender, RoutedEventArgs e)
         {
-            var hotelWindow = new HotelWindow(hotelsList.SelectedItem as Hotel, Guest, CheckIn, CheckOut);
-            hotelWindow.Show();
+            if (hotelsList.SelectedItem != null)
+            {
+                var hotelWindow = new HotelWindow(hotelsList.SelectedItem as Hotel, Guest, CheckIn, CheckOut);
+                hotelWindow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Select a hotel first", "Error");
+                return;
+            }
         }
 
         private void BinButton_Click(object sender, RoutedEventArgs e)

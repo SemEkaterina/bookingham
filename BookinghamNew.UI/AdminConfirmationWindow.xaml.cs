@@ -57,7 +57,19 @@ namespace BookinghamNew.UI
                 CheckOutDate = CheckOutCalendar.SelectedDate.Value                
             };
 
-            _repo.AddReservation(Room, newReservation);
+            int k = 0;
+            _repo.AddReservation(Room, newReservation, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out k);
+            if (k==1)
+            {
+                MessageBox.Show("Success", "Success");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("This room has been already booked for this timespan", "Error");
+                return;
+            }
+            
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

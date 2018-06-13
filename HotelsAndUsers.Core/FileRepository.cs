@@ -146,21 +146,22 @@ namespace HotelsAndUsers.Core
             }
         }
 
-        public void AddReservation(Room room, Reservation reservation)
+        public void AddReservation(Room room, Reservation reservation, DateTime CheckInDate, DateTime CheckOutDate, out int k)
         {
-            using (var c = new Context())
-            {
+            k = 0;
+            //using (var c = new Context())
+            //{
 
-                if (room.Reservations == null)
-                {
-                    room.Reservations = new List<Reservation>();
-                }
+            //    if (room.Reservations == null)
+            //    {
+            //        room.Reservations = new List<Reservation>();
+            //    }
 
-                room.Reservations.Add(reservation);
+            //    room.Reservations.Add(reservation);
 
-                c.Reservations.Add(room.Reservations.Last());
-                c.SaveChanges();
-            }
+            //    c.Reservations.Add(room.Reservations.Last());
+            //    c.SaveChanges();
+            //}
         }
     }   
 }

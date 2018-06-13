@@ -55,7 +55,8 @@ namespace HotelsAndUsers.Core
                 }
                 else
                 {
-                    context.Guests.Add(guest);
+                    context.Guests.AddOrUpdate(guest);
+                    Guests.Add(guest);
                 }
                 context.SaveChanges();
             }
@@ -115,20 +116,36 @@ namespace HotelsAndUsers.Core
             }
         }
 
-        public void AddReservation(Room room, Reservation reservation)
+        public void AddReservation(Room room, Reservation reservation, DateTime CheckInDate, DateTime CheckOutDate, out int k)
         {
+            k = 0;
             using (var c = new Context())
             {
+                if (room.Reservations != null)
+                {
+                    for (int i = 1; i <= room.Reservations.Count+1; i++)
+                    {
+                        if ((CheckInDate >= room.Reservations[i - 1].CheckOutDate) && (CheckInDate < room.Reservations[i].CheckInDate))
+                        {
+                            k = 1;
+                        }
+                    }
+                }
+                
 
                 if (room.Reservations == null)
                 {
                     room.Reservations = new List<Reservation>();
+                    k = 1;
                 }
+                if (k==1)
+                {
+                    room.Reservations.Add(reservation);
+                    c.Reservations.Add(room.Reservations.Last());
 
-                room.Reservations.Add(reservation);
-
-                c.Reservations.Add(room.Reservations.Last());
-                c.SaveChanges();
+                    c.SaveChanges();
+                }
+                
             }
         }
 
