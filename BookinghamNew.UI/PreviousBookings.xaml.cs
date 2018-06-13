@@ -52,14 +52,23 @@ namespace BookinghamNew.UI
 
         private void ExitToHotelButton(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
-        {
             var searchWindow = new SearchWindow(Guest);
             searchWindow.Show();
             this.Close();
         }
+
+        //private void BinButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (_repo.BinRooms == null)
+        //    {
+        //        MessageBox.Show("Bin is empty", "Error");
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        var binWindow = new BinWindow(Guest, CheckIn, CheckOut);
+        //        binWindow.Show();
+        //    }
+        //}
     }
 }

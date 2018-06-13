@@ -104,12 +104,8 @@ namespace BookinghamNew.UI
                         CheckOut = CheckOutDate,
                         TotalPrice = totalPrice
                     };
-
-
                     _repo.AddBooking(Guest, NewBooking);
-
-                }
-                
+                }               
             }
             MessageBox.Show("Success", "Success");
             return;

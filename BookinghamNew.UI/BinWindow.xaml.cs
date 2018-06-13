@@ -67,12 +67,26 @@ namespace BookinghamNew.UI
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (roomsList.SelectedItem == null)
+            {
+                MessageBox.Show("Select a room from the list");
+                return;
+            }
+            foreach (var r in _repo.BinRooms)
+                if (r == roomsList.SelectedItem as Room)
+                {
+                    _repo.BinRooms.Remove(r);
+                    break;
+                }
+            roomsList.ItemsSource = null;
+            roomsList.ItemsSource = _repo.BinRooms;
         }
 
         private void ButtonLogIn_Click(object sender, RoutedEventArgs e)
         {
-
+            var loginWindow = new LogInWindow();
+            loginWindow.Show();
+            
         }
     }
 }

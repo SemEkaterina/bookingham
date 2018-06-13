@@ -78,9 +78,9 @@ namespace BookinghamNew.UI
                         Password = textBoxPassword.Password,
                     };
                     _repo.RegisterGuest(Guest);
-                LogInWindow logInWindow = new LogInWindow();
-                logInWindow.Show();
-                this.Close();
+                    LogInWindow logInWindow = new LogInWindow();
+                    logInWindow.Show();
+                    Close();
                 }           
         }
 
