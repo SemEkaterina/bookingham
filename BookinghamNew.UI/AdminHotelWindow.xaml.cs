@@ -33,6 +33,7 @@ namespace BookinghamNew.UI
             HotelPhoneText.Text = Hotel.PhoneNumber;
             HotelCheckInText.Text = Hotel.CheckInTime;
             HotelCheckOutText.Text = Hotel.CheckOutTime;
+            HotelDistrictText.Text = Hotel.District;
             if (Hotel.Stars == 1)
             {
                 Uri uri = new Uri(@"Stars/1_star.png", UriKind.Relative);

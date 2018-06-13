@@ -30,6 +30,10 @@ namespace BookinghamNew.UI
             InitializeComponent();
             Room = room;
             Hotel = hotel;
+            CheckInCalendar.DisplayDateStart = DateTime.Today;
+            CheckOutCalendar.DisplayDateStart = DateTime.Today;
+            CheckInCalendar.SelectedDate = DateTime.Today;
+            CheckOutCalendar.SelectedDate = DateTime.Today.AddDays(1);
         }
 
         private void ButtonConfirm_Click(object sender, RoutedEventArgs e)

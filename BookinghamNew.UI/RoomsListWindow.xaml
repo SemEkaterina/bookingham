@@ -21,11 +21,11 @@
         <Button Grid.Row="0" Click="BinButton_Click" Height="48" Width="48" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
             <Image Height="26" Width="26" Source="Images/shopping-basket.png"></Image>
         </Button>
-        <Button Grid.Row="0" Click="ExitToHotelButton" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" >
+        <Button Grid.Row="0" Click="ExitToHotelButton_Click" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" >
             <Image Height="30" Width="30" Source="Images/back.png"></Image>
         </Button>
 
-        <TextBlock Grid.Row="1" Name="HotelHeader" Margin="5" FontSize="18" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="1" Name="HotelHeader" Margin="5" FontSize="14" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden">
             <ListBox x:Name="roomsList" SelectionChanged="RoomsList_SelectionChanged">

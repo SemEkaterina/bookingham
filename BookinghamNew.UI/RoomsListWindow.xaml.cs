@@ -36,7 +36,8 @@ namespace BookinghamNew.UI
             CheckIn = checkin;
             CheckOut = checkout;
             HotelHeader.Text = Hotel.Name;
-            roomsList.ItemsSource = Hotel.SuitableRooms;
+            //roomsList.ItemsSource = null;
+            //roomsList.ItemsSource = Hotel.SuitableRooms;
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
@@ -58,13 +59,6 @@ namespace BookinghamNew.UI
             }                     
         }
 
-        private void ExitToHotelButton(object sender, RoutedEventArgs e)
-        {
-            var hotelWindow = new HotelWindow(Hotel, Guest, CheckIn, CheckOut);
-            hotelWindow.Show();
-            this.Close();
-        }
-
         private void RoomsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -83,6 +77,13 @@ namespace BookinghamNew.UI
                 var binWindow = new BinWindow(Guest, CheckIn, CheckOut);
                 binWindow.Show();
             }
+        }
+
+        private void ExitToHotelButton_Click(object sender, RoutedEventArgs e)
+        {
+            var hotelWindow = new HotelWindow(Hotel, Guest, CheckIn, CheckOut);
+            hotelWindow.Show();
+            this.Close();
         }
     }
 }
