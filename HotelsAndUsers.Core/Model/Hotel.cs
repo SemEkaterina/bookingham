@@ -24,5 +24,6 @@ namespace HotelsAndUsers.Core.Model
         public string Password { get; set; }
         public List<Room> Rooms { get; set; }
         public List<Room> SuitableRooms { get; set; }
+        public List<Room> BinRooms { get; set; }
     }
 }
