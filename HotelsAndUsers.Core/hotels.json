@@ -764,7 +764,7 @@
       "Type":"Hotel",
       "HotelImagePath":"Hotels/stJamesHotelAndClub.jpg",
       "Address":"7-8 Park Place, SW1A 1LS",
-      "District":"Center",
+      "District":"East",
       "PhoneNumber":"810 44 20 7316 1600",
       "CheckInTime":"10:00",
       "CheckOutTime":"12:00",
@@ -955,20 +955,360 @@
       "Name":"Amity Hostel",
       "Stars":3,
       "Type":"Hostel",
-      "HotelImagePath":"Hotels/theStaffordLondon.JPG",
-      "Address":"16-18 St. James's Place",
-      "District":"Center",
-      "PhoneNumber":"810 44 20 3958 4011",
+      "HotelImagePath":"Hotels/amityHostel.jpg",
+      "Address":"43-45 Wimbledon Hill Road Wimbledon",
+      "District":"West",
+      "PhoneNumber":"810 44 20 1023 2194",
       "CheckInTime":"9:00",
       "CheckOutTime":"12:00",
-	  "MinPrice":412,
-	  "Email": "stafford@gmail.com",
-	  "Password": "stafford",
+	  "MinPrice":72,
+	  "Email": "amity@gmail.com",
+	  "Password": "amity",
       "Rooms":[  
-         {  
-			"HotelId":7,
+		 {  
+			"HotelId":8,
             "RoomNumber":101,
-            "PriceForNight":412,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":102,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":103,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":104,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":105,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":106,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+         {  
+			"HotelId":8,
+            "RoomNumber":201,
+            "PriceForNight":72,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":202,
+            "PriceForNight":72,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":203,
+            "PriceForNight":72,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":204,
+            "PriceForNight":72,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":205,
+            "PriceForNight":72,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":8,
+            "RoomNumber":206,
+            "PriceForNight":72,
+            "Class":"Standart",
+            "BedNumber":1
+         }
+	  ]
+   },
+   {  
+      "Name":"YHA London Earl's Court",
+      "Stars":4,
+      "Type":"Hostel",
+      "HotelImagePath":"Hotels/yhaLondonEarl'sCourt.jpg",
+      "Address":"38 Bolton Gardens",
+      "District":"West",
+      "PhoneNumber":"810 44 1273 005140",
+      "CheckInTime":"11:00",
+      "CheckOutTime":"12:00",
+	  "MinPrice":59,
+	  "Email": "earlscourt@gmail.com",
+	  "Password": "earlscourt",
+      "Rooms":[  
+		 {  
+			"HotelId":9,
+            "RoomNumber":101,
+            "PriceForNight":59,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":102,
+            "PriceForNight":59,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":103,
+            "PriceForNight":59,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":104,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":105,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":106,
+            "PriceForNight":63,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+         {  
+			"HotelId":9,
+            "RoomNumber":201,
+            "PriceForNight":85,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":202,
+            "PriceForNight":85,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":203,
+            "PriceForNight":85,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":204,
+            "PriceForNight":85,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":205,
+            "PriceForNight":85,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":206,
+            "PriceForNight":85,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":9,
+            "RoomNumber":207,
+            "PriceForNight":85,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":1,
+            "RoomNumber":301,
+            "PriceForNight":104,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+			"HotelId":1,
+            "RoomNumber":302,
+            "PriceForNight":104,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+			"HotelId":1,
+            "RoomNumber":303,
+            "PriceForNight":104,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+			"HotelId":1,
+            "RoomNumber":304,
+            "PriceForNight":104,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+			"HotelId":1,
+            "RoomNumber":305,
+            "PriceForNight":104,
+            "Class":"Suite",
+            "BedNumber":2
+         },
+		 {  
+			"HotelId":1,
+            "RoomNumber":306,
+            "PriceForNight":104,
+            "Class":"Suite",
+            "BedNumber":2
+         }
+	  ]
+   },
+   {  
+      "Name":"Palmers Lodge - Swiss Cottage",
+      "Stars":2,
+      "Type":"Hostel",
+      "HotelImagePath":"Hotels/palmersLodgeSwissCottage.jpg",
+      "Address":"40 College Crescent, Swiss Cottage",
+      "District":"Nouth",
+      "PhoneNumber":"810 44 20 7483 8470",
+      "CheckInTime":"10:00",
+      "CheckOutTime":"12:00",
+	  "MinPrice":31,
+	  "Email": "palmers@gmail.com",
+	  "Password": "palmers",
+      "Rooms":[  
+		 {  
+			"HotelId":10,
+            "RoomNumber":101,
+            "PriceForNight":31,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":102,
+            "PriceForNight":31,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":103,
+            "PriceForNight":31,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":104,
+            "PriceForNight":31,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":105,
+            "PriceForNight":31,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":106,
+            "PriceForNight":31,
+            "Class":"Bunk Bed",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":201,
+            "PriceForNight":57,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":202,
+            "PriceForNight":57,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":203,
+            "PriceForNight":57,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":204,
+            "PriceForNight":57,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":301,
+            "PriceForNight":57,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":302,
+            "PriceForNight":57,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":303,
+            "PriceForNight":57,
+            "Class":"Standart",
+            "BedNumber":1
+         },
+		 {  
+			"HotelId":10,
+            "RoomNumber":304,
+            "PriceForNight":57,
             "Class":"Standart",
             "BedNumber":1
          }

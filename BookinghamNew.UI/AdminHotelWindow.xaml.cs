@@ -25,7 +25,6 @@ namespace BookinghamNew.UI
         {
             InitializeComponent();
             Hotel = hotel;
-            HotelClassText.Text = Hotel.Type;
             HotelAddressText.Text = Hotel.Address;
             HotelNameText.Text = Hotel.Name;
             HotelPhoneText.Text = Hotel.PhoneNumber;

@@ -42,6 +42,10 @@
             <TextBox Name="textBoxPassportNumber" Grid.Row="1" Grid.Column="1" Height="40" Width="250" Margin="1" FontSize="18" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="#FFEA4636"></TextBox>
         </StackPanel>
 
-        <Button Click="ButtonConfirm_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Confirm</Button>
+        <Button Click="ButtonConfirm_Click" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Height="40" Width="250" FontSize="18" Background="#FFEA4636" Foreground="White" Margin="1 24 1 48">Confirm
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Opacity="0.4" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

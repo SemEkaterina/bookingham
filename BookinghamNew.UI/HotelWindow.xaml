@@ -55,6 +55,10 @@
             <TextBlock Height="Auto" FontSize="14" Name="CheckOutTextblock" Foreground="#FF989898"></TextBlock>
         </StackPanel>
 
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show available rooms</Button>
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonShowRooms_Click" Height="40" Width="250" Margin="1 24 1 48" FontSize="18" Background="#FFEA4636" Foreground="White">Show available rooms
+            <Button.Effect>
+                <DropShadowEffect Color="Black" Opacity="0.4" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

@@ -169,8 +169,8 @@ namespace BookinghamNew.UI
                 Booking selectedBooking = previousWindow.bookingsList.SelectedItem as Booking;
                 if (selectedBooking != null)
                 {
-                    Hotel selectedHotel = selectedBooking.Hotel;
-                    HotelNameCombobox.SelectedItem = selectedHotel;
+                    //Hotel selectedHotel = selectedBooking.Hotel;
+                    //HotelNameCombobox.SelectedItem = selectedHotel;
                 }
                 
                 //foreach (var s in _repo.stations)
