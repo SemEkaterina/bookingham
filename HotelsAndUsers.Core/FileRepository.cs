@@ -146,6 +146,11 @@ namespace HotelsAndUsers.Core
             }
         }
 
+        public void RemoveGuest(Guest guest)
+        {
+
+        }
+
         public void AddReservation(Room room, Reservation reservation, DateTime CheckInDate, DateTime CheckOutDate, out int k)
         {
             k = 0;

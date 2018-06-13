@@ -17,6 +17,7 @@ namespace HotelsAndUsers.Core.Interfaces
         void Authorize(string login, string password, out Guest guest, out Hotel hotel);
         decimal TotalPrice(Room Room, DateTime InData, DateTime OutData);
         void RegisterGuest(Guest guest);
+        void RemoveGuest(Guest guest);
         void AddBooking(Guest guest, Booking booking);
         void AddReservation(Room room, Reservation reservation, DateTime CheckInDate, DateTime CheckOutDate, out int k);
         void UpdateHotel(Hotel hotel);
