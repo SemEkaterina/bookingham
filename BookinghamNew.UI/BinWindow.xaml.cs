@@ -86,5 +86,14 @@ namespace BookinghamNew.UI
             loginWindow.Show();
             
         }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                ButtonProceed_Click(sender, e);
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -57,6 +57,15 @@ namespace BookinghamNew.UI
             this.Close();
         }
 
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                ButtonSelect_Click(sender, e);
+                e.Handled = true;
+            }
+        }
+
         //private void BinButton_Click(object sender, RoutedEventArgs e)
         //{
         //    if (_repo.BinRooms == null)

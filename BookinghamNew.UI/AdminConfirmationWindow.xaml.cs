@@ -66,5 +66,14 @@ namespace BookinghamNew.UI
             adminguestslistWindow.Show();
             this.Close();
         }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                ButtonConfirm_Click(sender, e);
+                e.Handled = true;
+            }
+        }
     }
 }

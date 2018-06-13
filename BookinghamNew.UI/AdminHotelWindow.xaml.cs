@@ -94,5 +94,14 @@ namespace BookinghamNew.UI
             Hotel.District = HotelDistrictText.Text;
             _repo.UpdateHotel(Hotel);
         }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                ButtonShowRooms_Click(sender, e);
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -1,11 +1,11 @@
-﻿<Window x:Class="BookinghamNew.UI.AddToBinWindow"
+﻿<Window x:Class="BookinghamNew.UI.SaveChangesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
-        Icon="Images/Group 5logo2.png"
+         Icon="Images/Group 5logo2.png"
         Height="160" Width="280" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_PreviewKeyDown">
     <Grid>
         <Grid.RowDefinitions>
@@ -16,9 +16,9 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" >Add selected room to the booking?</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13">Do you want to save changes?</TextBlock>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Click="ButtonAdd_Click" Width="100" Height="25" Cursor="Hand" Margin="5" Background="#FFEA4636" Foreground="White">Add
+            <Button Click="ButtonOK_Click" Width="100" Height="25" Cursor="Hand" Margin="5" Background="#FFEA4636" Foreground="White">OK
                 <Button.Effect>
                     <DropShadowEffect Color="Black" Opacity="0.4" ShadowDepth="3"/>
                 </Button.Effect>

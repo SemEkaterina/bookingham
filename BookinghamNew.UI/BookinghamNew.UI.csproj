@@ -100,6 +100,9 @@
     <Compile Include="RoomsListWindow.xaml.cs">
       <DependentUpon>RoomsListWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SaveChangesWindow.xaml.cs">
+      <DependentUpon>SaveChangesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchWindow.xaml.cs">
       <DependentUpon>SearchWindow.xaml</DependentUpon>
     </Compile>
@@ -167,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RoomsListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SaveChangesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

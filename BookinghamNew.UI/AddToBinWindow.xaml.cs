@@ -47,5 +47,19 @@ namespace BookinghamNew.UI
         {
             this.Close();
         }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) 
+            {
+                ButtonAdd_Click(sender, e);
+                e.Handled = true;
+            }
+            else if (e.Key == Key.Escape)
+            {
+                ButtonCancel_Click(sender, e);
+                e.Handled = true;
+            }
+        }
     }
 }

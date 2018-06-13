@@ -110,5 +110,14 @@ namespace BookinghamNew.UI
             MessageBox.Show("Success", "Success");
             return;
         }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                ButtonConfirm_Click(sender, e);
+                e.Handled = true;
+            }
+        }
     }
 }

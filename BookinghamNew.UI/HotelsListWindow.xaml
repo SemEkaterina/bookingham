@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BookinghamNew.UI"
         mc:Ignorable="d"
         Icon="Images/Group 5logo2.png"
-        Title="HotelsListWindow" Height="640" Width="360" WindowStartupLocation="CenterScreen">
+        Title="HotelsListWindow" Height="640" Width="360" WindowStartupLocation="CenterScreen" PreviewKeyDown="Window_PreviewKeyDown">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
