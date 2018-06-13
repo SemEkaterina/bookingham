@@ -37,9 +37,7 @@ namespace BookinghamNew.UI
             foreach (var room in _repo.BinRooms)
             {
                     totalCost += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
-            }
-                
-            
+            }      
             TotalCost.Text = totalCost.ToString();
         }
 

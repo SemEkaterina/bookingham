@@ -37,13 +37,6 @@ namespace BookinghamNew.UI
             CheckOutCalendar.SelectedDate = DateTime.Today.AddDays(1);
         }
 
-        //private void ExitButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var mainWindow = new MainWindow();
-        //    mainWindow.Show();
-        //    this.Close();
-        //}
-
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {            
             List<Hotel> SuitableHotels = new List<Hotel>();
@@ -60,11 +53,12 @@ namespace BookinghamNew.UI
                         h.SuitableRooms = SuitableRooms;
                         var hotelWindow = new HotelWindow(h, Guest, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value);
                         hotelWindow.Show();
+                        this.Close();
                     }
                 }
             }
 
-            else if ((DistrictHotelCombobox.SelectedIndex != -1) )
+            else if (DistrictHotelCombobox.SelectedIndex != -1) 
             {
                 foreach (var h in _repo._hotels)
                 {
@@ -85,19 +79,6 @@ namespace BookinghamNew.UI
                 hotelslistWindow.Show();
                 this.Close();
             }
-
-            //else if((HotelNameCombobox.SelectedIndex == -1)&&(DistrictHotelCombobox.SelectedIndex == -1))
-            //{
-            //    foreach (var item in _repo._hotels)
-            //    {
-            //        SuitableHotels.Add(item);
-            //    }
-                
-
-            //    var hotelslistWindow = new HotelsListWindow(SuitableHotels);
-            //    hotelslistWindow.Show();
-            //    this.Close();
-            //}
 
             else
             {

@@ -67,7 +67,7 @@ namespace HotelsAndUsers.Core
             PossibleBeds = 0;
             foreach (var r in Rooms)
             {
-                if (r.Reservations == null)
+                if ((r.Reservations == null)||(r.Reservations.Count == 0))
                 {
                     r.Reservations = new List<Reservation>();
                     SuitableRooms.Add(r);

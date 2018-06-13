@@ -37,6 +37,10 @@ namespace BookinghamNew.UI
             HotelClassText.Text = Hotel.Type;
             HotelNameText.Text = Hotel.Name;
             HotelAddressText.Text = Hotel.Address;
+            CheckInTextblock.Text = Hotel.CheckInTime.ToString();
+            CheckOutTextblock.Text = Hotel.CheckOutTime.ToString();
+            PhoneTextBlock.Text = Hotel.PhoneNumber;
+
             if (Hotel.Stars == 1)
             {
                 Uri uri = new Uri(@"Stars/1_star.png", UriKind.Relative);
@@ -67,10 +71,6 @@ namespace BookinghamNew.UI
                 ImageSource imgSource = new BitmapImage(uri);
                 StarsImage.Source = imgSource;
             }
-            CheckInTextblock.Text = Hotel.CheckInTime.ToString();
-            CheckOutTextblock.Text = Hotel.CheckOutTime.ToString();
-            //EmailTextBlock.Text = Hotel.Email;
-            PhoneTextBlock.Text = Hotel.PhoneNumber;
 
             Uri newUri = new Uri(Hotel.HotelImagePath, UriKind.Relative);
             ImageSource imgHotelSource = new BitmapImage(newUri);
@@ -80,6 +80,7 @@ namespace BookinghamNew.UI
         private void ButtonShowRooms_Click(object sender, RoutedEventArgs e)
         {
             var roomslistlWindow = new RoomsListWindow(Hotel, Guest, CheckIn, CheckOut);
+            roomslistlWindow.roomsList.ItemsSource = Hotel.SuitableRooms;
             roomslistlWindow.Show();
             this.Close();
         }
