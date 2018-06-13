@@ -19,6 +19,7 @@ namespace HotelsAndUsers.Core.Interfaces
         void RegisterGuest(Guest guest);
         void AddBooking(Guest guest, Booking booking);
         void AddReservation(Room room, Reservation reservation);
+        void UpdateHotel(Hotel hotel);
         void SearchEngine(List<Room> Rooms, decimal MaxPrice, DateTime CheckInDate, DateTime CheckOutDate, out List<Room> SuitableRooms, out int PossibleBeds);
     }
 }

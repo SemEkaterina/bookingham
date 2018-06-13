@@ -1,4 +1,5 @@
-﻿using HotelsAndUsers.Core.Model;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,8 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class AdminHotelWindow : Window
     {
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
+
         public Hotel Hotel { get; set; }
         public AdminHotelWindow(Hotel hotel)
         {
@@ -82,7 +85,12 @@ namespace BookinghamNew.UI
 
         private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Hotel.Address = HotelAddressText.Text;
+            Hotel.CheckInTime = HotelCheckInText.Text;
+            Hotel.CheckOutTime = HotelCheckOutText.Text;
+            Hotel.Name = HotelNameText.Text;
+            Hotel.PhoneNumber = HotelPhoneText.Text;
+            _repo.UpdateHotel(Hotel);
         }
     }
 }
