@@ -103,10 +103,9 @@ namespace BookinghamNew.UI
             {
                 foreach (var h in _repo._hotels)
                 {
-                    h.SuitableRooms = null;
+                    //h.SuitableRooms = null;
                     List<Room> SuitableRooms = new List<Room>();
                     _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
-
 
                     if ((SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
                     {

@@ -81,10 +81,13 @@ namespace BookinghamNew.UI
         {
             var roomslistlWindow = new RoomsListWindow(Hotel, Guest, CheckIn, CheckOut);
             roomslistlWindow.Show();
+            this.Close();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            var searchWindow = new SearchWindow(Guest);
+            searchWindow.Show();
             this.Close();
         }
 

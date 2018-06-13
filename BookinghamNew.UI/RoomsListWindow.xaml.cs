@@ -60,6 +60,8 @@ namespace BookinghamNew.UI
 
         private void ExitToHotelButton(object sender, RoutedEventArgs e)
         {
+            var hotelWindow = new HotelWindow(Hotel, Guest, CheckIn, CheckOut);
+            hotelWindow.Show();
             this.Close();
         }
 
