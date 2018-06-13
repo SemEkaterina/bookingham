@@ -86,8 +86,8 @@ namespace BookinghamNew.UI
                             RoomId = room.RoomId,
                             CheckInDate = CheckInDate,
                             CheckOutDate = CheckOutDate
-                        };
-                        _repo.AddReservation(room, newReservation);
+                        };                       
+                        _repo.AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
                         totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
                     }
                 }

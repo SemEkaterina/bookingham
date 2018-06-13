@@ -1,4 +1,5 @@
-﻿using HotelsAndUsers.Core.Model;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class AdminGuestsListWindow : Window
     {
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
         public Hotel Hotel { get; set; }
         public Room Room { get; set; }
         public AdminGuestsListWindow(Room room,Hotel hotel)
@@ -27,6 +29,22 @@ namespace BookinghamNew.UI
             InitializeComponent();
             Hotel = hotel;
             Room = room;
+            List<Guest> guests = new List<Guest>();
+            if (room.Reservations != null)
+            {
+                foreach (var item in room.Reservations)
+                {
+                    foreach (var g in _repo._guests)
+                    {
+                        if (g.GuestId == item.GuestId)
+                        {
+                            guests.Add(g);
+                        }
+                    }
+                }
+            }
+            guestsList.ItemsSource = null;
+            guestsList.ItemsSource = guests;
         }
 
         private void BackToRoomsButton_Click(object sender, RoutedEventArgs e)

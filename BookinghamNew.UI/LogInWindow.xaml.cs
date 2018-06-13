@@ -41,7 +41,7 @@ namespace BookinghamNew.UI
                 searchWindow.Show();
                 Close();
             }
-            if (hotel != null)
+            else if (hotel != null)
             {
                 ///////////////////////открытие профиля отеля
                 var adminHotelWindow = new AdminHotelWindow(hotel);
