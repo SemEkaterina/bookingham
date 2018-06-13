@@ -68,7 +68,7 @@ namespace BookinghamNew.UI
             {
                 foreach (var h in _repo._hotels)
                 {
-                    h.SuitableRooms = null;
+                    //h.SuitableRooms = null;
                     if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
                     {
                         List<Room> SuitableRooms = new List<Room>();

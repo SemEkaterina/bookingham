@@ -27,7 +27,7 @@ namespace BookinghamNew.UI
         public AdminHotelWindow(Hotel hotel)
         {
             InitializeComponent();
-            Hotel = hotel;
+            Hotel = hotel;            
             HotelAddressText.Text = Hotel.Address;
             HotelNameText.Text = Hotel.Name;
             HotelPhoneText.Text = Hotel.PhoneNumber;
@@ -90,6 +90,7 @@ namespace BookinghamNew.UI
             Hotel.CheckOutTime = HotelCheckOutText.Text;
             Hotel.Name = HotelNameText.Text;
             Hotel.PhoneNumber = HotelPhoneText.Text;
+            Hotel.District = HotelDistrictText.Text;
             _repo.UpdateHotel(Hotel);
         }
     }
