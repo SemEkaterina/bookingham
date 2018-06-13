@@ -65,13 +65,17 @@ namespace BookinghamNew.UI
                     //h.SuitableRooms = null;
                     if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
                     {
-                        List<Room> SuitableRooms = new List<Room>();
-                        _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
-                        h.SuitableRooms = SuitableRooms;
-                        if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
+                        if ((MaxPriceTextBox.Text != null)&&(h.MinPrice <= decimal.Parse(MaxPriceTextBox.Text)))
                         {
-                            SuitableHotels.Add(h);
+                            List<Room> SuitableRooms = new List<Room>();
+                            _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
+                            h.SuitableRooms = SuitableRooms;
+                            if ((h.SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
+                            {
+                                SuitableHotels.Add(h);
+                            }
                         }
+                        
                     }
                 }
                 /////////////////////Вывод списка отелей
@@ -84,14 +88,17 @@ namespace BookinghamNew.UI
             {
                 foreach (var h in _repo._hotels)
                 {
-                    //h.SuitableRooms = null;
-                    List<Room> SuitableRooms = new List<Room>();
-                    _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
-
-                    if ((SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
+                    if ((MaxPriceTextBox.Text != null) && (h.MinPrice <= decimal.Parse(MaxPriceTextBox.Text)))
                     {
-                        SuitableHotels.Add(h);
-                        h.SuitableRooms = SuitableRooms;
+                        //h.SuitableRooms = null;
+                        List<Room> SuitableRooms = new List<Room>();
+                        _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
+
+                        if ((SuitableRooms.Count >= int.Parse(RoomsTextBox.Text)) && (PossibleBeds >= int.Parse(PeopleTextBox.Text)))
+                        {
+                            SuitableHotels.Add(h);
+                            h.SuitableRooms = SuitableRooms;
+                        }
                     }
                 }
                 /////////////////////Вывод списка отелей

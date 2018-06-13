@@ -100,9 +100,8 @@ namespace BookinghamNew.UI
                     CheckInDate = CheckInCalendar.SelectedDate.Value,
                     CheckOutDate = CheckOutCalendar.SelectedDate.Value
                 };
-
-                int k = 0;
-                _repo.AddReservation(Room, newReservation, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out k);
+                
+                _repo.AddReservation(Room, newReservation, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out int k);
                 if (k == 1)
                 {
                     MessageBox.Show("Success", "Success");

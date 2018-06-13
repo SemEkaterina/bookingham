@@ -145,7 +145,10 @@ namespace BookinghamNew.UI
                     }
                 }
                 MessageBox.Show("Success", "Success");
-                return;
+                _repo.BinRooms = null;
+                var searchWindow = new SearchWindow(Guest);
+                searchWindow.Show();
+                this.Close();
             }
         }
 

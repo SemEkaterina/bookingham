@@ -68,22 +68,35 @@ namespace HotelsAndUsers.Core
             PossibleBeds = 0;
             foreach (var r in Rooms)
             {
-                if ((r.Reservations == null)||(r.Reservations.Count == 0))
+                if (((r.Reservations == null)||(r.Reservations.Count == 0))&&(r.PriceForNight <= MaxPrice))
                 {
                     r.Reservations = new List<Reservation>();
                     SuitableRooms.Add(r);
                     PossibleBeds += r.BedNumber;
                     //break;
                 }
-                else
+                else if(r.Reservations != null)
                 {
                     for (int i = 1; i <= r.Reservations.Count - 1; i++)
                     {
-                        if ((((CheckInDate >= r.Reservations[i - 1].CheckOutDate) && (CheckInDate < r.Reservations[i].CheckInDate) && (CheckOutDate < r.Reservations[i].CheckInDate)) || (CheckInDate >= r.Reservations[r.Reservations.Count - 1].CheckOutDate)) && (r.PriceForNight <= MaxPrice))
+                        if (CheckInDate >= r.Reservations[r.Reservations.Count - 1].CheckOutDate)
                         {
-                            SuitableRooms.Add(r);
-                            PossibleBeds += r.BedNumber;
-                            break;
+                            if (r.PriceForNight <= MaxPrice)
+                            {
+                                SuitableRooms.Add(r);
+                                PossibleBeds += r.BedNumber;
+                                break;
+                            }
+                        }
+
+                        else if ((CheckInDate >= r.Reservations[i - 1].CheckOutDate) && (CheckInDate < r.Reservations[i].CheckInDate) && (CheckOutDate < r.Reservations[i].CheckInDate))
+                        {
+                            if (r.PriceForNight <= MaxPrice)
+                            {
+                                SuitableRooms.Add(r);
+                                PossibleBeds += r.BedNumber;
+                                break;
+                            }
                         }
                     }
                 }
@@ -133,9 +146,14 @@ namespace HotelsAndUsers.Core
             {
                 if (room.Reservations != null)
                 {
-                    for (int i = 1; i <= room.Reservations.Count - 1; i++)
+                    for (int i = 1; i <= room.Reservations.Count; i++)
                     {
-                        if ((((CheckInDate >= room.Reservations[i - 1].CheckOutDate) && (CheckInDate < room.Reservations[i].CheckInDate) && (CheckOutDate < room.Reservations[i].CheckInDate))) || (CheckInDate >= room.Reservations[room.Reservations.Count - 1].CheckOutDate))
+                        if (CheckInDate >= room.Reservations[room.Reservations.Count - 1].CheckOutDate)
+                        {
+                            k = 1;
+                            break;
+                        }
+                        else if (((CheckInDate >= room.Reservations[i - 1].CheckOutDate) && (CheckInDate < room.Reservations[i].CheckInDate) && (CheckOutDate < room.Reservations[i].CheckInDate)))
                         {
                             k = 1;
                             break;

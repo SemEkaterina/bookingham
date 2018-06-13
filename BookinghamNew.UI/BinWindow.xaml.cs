@@ -78,6 +78,13 @@ namespace BookinghamNew.UI
                 }
             roomsList.ItemsSource = null;
             roomsList.ItemsSource = _repo.BinRooms;
+            decimal totalCost = 0;
+            foreach (var room in _repo.BinRooms)
+            {
+                totalCost += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
+            }
+            TotalCost.Text = null;
+            TotalCost.Text = totalCost.ToString();
         }
 
         private void ButtonLogIn_Click(object sender, RoutedEventArgs e)
