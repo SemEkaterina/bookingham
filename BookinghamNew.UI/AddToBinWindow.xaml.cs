@@ -34,11 +34,16 @@ namespace BookinghamNew.UI
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (_repo.BinRooms == null)
+            if (_repo.BinHotels == null)
             {
-                _repo.BinRooms = new List<Room>();
+                _repo.BinHotels = new List<Hotel>();
             }
-            _repo.BinRooms.Add(Room);
+            if (Hotel.BinRooms == null)
+            {
+                Hotel.BinRooms = new List<Room>();
+            }
+            Hotel.BinRooms.Add(Room);
+            _repo.BinHotels.Add(Hotel);
             Hotel.SuitableRooms.Remove(Room);
             this.Close();
         }

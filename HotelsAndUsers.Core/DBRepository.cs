@@ -15,7 +15,7 @@ namespace HotelsAndUsers.Core
         public List<Guest> Guests { get; set; }
         public List<Hotel> Hotels { get; set; }
         public Context Context { get; set; }
-        public List<Room> BinRooms { get; set; }
+        public List<Hotel> BinHotels { get; set; }
 
         public IEnumerable<Guest> _guests => Guests;
         public IEnumerable<Hotel> _hotels => Hotels;
@@ -87,14 +87,21 @@ namespace HotelsAndUsers.Core
                         }
                     }
                 }
-                if (BinRooms != null)
+                if (BinHotels != null)
                 {
-                    var suitableRooms = SuitableRooms.Except(BinRooms);
-                    SuitableRooms = new List<Room>();
-                    foreach (var item in suitableRooms)
+                    foreach (var item in BinHotels)
                     {
-                        SuitableRooms.Add(item);
+                        foreach (var room in item.BinRooms)
+                        {
+                            SuitableRooms.Remove(room);
+                        }                        
                     }
+                    //var suitableRooms = SuitableRooms.Except(BinRooms);
+                    //SuitableRooms = new List<Room>();
+                    //foreach (var item in suitableRooms)
+                    //{
+                    //    SuitableRooms.Add(item);
+                    //}
                 }
                 
             }
