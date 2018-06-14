@@ -25,10 +25,13 @@
         </Button>
 
         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Visible">
-            <ListBox x:Name="bookingsList" SelectionChanged="MyBookingsList_SelectionChanged">
+            <ListBox x:Name="bookingsList"  SelectionChanged="MyBookingsList_SelectionChanged">
+                <ListBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FFEA4636" Opacity="0.5"/>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White"/>
+                </ListBox.Resources>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-
                         <StackPanel Margin="5" Orientation="Horizontal">
                             <StackPanel>
                                 <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Room.Class}"/>

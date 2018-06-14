@@ -36,10 +36,10 @@
                                 <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Class}"/>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Width="Auto" Height="Auto" FontSize="14" Foreground="#FF989898">Bed Number:</TextBlock>
-                                    <TextBlock Width="Auto" Height="Auto" FontSize="14" Foreground="#FF989898" Text="{Binding Path=BedNumber}"/>
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="14" Margin="5 0"  Foreground="#FF989898" Text="{Binding Path=BedNumber}"/>
                                 </StackPanel>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                 <TextBlock HorizontalAlignment="Right" Height="Auto" FontSize="16" Text="{Binding Path=PriceForNight}" Foreground="#FFEA4636"/>
                                 <TextBlock Height="Auto" FontSize="16" Foreground="#FFEA4636">£</TextBlock>
                             </StackPanel>
