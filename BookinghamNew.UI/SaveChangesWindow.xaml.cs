@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HotelsAndUsers.Core;
+using HotelsAndUsers.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,19 +21,46 @@ namespace BookinghamNew.UI
     /// </summary>
     public partial class SaveChangesWindow : Window
     {
-        public SaveChangesWindow()
+        HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
+
+        public Hotel Hotel { get; set; }
+        public string Address { get; set; }
+        public string CheckIn { get; set; }
+        public string CheckOut { get; set; }
+        public string HotelName { get; set; }
+        public string HotelPhone { get; set; }
+        public string HotelDistrict { get; set; }
+        public SaveChangesWindow(Hotel hotel, string address, string checkin, string checkout, string hotelname, string hotelphone, string hoteldistrict)
         {
             InitializeComponent();
+            Hotel = hotel;
+            Address = address;
+            CheckIn = checkin;
+            CheckOut = checkout;
+            HotelName = hotelname;
+            HotelPhone = hotelphone;
+            HotelDistrict = hoteldistrict;
         }
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            var adminRoomsListWindow = new AdminRoomsListWindow(Hotel);
+            adminRoomsListWindow.Show();
+            this.Close();
         }
 
         private void ButtonOK_Click(object sender, RoutedEventArgs e)
         {
-
+            Hotel.Address = Address;
+            Hotel.CheckInTime = CheckIn;
+            Hotel.CheckOutTime = CheckOut;
+            Hotel.Name = HotelName;
+            Hotel.PhoneNumber = HotelPhone;
+            Hotel.District = HotelDistrict;
+            _repo.UpdateHotel(Hotel);
+            var adminRoomsListWindow = new AdminRoomsListWindow(Hotel);
+            adminRoomsListWindow.Show();
+            this.Close();
         }
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)

@@ -31,10 +31,6 @@ namespace BookinghamNew.UI
 
         private void ButtonShowGuests_Click(object sender, RoutedEventArgs e)
         {
-            if (true)
-            {
-
-            }
             Room selectedRoom = roomsList.SelectedItem as Room;
             
             var adminguestslistWindow = new AdminGuestsListWindow(selectedRoom, Hotel);

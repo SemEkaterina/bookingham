@@ -65,19 +65,5 @@ namespace BookinghamNew.UI
                 e.Handled = true;
             }
         }
-
-        //private void BinButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (_repo.BinRooms == null)
-        //    {
-        //        MessageBox.Show("Bin is empty", "Error");
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        var binWindow = new BinWindow(Guest, CheckIn, CheckOut);
-        //        binWindow.Show();
-        //    }
-        //}
     }
 }
