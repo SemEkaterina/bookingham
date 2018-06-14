@@ -28,7 +28,7 @@ namespace BookinghamNew.UI
         {
             InitializeComponent();
             Guest = guest;
-            bookingsList.ItemsSource = guest.GuestBookings;
+            bookingsList.ItemsSource = guest.GuestBookings;    
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)
@@ -47,7 +47,7 @@ namespace BookinghamNew.UI
 
         private void MyBookingsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
 
         private void ExitToHotelButton(object sender, RoutedEventArgs e)

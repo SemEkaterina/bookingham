@@ -25,12 +25,12 @@
             <Image Height="26" Width="26" Source="Images/back.png"></Image>
         </Button>
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Hotel</TextBlock>
-        <Button Grid.Row="0" Grid.Column="1" Click="SaveChangesButton_Click" Height="40" Width="Auto" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" Foreground="White">
+        <!--<Button Grid.Row="0" Grid.Column="1" Click="SaveChangesButton_Click" Height="40" Width="Auto" HorizontalAlignment="Right" Margin="12" Background="{x:Null}" Foreground="White">
             <StackPanel>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">Save</TextBlock>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14">Changes</TextBlock>
             </StackPanel>
-        </Button>
+        </Button>-->
         <Image Name="ImageOfHotel" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Stretch="UniformToFill"></Image>
 
         <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="12" HorizontalAlignment="Left" VerticalAlignment="Center">

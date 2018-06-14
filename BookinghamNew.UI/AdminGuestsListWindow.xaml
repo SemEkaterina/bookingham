@@ -31,30 +31,30 @@
                 </ListBox.Resources>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="5" Orientation="Vertical">
+                        <StackPanel Margin="5" Orientation="Vertical" VerticalAlignment="Center">
                             <StackPanel Orientation="Horizontal" Margin="1">
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14"  Foreground="#FF989898">Last Name:</TextBlock>
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=Surname}"/>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13" Foreground="#FF989898">Last Name:</TextBlock>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13" Margin="3 0" Text="{Binding Path=Surname}"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="1">
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14"  Foreground="#FF989898">First Name:</TextBlock>
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=Name}"/>
+                            <StackPanel Orientation="Horizontal" Margin="1" VerticalAlignment="Center">
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13"  Foreground="#FF989898">First Name:</TextBlock>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13" Margin="3 0" Text="{Binding Path=Name}"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="1">
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14"  Foreground="#FF989898">Email:</TextBlock>
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=Email}"/>
+                            <StackPanel Orientation="Horizontal" Margin="1" VerticalAlignment="Center">
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13"  Foreground="#FF989898">Email:</TextBlock>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13" Margin="3 0" Text="{Binding Path=Email}"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="1">
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14"  Foreground="#FF989898">Country:</TextBlock>
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=Country}"/>
+                            <StackPanel Orientation="Horizontal" Margin="1" VerticalAlignment="Center">
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13"  Foreground="#FF989898">Country:</TextBlock>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13" Margin="3 0" Text="{Binding Path=Country}"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="1">
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14"  Foreground="#FF989898">Passport Series:</TextBlock>
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=PassportId}"/>
+                            <StackPanel Orientation="Horizontal" Margin="1" VerticalAlignment="Center">
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13"  Foreground="#FF989898">Passport Series:</TextBlock>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13" Margin="3 0" Text="{Binding Path=PassportId}"/>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="1">
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14"  Foreground="#FF989898">Passport Number:</TextBlock>
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=PassportNumber}"/>
+                            <StackPanel Orientation="Horizontal" Margin="1" VerticalAlignment="Center">
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13"  Foreground="#FF989898">Passport Number:</TextBlock>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="13" Margin="3 0" Text="{Binding Path=PassportNumber}"/>
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>
