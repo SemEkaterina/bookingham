@@ -28,7 +28,7 @@ namespace HotelsAndUsers.Core
                 using (Context = new Context())
                 {
                     Guests = Context.Guests.Include("GuestBookings").ToList();
-                    Hotels = Context.Hotels/*.Include("Rooms")*/.ToList();
+                    Hotels = Context.Hotels.ToList();
                     Rooms = Context.Rooms.Include("Reservations").ToList();
                     for (int i = 0; i < Guests.Count; i++)
                     {
@@ -37,19 +37,6 @@ namespace HotelsAndUsers.Core
                             Guests.Remove(Guests[i]);
                         }
                     }
-                        
-                    
-                    //foreach (var hotel in Hotels)
-                    //{
-                    //    hotel.Rooms = new List<Room>();
-                    //    foreach (var room in hotel.Rooms)
-                    //    {
-                    //        if (room.HotelId == hotel.HotelId)
-                    //        {
-                    //            hotel.Rooms.Add(room);
-                    //        }
-                    //    }
-                    //}
                 }
             }
             catch
