@@ -79,9 +79,8 @@ namespace BookinghamNew.UI
 
         private void ButtonShowRooms_Click(object sender, RoutedEventArgs e)
         {
-            var adminRoomsListWindow = new AdminRoomsListWindow(Hotel);
-            adminRoomsListWindow.Show();
-            this.Close();
+            var savechangesWindow = new SaveChangesWindow(Hotel, HotelAddressText.Text, HotelCheckInText.Text, HotelCheckOutText.Text, HotelNameText.Text, HotelPhoneText.Text, HotelDistrictText.Text);
+            savechangesWindow.Show();
         }
 
         private void SaveChangesButton_Click(object sender, RoutedEventArgs e)

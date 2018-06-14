@@ -36,8 +36,6 @@ namespace BookinghamNew.UI
             CheckIn = checkin;
             CheckOut = checkout;
             HotelHeader.Text = Hotel.Name;
-            //roomsList.ItemsSource = null;
-            //roomsList.ItemsSource = Hotel.SuitableRooms;
         }
 
         private void ButtonSelect_Click(object sender, RoutedEventArgs e)

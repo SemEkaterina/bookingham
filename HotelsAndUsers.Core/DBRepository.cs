@@ -37,19 +37,6 @@ namespace HotelsAndUsers.Core
                             Guests.Remove(Guests[i]);
                         }
                     }
-                        
-                    
-                    //foreach (var hotel in Hotels)
-                    //{
-                    //    hotel.Rooms = new List<Room>();
-                    //    foreach (var room in hotel.Rooms)
-                    //    {
-                    //        if (room.HotelId == hotel.HotelId)
-                    //        {
-                    //            hotel.Rooms.Add(room);
-                    //        }
-                    //    }
-                    //}
                 }
             }
             catch
@@ -207,6 +194,49 @@ namespace HotelsAndUsers.Core
                 c.Hotels.AddOrUpdate(hotel);
                 c.SaveChanges();
             }
+        }
+
+        public List<Guest> RegisteredGuests(Room room)
+        {
+            List<Guest> guests = new List<Guest>();
+            if (room.Reservations != null)
+            {
+                foreach (var item in room.Reservations)
+                {
+                    foreach (var g in _guests)
+                    {
+                        if (g.GuestId == item.GuestId)
+                        {
+                            guests.Add(g);
+                        }
+                    }
+                }
+            }
+            return guests;
+        }
+
+        public void AddBookedRoomsAndReservations(Hotel hotel, Guest Guest, DateTime CheckInDate, DateTime CheckOutDate, out List<Room> BookedRooms, out decimal totalPrice)
+        {
+            
+                totalPrice = 0;
+                BookedRooms = new List<Room>();
+                foreach (var room in BinRooms)
+                {
+                    if (room.HotelId == hotel.HotelId)
+                    {
+                        BookedRooms.Add(room);
+                        Reservation newReservation = new Reservation()
+                        {
+                            GuestId = Guest.GuestId,
+                            RoomId = room.RoomId,
+                            CheckInDate = CheckInDate,
+                            CheckOutDate = CheckOutDate
+                        };
+                        AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
+                        totalPrice += TotalPrice(room, CheckInDate, CheckOutDate);
+                    }
+                }
+            
         }
 
         public void RemoveGuest(Guest guest)

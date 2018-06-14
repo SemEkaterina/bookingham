@@ -108,27 +108,10 @@ namespace BookinghamNew.UI
                     _repo.RegisterGuest(guest);
                     Guest = guest;
                 }
+                //////////////////////////////////////
                 foreach (var hotel in _repo._hotels)
                 {
-                    decimal totalPrice = 0;
-                    List<Room> BookedRooms = new List<Room>();
-                    foreach (var room in _repo.BinRooms)
-                    {
-                        if (room.HotelId == hotel.HotelId)
-                        {
-                            BookedRooms.Add(room);
-                            Reservation newReservation = new Reservation()
-                            {
-                                GuestId = Guest.GuestId,
-                                RoomId = room.RoomId,
-                                CheckInDate = CheckInDate,
-                                CheckOutDate = CheckOutDate
-                            };
-                            _repo.AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
-                            totalPrice += _repo.TotalPrice(room, CheckInDate, CheckOutDate);
-                        }
-                    }
-
+                    _repo.AddBookedRoomsAndReservations(hotel, Guest, CheckInDate, CheckOutDate, out List<Room> BookedRooms, out decimal totalPrice);
                     if (BookedRooms.Count != 0)
                     {
                         Booking NewBooking = new Booking
@@ -143,8 +126,8 @@ namespace BookinghamNew.UI
                         };
                         _repo.AddBooking(Guest, NewBooking);
                     }
-                    
-                }
+                }    
+                
                 MessageBox.Show("Success", "Success");
                 _repo.BinRooms = null;
                 var searchWindow = new SearchWindow(Guest);

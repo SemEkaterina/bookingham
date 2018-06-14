@@ -29,20 +29,8 @@ namespace BookinghamNew.UI
             InitializeComponent();
             Hotel = hotel;
             Room = room;
-            List<Guest> guests = new List<Guest>();
-            if (room.Reservations != null)
-            {
-                foreach (var item in room.Reservations)
-                {
-                    foreach (var g in _repo._guests)
-                    {
-                        if (g.GuestId == item.GuestId)
-                        {
-                            guests.Add(g);
-                        }
-                    }
-                }
-            }
+            List<Guest> guests = _repo.RegisteredGuests(room);
+ 
             guestsList.ItemsSource = null;
             guestsList.ItemsSource = guests;
         }

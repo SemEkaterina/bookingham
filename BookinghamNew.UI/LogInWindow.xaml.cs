@@ -51,14 +51,12 @@ namespace BookinghamNew.UI
 
             if (guest != null)
             {
-                ///////////////////////открытие профиля гостя
                 var searchWindow = new SearchWindow(guest);
                 searchWindow.Show();
                 Close();
             }
             else if (hotel != null)
             {
-                ///////////////////////открытие профиля отеля
                 var adminHotelWindow = new AdminHotelWindow(hotel);
                 adminHotelWindow.Show();
                 Close();
@@ -67,9 +65,7 @@ namespace BookinghamNew.UI
             else if ((hotel == null) && (guest == null))
             {
                 MessageBox.Show("Incorrect login/password");
-            }
-            
-
+            }           
         }
 
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
