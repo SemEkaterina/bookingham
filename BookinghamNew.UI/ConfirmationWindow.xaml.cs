@@ -143,6 +143,7 @@ namespace BookinghamNew.UI
                         };
                         _repo.AddBooking(Guest, NewBooking);
                     }
+                    
                 }
                 MessageBox.Show("Success", "Success");
                 _repo.BinRooms = null;

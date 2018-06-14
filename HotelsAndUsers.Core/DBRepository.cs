@@ -191,7 +191,7 @@ namespace HotelsAndUsers.Core
                 if (k == 1)
                 {
                     room.Reservations.Add(reservation);
-                    BinRooms = null;
+                    
                     c.Reservations.Add(room.Reservations.Last());
 
                     c.SaveChanges();
