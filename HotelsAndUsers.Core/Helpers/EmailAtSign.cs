@@ -9,7 +9,6 @@ namespace HotelsAndUsers.Core.Helpers
     public class EmailAtSign
     {
         public bool SampleCheckingEmail(string mail)
-
         {
             foreach (var letter in mail)
             {

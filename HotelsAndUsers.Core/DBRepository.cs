@@ -237,8 +237,8 @@ namespace HotelsAndUsers.Core
                   {
                       GuestId = Guest.GuestId,
                       RoomId = room.RoomId,
-                      CheckInDate = CheckInDate,
-                      CheckOutDate = CheckOutDate
+                      CheckInDate = CheckInDate.Date,
+                      CheckOutDate = CheckOutDate.Date
                   };
                   AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
                   totalPrice += TotalPrice(room, CheckInDate, CheckOutDate);

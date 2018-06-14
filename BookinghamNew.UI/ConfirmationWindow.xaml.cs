@@ -121,8 +121,8 @@ namespace BookinghamNew.UI
                             GuestId = Guest.GuestId,
                             Room = BookedRooms,
                             BookingTime = DateTime.Now.Date,
-                            CheckIn = CheckInDate,
-                            CheckOut = CheckOutDate,
+                            CheckIn = CheckInDate.Date,
+                            CheckOut = CheckOutDate.Date,
                             TotalPrice = totalPrice
                         };
                         _repo.AddBooking(Guest, NewBooking);
