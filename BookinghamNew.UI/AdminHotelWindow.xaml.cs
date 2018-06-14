@@ -83,16 +83,16 @@ namespace BookinghamNew.UI
             savechangesWindow.Show();
         }
 
-        private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
-        {
-            Hotel.Address = HotelAddressText.Text;
-            Hotel.CheckInTime = HotelCheckInText.Text;
-            Hotel.CheckOutTime = HotelCheckOutText.Text;
-            Hotel.Name = HotelNameText.Text;
-            Hotel.PhoneNumber = HotelPhoneText.Text;
-            Hotel.District = HotelDistrictText.Text;
-            _repo.UpdateHotel(Hotel);
-        }
+        //private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Hotel.Address = HotelAddressText.Text;
+        //    Hotel.CheckInTime = HotelCheckInText.Text;
+        //    Hotel.CheckOutTime = HotelCheckOutText.Text;
+        //    Hotel.Name = HotelNameText.Text;
+        //    Hotel.PhoneNumber = HotelPhoneText.Text;
+        //    Hotel.District = HotelDistrictText.Text;
+        //    _repo.UpdateHotel(Hotel);
+        //}
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {

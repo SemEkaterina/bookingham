@@ -120,7 +120,7 @@ namespace BookinghamNew.UI
                             HotelId = hotel.HotelId,
                             GuestId = Guest.GuestId,
                             Room = BookedRooms,
-                            BookingTime = DateTime.Now,
+                            BookingTime = DateTime.Now.Date,
                             CheckIn = CheckInDate,
                             CheckOut = CheckOutDate,
                             TotalPrice = totalPrice

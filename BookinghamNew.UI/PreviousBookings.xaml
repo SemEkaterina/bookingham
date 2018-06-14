@@ -19,9 +19,7 @@
         </Grid.ColumnDefinitions>
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Bookings</TextBlock>
-        <!--<Button Grid.Row="0" Grid.Column="1" Click="BinButton_Click" Height="48" Width="48" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
-            <Image Height="30" Width="30" Source="Images/shopping-basket.png"></Image>
-        </Button>-->
+       
         <Button Grid.Row="0" Grid.Column="0" Click="ExitToHotelButton" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" >
             <Image Height="30" Width="30" Source="Images/back.png"></Image>
         </Button>
@@ -30,13 +28,26 @@
             <ListBox x:Name="bookingsList" SelectionChanged="MyBookingsList_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
+
                         <StackPanel Margin="5" Orientation="Horizontal">
-                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=Room.Class}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=BookingTime}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=CheckIn}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="20" Text="{Binding Path=CheckOut}"/>
-                            <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=TotalPrice}"/>
+                            <StackPanel>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Room.Class}"/>
+                                <StackPanel>
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="11">Booking Time:</TextBlock>
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="11" Text="{Binding Path=BookingTime}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="5" Width="200">
+                                <TextBlock Name="CheckIn" Width="Auto" Height="Auto" FontSize="12" Margin="5 0" Foreground="#FF989898" Text="{Binding Path=CheckIn}"/>
+                                <TextBlock Width="Auto" Height="Auto" FontSize="12" Margin="5 0" Foreground="#FF989898">-</TextBlock>
+                                <TextBlock Name="CheckOut" Width="Auto" Height="Auto" FontSize="12" Margin="5 0" Foreground="#FF989898" Text="{Binding Path=CheckOut}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock HorizontalAlignment="Right" Height="Auto" FontSize="16" Text="{Binding Path=TotalPrice}" Foreground="#FFEA4636"/>
+                                <TextBlock Height="Auto" FontSize="16" Foreground="#FFEA4636">£</TextBlock>
+                            </StackPanel>
                         </StackPanel>
+                        
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>

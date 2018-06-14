@@ -17,10 +17,7 @@
         <Canvas Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFEA4636"></Canvas>
 
         <TextBlock Margin="5" FontSize="26" Foreground="White" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Rooms</TextBlock>
-
-        <!--<Button Grid.Row="0" Click="BinButton_Click" Height="48" Width="48" HorizontalAlignment="Right" Margin="12" Background="{x:Null}">
-            <Image Height="26" Width="26" Source="Images/menu.png"></Image>
-        </Button>-->
+        
         <Button Grid.Row="0" Click="ExitToHotelButton_Click" Height="50" Width="50" HorizontalAlignment="Left" Margin="5 12" Background="{x:Null}" >
             <Image Height="30" Width="30" Source="Images/back.png"></Image>
         </Button>
@@ -36,15 +33,20 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="5" Orientation="Horizontal">
-                            <StackPanel Orientation="Vertical" Width="250">
-                                <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=RoomNumber}"/>
+                            <TextBlock Width="Auto" Height="Auto" FontSize="16" VerticalAlignment="Center" Foreground="#FF989898" Text="{Binding Path=RoomNumber}"/>
+                            <StackPanel Orientation="Vertical" Width="210" VerticalAlignment="Center" Margin="5">
                                 <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Class}"/>
-                                <TextBlock Width="Auto" Height="Auto" FontSize="14" Text="{Binding Path=BedNumber}"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="14" Foreground="#FF989898">Bed Number:</TextBlock>
+                                    <TextBlock Width="Auto" Height="Auto" FontSize="14" Foreground="#FF989898" Text="{Binding Path=BedNumber}"/>
+                                </StackPanel>
                             </StackPanel>
-                            <StackPanel>
-                                <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=PriceForNight}"/>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock HorizontalAlignment="Right" Height="Auto" FontSize="16" Text="{Binding Path=PriceForNight}" Foreground="#FFEA4636"/>
+                                <TextBlock Height="Auto" FontSize="16" Foreground="#FFEA4636">£</TextBlock>
                             </StackPanel>
                         </StackPanel>
+                        
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>

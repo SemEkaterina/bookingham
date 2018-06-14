@@ -29,12 +29,15 @@
         
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden">
             <ListBox x:Name="roomsList" SelectionChanged="RoomsList_SelectionChanged">
+                
                 <ListBox.Resources>
                     <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#FFEA4636" Opacity="0.5"/>
                     <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White"/>
                 </ListBox.Resources>
+                
                 <ListBox.ItemTemplate>
                     <DataTemplate>
+                        
                         <StackPanel Margin="5" Orientation="Horizontal">
                             <StackPanel Orientation="Vertical" Width="250">
                                 <TextBlock Width="Auto" Height="Auto" FontSize="16" Text="{Binding Path=Class}"/>
@@ -48,6 +51,7 @@
                                 <TextBlock Height="Auto" FontSize="16" Foreground="#FFEA4636">£</TextBlock>
                             </StackPanel>
                         </StackPanel>
+                        
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
