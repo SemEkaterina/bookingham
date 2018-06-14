@@ -24,12 +24,18 @@ namespace BookinghamNew.UI
         HotelsAndUsers.Core.Interfaces.IRepository _repo = Factory.Instance.GetRepository();
         public Room Room { get; set; }
         public Hotel Hotel { get; set; }
+        public Guest Guest { get; set; }
+        public DateTime CheckInDate { get; set; }
+        public DateTime CheckOutDate { get; set; }
 
-        public AddToBinWindow(Room room, Hotel hotel)
+        public AddToBinWindow(Room room, Hotel hotel, Guest guest, DateTime checkin, DateTime checkout)
         {
             InitializeComponent();
             Room = room;
             Hotel = hotel;
+            Guest = guest;
+            CheckInDate = checkin;
+            CheckOutDate = checkout;
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
@@ -40,6 +46,8 @@ namespace BookinghamNew.UI
             }
             _repo.BinRooms.Add(Room);
             Hotel.SuitableRooms.Remove(Room);
+            var binWindow = new BinWindow(Guest, CheckInDate, CheckOutDate);
+            binWindow.Show();
             this.Close();
         }
 

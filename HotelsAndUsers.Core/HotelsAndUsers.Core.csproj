@@ -57,9 +57,9 @@
     <Compile Include="Helpers\EmailAtSign.cs" />
     <Compile Include="Helpers\Hash.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201806130041294_Initial.cs" />
-    <Compile Include="Migrations\201806130041294_Initial.Designer.cs">
-      <DependentUpon>201806130041294_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201806142002234_Initial.cs" />
+    <Compile Include="Migrations\201806142002234_Initial.Designer.cs">
+      <DependentUpon>201806142002234_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Booking.cs" />
@@ -75,8 +75,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EmbeddedResource Include="Migrations\201806130041294_Initial.resx">
-      <DependentUpon>201806130041294_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806142002234_Initial.resx">
+      <DependentUpon>201806142002234_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="users.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

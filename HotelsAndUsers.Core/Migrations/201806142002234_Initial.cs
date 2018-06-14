@@ -14,9 +14,9 @@ namespace HotelsAndUsers.Core.Migrations
                         BookingId = c.Int(nullable: false, identity: true),
                         GuestId = c.Int(nullable: false),
                         HotelId = c.Int(nullable: false),
-                        BookingTime = c.DateTime(nullable: false),
-                        CheckIn = c.DateTime(nullable: false),
-                        CheckOut = c.DateTime(nullable: false),
+                        BookingTime = c.String(),
+                        CheckIn = c.String(),
+                        CheckOut = c.String(),
                         TotalPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.BookingId)

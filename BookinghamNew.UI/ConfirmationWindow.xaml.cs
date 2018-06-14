@@ -112,7 +112,7 @@ namespace BookinghamNew.UI
 
                 foreach (var hotel in _repo._hotels)
                 {
-                    _repo.AddBookedRoomsAndReservations(hotel, Guest, CheckInDate, CheckOutDate, out List<Room> BookedRooms, out decimal totalPrice);
+                    _repo.AddBookedRoomsAndReservations(hotel, Guest, CheckInDate.Date, CheckOutDate.Date, out List<Room> BookedRooms, out decimal totalPrice);
                     if (BookedRooms.Count != 0)
                     {
                         Booking NewBooking = new Booking
@@ -120,9 +120,9 @@ namespace BookinghamNew.UI
                             HotelId = hotel.HotelId,
                             GuestId = Guest.GuestId,
                             Room = BookedRooms,
-                            BookingTime = DateTime.Now.Date,
-                            CheckIn = CheckInDate,
-                            CheckOut = CheckOutDate,
+                            BookingTime = DateTime.Now.ToShortDateString(),
+                            CheckIn = CheckInDate.ToShortDateString(),
+                            CheckOut = CheckOutDate.ToShortDateString(),
                             TotalPrice = totalPrice
                         };
                         _repo.AddBooking(Guest, NewBooking);

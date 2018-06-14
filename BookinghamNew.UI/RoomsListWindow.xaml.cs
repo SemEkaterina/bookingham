@@ -48,7 +48,7 @@ namespace BookinghamNew.UI
 
             else
             {
-                var addtobinWindow = new AddToBinWindow(roomsList.SelectedItem as Room, Hotel);
+                var addtobinWindow = new AddToBinWindow(roomsList.SelectedItem as Room, Hotel, Guest, CheckIn, CheckOut);
                 if (addtobinWindow.ShowDialog() == false)
                 {
                     roomsList.ItemsSource = null;
