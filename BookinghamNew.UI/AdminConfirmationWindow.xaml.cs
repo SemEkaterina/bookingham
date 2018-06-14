@@ -97,8 +97,8 @@ namespace BookinghamNew.UI
                 {
                     GuestId = guest.GuestId,
                     RoomId = Room.RoomId,
-                    CheckInDate = CheckInCalendar.SelectedDate.Value,
-                    CheckOutDate = CheckOutCalendar.SelectedDate.Value
+                    CheckInDate = CheckInCalendar.SelectedDate.Value.Date,
+                    CheckOutDate = CheckOutCalendar.SelectedDate.Value.Date
                 };
                 
                 _repo.AddReservation(Room, newReservation, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out int k);
