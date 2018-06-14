@@ -92,6 +92,7 @@ namespace BookinghamNew.UI
                     Guest.PassportId = textBoxPassportSeries.Text;
                     Guest.PassportNumber = textBoxPassportNumber.Text;
                     Guest.Country = textBoxCountry.Text;
+                    _repo.UpdateGuest(Guest);
                 }
 
                 else
@@ -108,7 +109,7 @@ namespace BookinghamNew.UI
                     _repo.RegisterGuest(guest);
                     Guest = guest;
                 }
-                //////////////////////////////////////
+
                 foreach (var hotel in _repo._hotels)
                 {
                     _repo.AddBookedRoomsAndReservations(hotel, Guest, CheckInDate, CheckOutDate, out List<Room> BookedRooms, out decimal totalPrice);

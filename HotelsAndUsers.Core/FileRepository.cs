@@ -70,6 +70,15 @@ namespace HotelsAndUsers.Core
             hotel = Hotels.FirstOrDefault(h => h.Email == login && Hash.GetHash(h.Password) == Hash.GetHash(password));
         }
 
+        public void UpdateGuest(Guest guest)
+        {
+            //using (var c = new Context())
+            //{
+            //    c.Guests.AddOrUpdate(guest);
+            //    c.SaveChanges();
+            //}
+        }
+
         public void RegisterGuest(Guest guest)
         {
             if (Guests == null)
@@ -185,6 +194,16 @@ namespace HotelsAndUsers.Core
                         totalPrice += TotalPrice(room, CheckInDate, CheckOutDate);
                     }
                 }            
+        }
+
+        public void RemoveGuest(Guest guest)
+        {
+            using (var c = new Context())
+            {
+                Guests.Remove(guest);
+                c.Guests.Remove(guest);
+                c.SaveChanges();
+            }
         }
 
         public void AddReservation(Room room, Reservation reservation, DateTime CheckInDate, DateTime CheckOutDate, out int k)

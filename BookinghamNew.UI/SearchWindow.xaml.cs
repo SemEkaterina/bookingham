@@ -41,13 +41,30 @@ namespace BookinghamNew.UI
         {            
             List<Hotel> SuitableHotels = new List<Hotel>();
             int PossibleBeds = 0;
-            if(HotelNameCombobox.SelectedIndex != -1) 
+            if (RoomsTextBox.Text == null)
+            {
+                MessageBox.Show("Enter number of rooms you want to book", "Error");
+                return;
+            }
+
+            if (PeopleTextBox.Text == null)
+            {
+                MessageBox.Show("Enter number of people that wants to check in", "Error");
+                return;
+            }
+
+            if (MaxPriceTextBox.Text == null)
+            {
+                MessageBox.Show("Enter maxprice please", "Error");
+                return;
+            }
+
+            if (HotelNameCombobox.SelectedIndex != -1) 
             {
                 foreach (var h in _repo._hotels)
                 {
                     if(h == HotelNameCombobox.SelectedItem)
                     {
-                        ////////////////////////открыть окно отеля
                         List<Room> SuitableRooms = new List<Room>();
                         _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
                         h.SuitableRooms = SuitableRooms;
@@ -62,7 +79,6 @@ namespace BookinghamNew.UI
             {
                 foreach (var h in _repo._hotels)
                 {
-                    //h.SuitableRooms = null;
                     if(h.District == DistrictHotelCombobox.SelectedItem.ToString())
                     {
                         if ((MaxPriceTextBox.Text != null)&&(h.MinPrice <= decimal.Parse(MaxPriceTextBox.Text)))
@@ -74,11 +90,9 @@ namespace BookinghamNew.UI
                             {
                                 SuitableHotels.Add(h);
                             }
-                        }
-                        
+                        }                        
                     }
                 }
-                /////////////////////Вывод списка отелей
                 var hotelslistWindow = new HotelsListWindow(SuitableHotels, Guest, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value);
                 hotelslistWindow.Show();
                 this.Close();
@@ -86,11 +100,11 @@ namespace BookinghamNew.UI
 
             else
             {
+
                 foreach (var h in _repo._hotels)
                 {
                     if ((MaxPriceTextBox.Text != null) && (h.MinPrice <= decimal.Parse(MaxPriceTextBox.Text)))
                     {
-                        //h.SuitableRooms = null;
                         List<Room> SuitableRooms = new List<Room>();
                         _repo.SearchEngine(h.Rooms, decimal.Parse(MaxPriceTextBox.Text), CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value, out SuitableRooms, out PossibleBeds);
 
@@ -101,7 +115,6 @@ namespace BookinghamNew.UI
                         }
                     }
                 }
-                /////////////////////Вывод списка отелей
                 var hotelslistWindow = new HotelsListWindow(SuitableHotels, Guest, CheckInCalendar.SelectedDate.Value, CheckOutCalendar.SelectedDate.Value);
                 hotelslistWindow.Show();
                 this.Close();
@@ -162,16 +175,7 @@ namespace BookinghamNew.UI
                             HotelNameCombobox.SelectedItem = item;
                         }
                     }
-                    //Hotel selectedHotel = selectedBooking.Hotel;
-                    //HotelNameCombobox.SelectedItem = selectedHotel;
                 }
-                
-                //foreach (var s in _repo.stations)
-                //    if (s.Name == selectedStation.Name)
-                //    {
-                //        StationsList.SelectedItem = s;
-                //        break;
-                //    }
             }
         }
 

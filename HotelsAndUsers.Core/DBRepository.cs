@@ -196,6 +196,15 @@ namespace HotelsAndUsers.Core
             }
         }
 
+        public void UpdateGuest(Guest guest)
+        {
+            using (var c = new Context())
+            {
+                c.Guests.AddOrUpdate(guest);
+                c.SaveChanges();
+            }
+        }
+
         public List<Guest> RegisteredGuests(Room room)
         {
             List<Guest> guests = new List<Guest>();
@@ -216,27 +225,25 @@ namespace HotelsAndUsers.Core
         }
 
         public void AddBookedRoomsAndReservations(Hotel hotel, Guest Guest, DateTime CheckInDate, DateTime CheckOutDate, out List<Room> BookedRooms, out decimal totalPrice)
-        {
-            
-                totalPrice = 0;
-                BookedRooms = new List<Room>();
-                foreach (var room in BinRooms)
-                {
-                    if (room.HotelId == hotel.HotelId)
-                    {
-                        BookedRooms.Add(room);
-                        Reservation newReservation = new Reservation()
-                        {
-                            GuestId = Guest.GuestId,
-                            RoomId = room.RoomId,
-                            CheckInDate = CheckInDate,
-                            CheckOutDate = CheckOutDate
-                        };
-                        AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
-                        totalPrice += TotalPrice(room, CheckInDate, CheckOutDate);
-                    }
-                }
-            
+        {            
+            totalPrice = 0;
+            BookedRooms = new List<Room>();
+            foreach (var room in BinRooms)
+            {
+               if (room.HotelId == hotel.HotelId)
+               {
+                  BookedRooms.Add(room);
+                  Reservation newReservation = new Reservation()
+                  {
+                      GuestId = Guest.GuestId,
+                      RoomId = room.RoomId,
+                      CheckInDate = CheckInDate,
+                      CheckOutDate = CheckOutDate
+                  };
+                  AddReservation(room, newReservation, CheckInDate, CheckInDate, out int k);
+                  totalPrice += TotalPrice(room, CheckInDate, CheckOutDate);
+               }
+            }            
         }
 
         public void RemoveGuest(Guest guest)
@@ -244,7 +251,8 @@ namespace HotelsAndUsers.Core
             using (var c = new Context())
             {
                 Guests.Remove(guest);
-                c.Guests.Remove(guest);
+                var Guest = c.Guests.FirstOrDefault(g => g.GuestId == guest.GuestId);
+                c.Guests.Remove(Guest);
                 c.SaveChanges();
             }
         }

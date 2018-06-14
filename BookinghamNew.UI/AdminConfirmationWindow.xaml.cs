@@ -111,7 +111,7 @@ namespace BookinghamNew.UI
                 }
                 if(k==0)
                 {
-                    //_repo.RemoveGuest(guest);
+                    _repo.RemoveGuest(guest);
                     MessageBox.Show("This room has been already booked for this timespan", "Error");
                     return;
                 }
