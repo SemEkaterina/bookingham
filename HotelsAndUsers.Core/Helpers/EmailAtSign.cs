@@ -8,13 +8,13 @@ namespace HotelsAndUsers.Core.Helpers
 {
     public class EmailAtSign
     {
-        public bool SampleCheckingEmail(string mail)
+        public static bool SampleCheckingEmail(string email)
         {
-            foreach (var letter in mail)
+            foreach (var letter in email)
             {
                 if (letter == '@')
                 {
-                    if (mail.Length >= 7)
+                    if (email.Length >= 7)
                     {
                         return true;
                     }

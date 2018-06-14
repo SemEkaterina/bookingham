@@ -12,9 +12,9 @@ namespace HotelsAndUsers.Core.Model
         public int GuestId { get; set; }
         public int HotelId { get; set; }
         public List<Room> Room { get; set; }
-        public DateTime BookingTime { get; set; }
-        public DateTime CheckIn { get; set; }
-        public DateTime CheckOut { get; set; }
+        public string BookingTime { get; set; }
+        public string CheckIn { get; set; }
+        public string CheckOut { get; set; }
         public decimal TotalPrice { get; set; }
     }
 }

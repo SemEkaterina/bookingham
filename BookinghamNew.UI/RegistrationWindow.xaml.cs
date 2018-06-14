@@ -60,12 +60,14 @@ namespace BookinghamNew.UI
                 return;
             }
 
-            //else if(EmailAtSign.SampleCheckingEmail(textBoxLogin.Text) == false)
-            //{
+            else if (EmailAtSign.SampleCheckingEmail(textBoxLogin.Text) == false)
+            {
+                MessageBox.Show("Invalid email", "Error");
+                textBoxLogin.Focus();
+                return;
+            }
 
-            //}
-
-             _repo.Authorize(textBoxLogin.Text, Hash.GetHash(textBoxPassword.Password), out Guest guest, out Hotel hotel);
+            _repo.Authorize(textBoxLogin.Text, Hash.GetHash(textBoxPassword.Password), out Guest guest, out Hotel hotel);
             if (guest != null)
             {
                 MessageBox.Show("This user has been already created", "Error");
